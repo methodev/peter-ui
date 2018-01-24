@@ -10,7 +10,7 @@ script:
 - cp 'README.md' dist
 branches:
   only:
-  - test
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 deploy:
 - provider: releases
   api_key:
