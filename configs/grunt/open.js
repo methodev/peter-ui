@@ -1,7 +1,7 @@
 var browser = process.platform === 'win32' ? 'Chrome' : 'Google Chrome';
 
 module.exports = {
-  dist: {
+  dev: {
     app: browser,
     path: 'http://localhost:<%= port %>'
   },
