@@ -1,0 +1,31 @@
+// =========================| Atom: Quote |========================= //
+
+
+
+.pa-quote {
+
+  //--------------------------| Variables
+
+  $text-color: map-get($roles-col-texts, 'secondary');
+  $text-color-accent: map-get($roles-col-texts, 'primary');
+
+
+  //--------------------------| Base
+
+  font-style: italic;
+
+
+  //--------------------------| Link
+
+  > a {
+    color: $text-color;
+    border-bottom-color: transparent;
+
+    &:hover,
+    &:active {
+      color: $text-color-accent;
+    }
+  }
+
+
+} // .pa-quote

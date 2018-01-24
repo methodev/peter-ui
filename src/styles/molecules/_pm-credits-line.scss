@@ -1,0 +1,97 @@
+// =========================| Molecule: Credits line |========================= //
+
+
+
+.pm-credits-line {
+
+  //--------------------------| Variables
+
+  $offset: #{get-page-offset()}vw;
+  $signature-sign-min-width:  16px;
+  $signature-sign-max-width:  20px;
+  $signature-sign-min-height: 52px;
+  $signature-sign-max-height: 66px;
+  $signature-label-offset: 1.3;
+
+
+  //--------------------------| Base
+
+  @include mq-screen-size-type('mobile') {
+    text-align: center;
+  }
+
+  @include mq-screen-size-type('desktop') {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  padding: 0 $offset;
+
+
+  //--------------------------| Credit item
+
+  .pa-credit {
+    @include mq-screen-size-type('mobile') {
+      > p {
+        margin-bottom: calc(#{$offset} / 2);
+      }
+
+      & + .pa-credit {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: calc(#{$offset});
+      }
+
+      .copyright {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+      }
+
+      .pa-signature {
+        flex-direction: column;
+
+        label {
+          padding: 0 0 1em;
+        }
+
+        .logo {
+          position: static;
+        }
+      }
+    }
+
+    @include mq-screen-size-type('desktop') {
+      & + .pa-credit {
+        margin-left: $offset;
+      }
+
+      .pa-signature {
+        .logo {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .pa-signature {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .copyright {
+    padding-right: get-progressive-calc($signature-sign-min-width * $signature-label-offset, $signature-sign-max-width * $signature-label-offset);
+  }
+
+
+  //--------------------------| Links
+
+  a {
+    white-space: nowrap;
+  }
+
+
+} // .pm-credits-line

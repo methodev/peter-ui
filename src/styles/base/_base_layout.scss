@@ -1,0 +1,100 @@
+// =========================| Base: Layout |========================= //
+
+
+
+//--------------------------| Variables
+
+$layout-bgr-color: map-get($roles-col-backgrounds, 'page');
+$layout-bgr-image: map-get($reg-gradients, 'linear-white-to-gray');
+$offset: #{get-page-offset()}vw;
+
+
+//--------------------------| Body
+
+body {
+  @include background-image($layout-bgr-image);
+
+  background-attachment: fixed;
+  background-color: $layout-bgr-color;
+  background-repeat: no-repeat;
+  background-size: 100% 20vw;
+}
+
+
+//--------------------------| Layout
+
+#layout,
+#layout-stage {
+  min-height: 100vh;
+}
+
+#layout-stage {
+  display: flex;
+  flex-direction: column;
+}
+
+#layout-main {
+  flex: 1;
+  margin: #{get-page-offset()}vw 0;
+}
+
+
+//--------------------------| Grid
+
+@at-root {
+  $offset: #{get-page-offset()}vw;
+
+  .container {
+    max-width: none;
+    padding: 0 calc((#{$offset} / 2) * -1);
+  }
+
+  .row:not(.no-gutters) {
+    @include margin-h(calc((#{$offset} / 2) * -1));
+
+    [class*='col'] {
+      @include padding-h(calc(#{$offset} / 2));
+    }
+  }
+}
+
+
+//--------------------------| Templates
+
+.tmpl-section {
+  & + .tmpl-section {
+    margin-top: $offset;
+  }
+}
+
+
+//--------------------------| Form elements
+
+input,
+textarea,
+button {
+  @include appearance(none);
+  @include border-radius(0);
+
+  outline: none;
+}
+
+input:not([type='button']):not([type='reset']):not([type='submit']):not([type='checkbox']):not([type='radio']),
+textarea {
+  @include transition(box-shadow map-get($roles-transitions, 'glow') ease-in-out, border-color map-get($roles-transitions, 'glow') ease-in-out);
+
+  &:focus {
+    @include box-shadow(0 0 5px map-get($roles-col-states, 'focused'));
+  }
+}
+
+textarea {
+  min-height: 200px;
+}
+
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}

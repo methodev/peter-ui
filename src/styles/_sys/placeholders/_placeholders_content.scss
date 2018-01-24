@@ -1,0 +1,44 @@
+// =========================| Placeholders: Content |========================= //
+
+
+
+//--------------------------| Post flow
+
+%ph-post-flow {
+  $offset: 1em;
+  $offset-inner: .5em;
+
+  max-width: $roles-size-post;
+
+  > *:not(:first-child) {
+    margin-top: $offset;
+  }
+
+  > .head {
+    > *:not(:first-child) {
+      margin-top: $offset-inner;
+    }
+
+    > [class*='pa-title'] {
+      margin-bottom: 0;
+    }
+  }
+
+  .cover {
+    a {
+      border-bottom-color: transparent;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include mq-device-holding-type('inpocket') {
+    .timestamp {
+      text-align: center;
+    }
+  }
+}

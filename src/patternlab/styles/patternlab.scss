@@ -1,0 +1,27 @@
+// =========================| Pattern lab |========================= //
+
+
+
+//--------------------------| Define core path
+
+$core-path: '.';
+
+
+//--------------------------| Compass
+
+@import '../../../node_modules/compass-mixins/lib/compass';
+
+
+//--------------------------| System
+
+@import '../../styles/_sys/bundle_sys';
+
+
+//--------------------------| Category
+
+@import 'includes/category';
+
+
+//--------------------------| Pattern
+
+@import 'includes/pattern';

@@ -1,0 +1,28 @@
+// =========================| Bundle: System |========================= //
+
+
+
+//--------------------------| Registries
+
+@import 'data/registries/core/*.*';
+@import 'data/registries/items/*.*';
+
+
+//--------------------------| Functions
+
+@import 'functions/**/*.*';
+
+
+//--------------------------| Roles
+
+@import 'data/roles/*.*';
+
+
+//--------------------------| Mixins
+
+@import 'mixins/**/*.*';
+
+
+//--------------------------| Placeholders
+
+@import 'placeholders/**/*.*';

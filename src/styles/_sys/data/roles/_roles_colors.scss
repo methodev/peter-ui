@@ -1,0 +1,56 @@
+// =========================| Roles: Colors |========================= //
+
+
+
+//--------------------------| States
+
+$roles-col-states: (
+  'disabled':  map-get($reg-colors, 'dusty-gray'),
+  'focused':   map-get($reg-colors, 'la-rioja'),
+  'alert':     map-get($reg-colors, 'red-berry'),
+  'warning':   map-get($reg-colors, 'golden-tainoi'),
+  'success':   map-get($reg-colors, 'la-rioja')
+);
+
+
+//--------------------------| Text
+
+$roles-col-texts: (
+  'primary':   map-get($reg-colors, 'mine-shaft'),
+  'secondary': map-get($reg-colors, 'dove-gray'),
+  'system':    map-get($reg-colors, 'dove-gray'),
+  'meta':      map-get($reg-colors, 'dove-gray'),
+  'credit':    map-get($reg-colors, 'dusty-gray'),
+  'negative':  map-get($reg-colors, 'white')
+);
+
+
+//--------------------------| Links
+
+$roles-col-links: (
+  'link':      map-get($reg-colors, 'navy-blue'),
+  'hover':     map-get($reg-colors, 'governor-bay'),
+  'active':    map-get($reg-colors, 'red-berry'),
+  'visited':   map-get($reg-colors, 'bossanova')
+);
+
+
+//--------------------------| Backgrounds
+
+$roles-col-backgrounds: (
+  'paper':     map-get($reg-backgrounds, 'white'),
+  'box':       dark(map-get($reg-backgrounds, 'alabaster'), 10%),
+  'headline':  map-get($reg-backgrounds, 'mine-shaft'),
+  'theme':     map-get($reg-backgrounds, 'la-rioja'),
+  'page':      map-get($reg-backgrounds, 'alabaster'),
+  'selection': map-get($reg-backgrounds, 'la-rioja'),
+  'image-bgr': map-get($reg-backgrounds, 'mine-shaft')
+);
+
+
+//--------------------------| Borders
+
+$roles-col-borders: (
+  'separator': map-get($reg-colors, 'silver'),
+  'input': map-get($reg-colors, 'silver')
+);

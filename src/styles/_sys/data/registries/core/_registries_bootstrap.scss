@@ -1,0 +1,20 @@
+// =========================| Registries: Bootstrap |========================= //
+
+
+
+$enable-flex:         true;
+$enable-grid-classes: true;
+$enable-shadows:      true;
+
+$grid-columns:        12;
+
+$grid-breakpoints: (
+  'xxs':     0,
+  'xs':    576px,
+  's':     768px,
+  'm':     992px,
+  'l':    1200px,
+  'xl':   1400px,
+  'xxl':  1600px,
+  'xxxl': 1900px
+);

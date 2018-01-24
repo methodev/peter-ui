@@ -1,0 +1,39 @@
+// =========================| Atom: Info text |========================= //
+
+
+
+.pa-nfo {
+
+  //--------------------------| Variables
+
+  $nfo-font-family: map-get($roles-typo-font-families, 'system');
+  $nfo-font-size: map-get($roles-typo-font-sizes, 'system');
+  $nfo-line-height: map-get($roles-typo-line-heights, 'system');
+  $nfo-color: map-get($roles-col-texts, 'system');
+  $nfo-icon-size: 1.2em;
+
+
+  //--------------------------| Base
+
+  position: relative;
+  padding-left: 1.4em;
+  font: normal unquote('#{$nfo-font-size}/#{$nfo-line-height}') $nfo-font-family;
+  color: $nfo-color;
+
+  &::before {
+    @include border-radius(50%);
+
+    position: absolute;
+    top: .2em;
+    left: 0;
+    width: $nfo-icon-size;
+    height: $nfo-icon-size;
+    font: map-get($reg-font-weights, 'bold') unquote('#{.8em}/#{$nfo-icon-size}') map-get($roles-typo-font-families, 'glyph');
+    color: map-get($roles-col-texts, 'negative');
+    text-align: center;
+    background-color: map-get($roles-col-states, 'alert');
+    content: 'i';
+  }
+
+
+} // .pa-nfo

@@ -1,0 +1,37 @@
+// =========================| Atom: Site title |========================= //
+
+
+
+.pa-title-site {
+
+  //--------------------------| Variables
+
+  $slogan-font-size: .5em;
+
+
+  //--------------------------| Base
+
+  @include typo-titles-base('site-title');
+
+  text-align: center;
+  white-space: nowrap;
+
+
+  //--------------------------| Slogan
+
+  &::after {
+    display: block;
+    font-size: $slogan-font-size;
+  }
+
+
+  //--------------------------| Link
+
+  > a {
+    display: block;
+    color: map-get($roles-col-texts, 'primary');
+    text-decoration: none;
+  }
+
+
+} // .pa-title-site

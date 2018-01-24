@@ -1,0 +1,8 @@
+<h1 class="pa-title-site">
+  {{# title_site.hyperlink }}
+    <a href="{{ href }}">{{ title_site.text }}</a>
+  {{/ title_site.hyperlink }}
+  {{^ title_site.hyperlink }}
+    {{ title_site.text }}
+  {{/ title_site.hyperlink }}
+</h1>

@@ -1,0 +1,22 @@
+// =========================| Mixins: Content |========================= //
+
+
+
+//--------------------------| Separator
+
+@mixin separator-content($position: 'after', $symbol: map-get($roles-typo-contents, 'separator')) {
+  &::#{$position} {
+    display: block;
+    padding: 1rem 0;
+    font-family: unquote(map-get($reg-font-families, 'pp–serif'));
+    color: map-get($reg-colors, 'dusty-gray');
+    text-align: center;
+    content: $symbol;
+  }
+}
+
+@mixin separator($position: 'after', $symbol: map-get($roles-typo-contents, 'separator')) {
+  &:not(:last-child) {
+    @include separator-content($position, $symbol);
+  }
+}

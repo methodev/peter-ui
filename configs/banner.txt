@@ -1,0 +1,12 @@
+/*!
+    * <%= pkg.title || pkg.name %>
+      <%= pkg.homepage%>
+      Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.title %>
+
+    * Front-end developer:
+      <%= pkg.author.name %>
+      <%= pkg.author.email %>
+      <%= pkg.author.url %>
+
+    * Last update: <%= grunt.template.date("yyyy-mm-dd") %>
+*/

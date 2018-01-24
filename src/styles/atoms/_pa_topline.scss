@@ -1,0 +1,23 @@
+// =========================| Atom: Topline |========================= //
+
+
+
+.pa-topline {
+
+  //--------------------------| Variables
+
+  $topline-min-height: $roles-size-topline;
+  $topline-max-height: $topline-min-height * 2;
+  $topline-height: get-progressive-calc($topline-min-height, $topline-max-height);
+  $topline-bgr-color: map-get($roles-col-backgrounds, 'theme');
+
+
+  //--------------------------| Base
+
+  display: block;
+  width: 100%;
+  height: $topline-height;
+  background-color: $topline-bgr-color;
+
+
+} // .pa-topline

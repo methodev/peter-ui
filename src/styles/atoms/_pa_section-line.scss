@@ -1,0 +1,101 @@
+// =========================| Atom: Section line |========================= //
+
+
+
+.pa-section-line {
+
+  //--------------------------| Data
+
+  $section-line-types: (
+    'major': map-get($reg-colors, 'red-berry'),
+    'minor': map-get($reg-colors, 'dove-gray'),
+    'sky':   map-get($reg-colors, 'twitter')
+  );
+
+
+  //--------------------------| Variables
+
+  $label-font-size: map-get($roles-typo-font-sizes, 'system');
+  $label-line-height: map-get($roles-typo-line-heights, 'system');
+  $offset: 1em;
+
+
+  //--------------------------| Base
+
+  @include user-select(none);
+
+  display: flex;
+  align-items: center;
+  margin-bottom: $offset;
+  line-height: $label-line-height;
+
+  // Colors
+  @for $type from 1 through length($section-line-types) {
+    $name: nth(nth($section-line-types, $type), 1);
+    $val: map-get($section-line-types, $name);
+
+    &[data-type='#{$name}'] {
+      > label {
+        color: $val;
+
+        &::before,
+        &::after {
+          background-color: $val;
+        }
+      }
+
+      > hr {
+        background-color: $val;
+      }
+    }
+  }
+
+
+  //--------------------------| Label
+
+  > label {
+    @include ellipsis();
+
+    position: relative;
+    padding: 0 .6em;
+    font-size: $label-font-size;
+    font-style: italic;
+    text-transform: lowercase;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 1px;
+      content: '';
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    > a {
+      color: inherit;
+      border-bottom-color: transparent;
+    }
+  }
+
+
+  //--------------------------| Lines
+
+  > hr {
+    display: block;
+    flex: 1;
+    height: 2px;
+    min-width: 20%;
+    border: 0;
+  }
+
+
+} // .pa-section-line

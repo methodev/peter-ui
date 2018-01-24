@@ -1,0 +1,47 @@
+// =========================| Organism: Posts list |========================= //
+
+
+
+.po-posts-list {
+
+  //--------------------------| Variables
+
+  $offset: #{get-page-offset()}vw;
+
+
+  //--------------------------| Base
+
+  @include mq-tablet-breakpoint('below') {
+    > * {
+      @include separator();
+    }
+  }
+
+  @include mq-tablet-breakpoint('above') {
+    margin-bottom: calc(#{$offset} * -1);
+
+    > * {
+      margin-bottom: $offset;
+
+      > * {
+        height: 100%;
+      }
+    }
+
+    .po-resume {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .body {
+        flex: 1;
+      }
+    }
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+
+
+
+} // .po-posts-list

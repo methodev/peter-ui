@@ -1,0 +1,33 @@
+// =========================| Utility classes: Panels |========================= //
+
+
+
+//--------------------------| Data
+
+$util-panels: (
+  'paper': (
+    'background': map-get($roles-col-backgrounds, 'paper'),
+    'shadow': map-get($roles-shadows, 'panel')
+  ),
+  'board': (
+    'background': map-get($roles-col-backgrounds, 'box'),
+    'shadow': none
+  )
+);
+
+
+//--------------------------| Generator
+
+@for $p from 1 through length($util-panels) {
+  $name: nth(nth($util-panels, $p), 1);
+  $value: map-get($util-panels, $name);
+
+  .ut-panel-#{$name} {
+    $bgr: map-get($value, 'background');
+    $shadow: map-get($value, 'shadow');
+
+    @include box-shadow($shadow);
+
+    background-color: $bgr;
+  }
+}

@@ -1,0 +1,51 @@
+// =========================| Organism: Article |========================= //
+
+
+
+.po-article {
+
+  //--------------------------| Variables
+
+  $secondary-title-offset: 1.5em 0 .6em;
+  $offset: #{get-page-offset()}vw;
+  $offset-inner: .5em;
+
+
+  //--------------------------| Base
+
+  & {
+    @extend %ph-post-flow;
+
+    margin: 0 auto;
+  }
+
+
+  //--------------------------| Head
+
+
+
+
+  //--------------------------| Body
+
+  > .body {
+    > * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .pa-title-secondary {
+    margin: $secondary-title-offset;
+  }
+
+
+  //--------------------------| Foot
+
+  .foot {
+    padding-top: $offset-inner;
+    border-top: 1px solid map-get($reg-colors, 'la-rioja');
+  }
+
+
+} // .po-article

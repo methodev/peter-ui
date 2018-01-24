@@ -1,0 +1,50 @@
+// =========================| Atom: Social icon |========================= //
+
+
+
+.pa-social-icon {
+
+  //--------------------------| Data
+
+  $social-icons: 'facebook' 'twitter';
+
+
+  //--------------------------| Variables
+
+  $social-icon-min-size: $roles-size-header-icons;
+  $social-icon-max-size: $social-icon-min-size * 2;
+  $size: get-progressive-calc($social-icon-min-size, $social-icon-max-size);
+  $path: '#{$core-path}/src/data-uri/social-icons';
+
+
+  //--------------------------| Base
+
+  display: inline-block;
+  width: $size;
+  height: $size;
+  min-width: $social-icon-min-size;
+  min-height: $social-icon-min-size;
+
+
+  //--------------------------| Children
+
+  > * {
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  > a {
+    border-bottom-color: transparent;
+  }
+
+  @each $item in $social-icons {
+    &[data-type='#{$item}'] * {
+      background-image: url(data-uri('#{$path}/#{$item}.svg'));
+    }
+  }
+
+
+} // .pa-social-icon

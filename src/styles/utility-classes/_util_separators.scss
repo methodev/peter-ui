@@ -1,0 +1,16 @@
+// =========================| Utility classes: Separators |========================= //
+
+
+
+//--------------------------| Before
+
+.ut-separator-before {
+  @include separator-content('before');
+}
+
+
+//--------------------------| After
+
+.ut-separator-after {
+  @include separator-content();
+}
