@@ -39,9 +39,9 @@ module.exports = function(grunt) {
 
     grunt.task.run(['clean:all', 'concurrent:build']);
 
-    if (env === 'prod') {
-      grunt.task.run(['concurrent:prod']);
-    }
+    // if (env === 'prod') {
+    //   grunt.task.run(['concurrent:prod']);
+    // }
   });
 
 
