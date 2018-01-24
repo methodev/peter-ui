@@ -1,0 +1,62 @@
+// =========================| Base: Font faces |========================= //
+
+
+
+//--------------------------| Variables
+
+$fonts-dir: '../fonts'; //#{$core-path}/src/fonts';
+$fonts-sysdir: '#{$fonts-dir}';
+$fonts-prefix: 'pp';
+
+$font-faces: (
+  'serif': (
+    'family': (
+      'r': map-get($reg-font-weights, 'regular'),
+      'b': map-get($reg-font-weights, 'bold')
+    ),
+    'italic': true
+  ),
+  'sans': (
+    'family': (
+      'r': map-get($reg-font-weights, 'regular'),
+      'b': map-get($reg-font-weights, 'bold')
+    ),
+    'italic': true
+  )
+);
+
+
+//--------------------------| Mixins
+
+@mixin font-face($font-name, $style-name, $weight, $style: 'normal') {
+  $path: '#{$fonts-sysdir}/#{$fonts-prefix}–#{$font-name}/#{$style-name}';
+  $name: if($style == 'italic', '#{$font-name}i', '#{$font-name}');
+
+  @font-face {
+    font-family: '#{$fonts-prefix}–#{$name}';
+    font-style: unquote($style);
+    font-weight: $weight;
+    src: url('#{$path}.woff2') format('woff2'),
+         url('#{$path}.woff') format('woff');
+  }
+}
+
+
+//--------------------------| Definitions
+
+@for $f from 1 through length($font-faces) {
+  $font-name: nth(nth($font-faces, $f), 1);
+  $font-data: map-get($font-faces, $font-name);
+  $font-styles: map-get($font-data, 'family');
+
+  @for $s from 1 through length($font-styles) {
+    $style-name: nth(nth($font-styles, $s), 1);
+    $weight: map-get($font-styles, $style-name);
+
+    @include font-face($font-name, $style-name, $weight);
+
+    @if map-get($font-data, 'italic') == true {
+      @include font-face($font-name, $style-name, $weight, 'italic');
+    }
+  }
+}

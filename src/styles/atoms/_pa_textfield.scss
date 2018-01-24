@@ -1,0 +1,41 @@
+// =========================| Atom: Textfield |========================= //
+
+
+
+.pa-textfield {
+
+  //--------------------------| Variables
+
+  $offset: .4em;
+  $input-font-face: map-get($roles-typo-font-families, 'input');
+  $input-border-color: map-get($roles-col-borders, 'input');
+  $input-text-color: map-get($reg-colors, 'navy-blue');
+
+
+  //--------------------------| Base
+
+
+
+
+  //--------------------------| Field area
+
+
+
+
+  //--------------------------| Input
+
+  .textfield-input {
+    display: block;
+    width: 100%;
+    padding: $offset;
+    font-family: $input-font-face;
+    color: $input-text-color;
+    border: 1px solid $input-border-color;
+
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+
+} // .pa-textfield

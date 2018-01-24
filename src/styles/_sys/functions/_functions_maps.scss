@@ -1,0 +1,132 @@
+// =========================| Functions: Maps |========================= //
+
+
+
+$private-sassy-maps-suppress-warnings: false !default;
+
+
+//--------------------------| Map Get Deep Warning
+// Displays a warning if the retrieved value is `null`
+
+@function map-get-deep-warning($warn, $get, $key) {
+  @if not $private-sassy-maps-suppress-warnings {
+    @if $get == null {
+      @warn 'Map has no value for key search `#{$warn}`';
+    }
+    @else if type-of($get) != 'map' {
+      @warn 'Non-map value found for key search `#{$warn}`, cannot search for key `#{$key}`';
+    }
+  }
+  @return null;
+}
+
+
+//--------------------------| Map Get Deep
+// Given a map and a list of keys, find the value at the given key
+
+@function map-get-deep($map, $keys...) {
+  @if length($keys) == 1 {
+    $keys: nth($keys, 1);
+  }
+
+  $warn: '#{nth($keys, 1)}';
+  $length: length($keys);
+  $get: map-get($map, nth($keys, 1));
+
+  @if $length > 1 {
+    @for $i from 2 through $length {
+      @if $get != null and type-of($get) == 'map' {
+        $warn: $warn + '->#{nth($keys, $i)}';
+        $get: map-get($get, nth($keys, $i));
+
+        @if $get == null {
+          @return map-get-deep-warning($warn, $get, nth($keys, $i));
+        }
+      }
+      @else {
+        @return map-get-deep-warning($warn, $get, nth($keys, $i));
+      }
+    }
+  }
+
+  @return $get;
+}
+
+
+//--------------------------| Map Get Keys
+
+@function get-keys($keys, $counter) {
+  $return: ();
+
+  @for $i from 1 to $counter {
+    $return: append($return, nth($keys, $i));
+  }
+
+  @return $return;
+}
+
+
+//--------------------------| Map Get Previous Key
+
+@function map-get-prev-key($map, $key) {
+  $index: index($map, $key);
+  $prev: $index - 1;
+  $result: if($prev > 0, nth($map, $prev), null);
+
+  @return $result;
+}
+
+
+//--------------------------| Map Set
+
+@function map-set($map, $key, $value) {
+  @return map-merge($map, ($key: $value));
+}
+
+
+//--------------------------| Map Set Deep
+
+@function map-set-deep($map, $keys, $value) {
+  $private-sassy-maps-suppress-warnings: true !global;
+  $length: length($keys);
+  $get-keys: ();
+  $map-level: ();
+
+  @if $length > 1 {
+    $get-keys: get-keys($keys, $length);
+    $map-level: map-get-deep($map, $get-keys);
+  }
+
+  $merge: (nth($keys, $length): $value);
+
+  @if $map-level {
+    $merge: map-merge($map-level, $merge);
+  }
+
+  @for $i from ($length * -1 + 1) through -1 {
+    $j: abs($i);
+    $key: nth($keys, $j);
+
+    // @debug $get-keys;
+
+    @if $j > 1 {
+      $get-keys: get-keys($keys, $j);
+      $map-level: map-get-deep($map, $get-keys);
+      @if $map-level {
+        $merge: map-merge($map-level, ($key: $merge));
+      }
+      @else {
+        $merge: ($key: $merge);
+      }
+    }
+    @else {
+      $merge: ($key: $merge);
+    }
+  }
+
+  $map: map-merge($map, $merge);
+
+  $private-sassy-maps-suppress-warnings: false !global;
+
+  @return $map;
+}

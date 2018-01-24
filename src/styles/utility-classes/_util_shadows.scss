@@ -1,0 +1,14 @@
+// =========================| Utility classes: Shadows |========================= //
+
+
+
+//--------------------------| Generator
+
+@for $s from 1 through length($roles-shadows) {
+  $name: nth(nth($roles-shadows, $s), 1);
+  $value: map-get($roles-shadows, $name);
+
+  .ut-shadow-#{$name} {
+    @include box-shadow($value);
+  }
+}

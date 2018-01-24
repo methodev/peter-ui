@@ -1,0 +1,22 @@
+// =========================| Atom: Primary title |========================= //
+
+
+
+.pa-title-primary {
+
+  //--------------------------| Variables
+
+
+
+
+  //--------------------------| Base
+
+  @include typo-titles-base('primary-title');
+
+  @include mq-device-holding-type('inpocket') {
+    width: 100%;
+    text-align: center;
+  }
+
+
+} // .pa-title-primary

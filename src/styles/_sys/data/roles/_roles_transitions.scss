@@ -1,0 +1,9 @@
+// =========================| Roles: Transitions |========================= //
+
+
+
+$roles-transitions: (
+  'rainbow': map-get($reg-transitions, '100ms'),
+  'glow': map-get($reg-transitions, '200ms'),
+  'slide': map-get($reg-transitions, '200ms')
+);

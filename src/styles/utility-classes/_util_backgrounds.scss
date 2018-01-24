@@ -1,0 +1,14 @@
+// =========================| Utility classes: Backgrounds |========================= //
+
+
+
+//--------------------------| Generator
+
+@for $b from 1 through length($reg-backgrounds) {
+  $name: nth(nth($reg-backgrounds, $b), 1);
+  $value: map-get($reg-backgrounds, $name);
+
+  .ut-bgr-#{$name} {
+    background-color: $value;
+  }
+}

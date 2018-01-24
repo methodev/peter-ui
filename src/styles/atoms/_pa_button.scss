@@ -1,0 +1,72 @@
+// =========================| Atom: Button |========================= //
+
+
+
+
+
+
+
+.pa-button {
+
+  //--------------------------| Variables
+
+
+
+
+  //--------------------------| Base
+
+  @include button-base();
+
+  @at-root {
+    button,
+    html [type='button'],
+    [type='reset'],
+    [type='submit'] {
+      &:not(.pa-button) {
+        @include button-base();
+        @include button-states();
+      }
+    }
+
+    button,
+    html [type='button'],
+    [type='reset'] {
+      $txt-color: map-get-deep($roles-button-types, 'default', 'txt-color');
+      $bgr-color: map-get-deep($roles-button-types, 'default', 'bgr-color');
+
+      &:not(.pa-button) {
+        @include button-type-generator($bgr-color, $txt-color);
+      }
+    }
+
+    [type='submit'] {
+      $txt-color: map-get-deep($roles-button-types, 'primary', 'txt-color');
+      $bgr-color: map-get-deep($roles-button-types, 'primary', 'bgr-color');
+
+      &:not(.pa-button) {
+        @include button-type-generator($bgr-color, $txt-color);
+      }
+    }
+  }
+
+
+  //--------------------------| Types
+
+  @for $f from 1 through length($roles-button-types) {
+    $name: nth(nth($roles-button-types, $f), 1);
+    $val: map-get($roles-button-types, $name);
+    $txt-color: map-get($val, 'txt-color');
+    $bgr-color: map-get($val, 'bgr-color');
+
+    &[data-type='#{$name}'] {
+      @include button-type-generator($bgr-color, $txt-color);
+    }
+  }
+
+
+  //--------------------------| States
+
+  @include button-states();
+
+
+} // .pa-button

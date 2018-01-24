@@ -1,0 +1,36 @@
+// =========================| Atom: Logo |========================= //
+
+
+
+.pa-logo {
+
+  //--------------------------| Variables
+
+  $logo-min-width:   30px;
+  $logo-max-width:   60px;
+  $logo-min-height: 100px;
+  $logo-max-height: 200px;
+
+
+  //--------------------------| Base
+
+  display: inline-block;
+  width: get-progressive-calc($logo-min-width, $logo-max-width);
+  min-width: $logo-min-width;
+  //height: get-progressive-calc($min-height, $max-height);
+
+
+  //--------------------------| Link
+
+  > a {
+    display: block;
+    width: 100%;
+    padding-top: $logo-min-height / $logo-min-width * 100%;
+    background-image: url(data-uri('#{$core-path}/src/data-uri/logo.svg'));
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-bottom: 0;
+  }
+
+
+} // .pa-logo

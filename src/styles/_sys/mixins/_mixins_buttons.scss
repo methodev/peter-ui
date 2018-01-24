@@ -1,0 +1,43 @@
+// =========================| Mixins: Buttons |========================= //
+
+
+
+//--------------------------| Button base
+
+@mixin button-base() {
+  padding: .4em 2em;
+  border-style: outset;
+  border-width: 1px;
+
+  &:active {
+    border-style: inset;
+  }
+}
+
+
+//--------------------------| Button type generator
+
+@mixin button-type-generator($bgr-color, $txt-color) {
+  color: $txt-color;
+  background-color: $bgr-color;
+  border-color: $bgr-color;
+
+  &:hover {
+    background-color: light($bgr-color, 15%);
+  }
+
+  &:active {
+    background-color: light($bgr-color, 30%);
+  }
+}
+
+
+//--------------------------| Button states
+
+@mixin button-states() {
+  .disabled &,
+  &.disabled,
+  &[disabled] {
+    background-color: map-get($roles-col-states, 'disabled');
+  }
+}

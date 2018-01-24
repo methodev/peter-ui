@@ -1,0 +1,36 @@
+// =========================| Organism: Resume |========================= //
+
+
+
+.po-resume {
+
+  //--------------------------| Variables
+
+  $offset: #{get-page-offset()}vw;
+  $offset-inner: .5em;
+  $text-color: map-get($roles-col-texts, 'secondary');
+
+
+  //--------------------------| Base
+
+  @include mq-tablet-breakpoint('above') {
+    font-size: .8rem;
+  }
+
+  & {
+    @extend %ph-post-flow;
+
+    display: block;
+  }
+
+
+  //--------------------------| Body
+
+  > .body {
+    @include typo-line-heights('text', map-get($reg-line-heights, '120%'));
+
+    color: $text-color;
+  }
+
+
+} // .po-resume

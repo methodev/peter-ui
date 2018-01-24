@@ -1,0 +1,31 @@
+// =========================| Molecule: User head |========================= //
+
+
+
+.pm-user-head {
+
+  //--------------------------| Variables
+
+  $offset: .5em;
+
+
+  //--------------------------| Base
+
+  display: flex;
+
+
+  //--------------------------| Data
+
+  > .data {
+    align-self: center;
+    flex: 1;
+    margin-left: $offset;
+  }
+
+  .pa-meta a {
+    color: map-get($roles-col-texts, 'meta');
+    border-bottom: 0;
+  }
+
+
+} // .pm-user-head

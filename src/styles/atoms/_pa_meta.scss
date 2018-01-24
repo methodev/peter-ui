@@ -1,0 +1,21 @@
+// =========================| Atom: Meta |========================= //
+
+
+
+.pa-meta {
+
+  //--------------------------| Variables
+
+  $meta-font-family: map-get($roles-typo-font-families, 'system');
+  $meta-font-size: map-get($roles-typo-font-sizes, 'meta');
+  $meta-line-height: map-get($roles-typo-line-heights, 'system');
+  $meta-color: map-get($roles-col-texts, 'meta');
+
+
+  //--------------------------| Base
+
+  font: normal unquote('#{$meta-font-size}/#{$meta-line-height}') $meta-font-family;
+  color: $meta-color;
+
+
+} // .pa-meta

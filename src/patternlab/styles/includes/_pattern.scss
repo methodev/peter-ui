@@ -1,0 +1,147 @@
+// =========================| Pattern |========================= //
+
+
+
+//--------------------------| Base
+
+//.sg-pattern {}
+
+
+//--------------------------| Head
+
+.sg-pattern-head {
+  text-align: left;
+}
+
+
+//--------------------------| Title
+
+.sg-pattern-title {
+  a {
+    border-bottom-color: transparent !important;
+  }
+
+  //.sg-pattern-state {
+  //  &.inprogress {
+  //    &::before {
+  //
+  //    }
+  //  }
+  //
+  //  &.inreview {
+  //    &::before {
+  //
+  //    }
+  //  }
+  //
+  //  &.complete {
+  //    &::before {
+  //
+  //    }
+  //  }
+  //}
+}
+
+
+//--------------------------| Breadcrumb
+
+//.sg-pattern-breadcrumb {}
+
+
+//--------------------------| Extra toggle
+
+.sg-pattern-extra-toggle {
+  border-bottom-color: light(map-get($reg-colors, 'black'), 86.5%) !important;
+
+  //span {
+  //
+  //}
+  //
+  //&.active {
+  //  span {
+  //
+  //  }
+  //}
+}
+
+
+//--------------------------| Extra box
+
+.sg-pattern-extra {
+  text-align: left;
+}
+
+//.sg-modal-content-inner {}
+
+//.sg-pattern-extra-inner {}
+
+//.sg-pattern-extra-info {
+//  .sg-pattern-desc {
+//    p {
+//
+//    }
+//  }
+//}
+//
+//.sg-pattern-extra-code {
+//  .sg-tabs {
+//
+//  }
+//
+//  .sg-tabs-list {
+//
+//  }
+//
+//  .sg-tab-title-active {
+//
+//  }
+//
+//  .sg-tabs-content {
+//
+//  }
+//
+//  .sg-tabs-panel {
+//    pre {
+//
+//    }
+//  }
+//}t
+
+
+//--------------------------| Example
+
+.sg-pattern-example {
+  max-width: 94%;
+  margin: 0 auto;
+  text-align: center;
+
+  > * {
+    position: relative !important;
+    margin: 0 auto;
+    text-align: initial;
+
+    &:not(.pa-textfield):not(.pa-section-line):not(.pm-meta-line):not(.pm-user-head):not(.pm-quoteblock):not(.pm-credits-line):not([class*='po-']) {
+      display: inline-block;
+    }
+  }
+
+  .po-head-nav {
+    min-height: 40px;
+  }
+
+  .po-font-family {
+    .pa-typeface-title {
+      white-space: normal;
+    }
+  }
+
+  .pa-cover-image,
+  .po-resumes-list,
+  .po-comments-list {
+    max-width: 780px;
+  }
+
+  .pa-input-label {
+    width: auto;
+  }
+}

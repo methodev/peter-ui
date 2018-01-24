@@ -1,0 +1,25 @@
+// =========================| Organism: Comments list |========================= //
+
+
+
+.po-comments-list {
+
+  //--------------------------| Variables
+
+  $offset: #{get-page-offset()}vw;
+
+
+  //--------------------------| Base
+
+  & {
+    @extend %ph-list-reset;
+  }
+
+  li {
+    @include separator();
+
+    width: 100%;
+  }
+
+
+} // .po-comments-list

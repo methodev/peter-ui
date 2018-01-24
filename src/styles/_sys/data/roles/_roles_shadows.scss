@@ -1,0 +1,9 @@
+// =========================| Roles: Shadows |========================= //
+
+
+
+//--------------------------| States
+
+$roles-shadows: (
+  'panel': map-get($reg-shadows, 'light-dim')
+);

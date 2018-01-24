@@ -1,0 +1,30 @@
+// =========================| Utility classes: Wrappers |========================= //
+
+
+
+//--------------------------| Base
+
+[class*='wrp-'] {
+  margin: 0 auto;
+}
+
+
+//--------------------------| Page
+
+.wrp-page {
+  $min-screen: map-get($reg-screens, 'min');
+  $max-screen: map-get($reg-screens, 'max');
+  $min-offset: map-get($roles-offsets, 'page');
+  $min-width: $min-screen - ($min-offset * 2);
+  $max-width: $min-width * (100 / $min-screen);
+
+  max-width: #{$max-width}vw;
+  min-width: $min-width;
+}
+
+
+//--------------------------| Main
+
+.wrp-main {
+  max-width: $roles-size-post;
+}

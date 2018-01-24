@@ -1,0 +1,101 @@
+// =========================| Organism: Header |========================= //
+
+
+
+.po-header {
+
+  //--------------------------| Variables
+
+  $min-offset: map-get($roles-offsets, 'header');
+  $max-offset: $min-offset * 2;
+  $offset: get-progressive-calc($min-offset, $max-offset);
+  $mobile-site-title-bgr-color: map-get($roles-col-backgrounds, 'headline');
+  $mobile-site-title-text-color: map-get($roles-col-texts, 'negative');
+
+
+  //--------------------------| Base
+
+  @include user-select(none);
+
+
+  //--------------------------| Headline
+
+  .headline {
+    @include mq-device-holding-type('inpocket') {
+      flex-direction: column;
+
+      .pa-logo {
+        position: relative;
+        z-index: 1;
+      }
+
+      .pa-title-site {
+        align-self: normal;
+        padding: get-progressive-calc($min-offset / 2, $min-offset) 0;
+        margin: $offset calc(#{get-page-offset()}vw * -1) 0;
+        //background-color: $mobile-site-title-bgr-color;
+        //
+        //> a {
+        //  color: $mobile-site-title-text-color;
+        //}
+      }
+
+      label {
+        &.pa-title-site {
+          display: none;
+        }
+      }
+    }
+
+    @include mq-device-holding-type('outpocket') {
+      margin: 0 0 $offset;
+
+      .pa-logo {
+        align-self: flex-start;
+      }
+
+      .pa-title-site {
+        margin: 0;
+      }
+
+      //.pm-social-channels {
+      //  padding-top: $offset;
+      //}
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .pa-logo {
+      margin-top: -2px;
+    }
+  }
+
+
+  //--------------------------| Social channels
+
+  @include mq-device-holding-type('inpocket') {
+    $min: $roles-size-topline + map-get($roles-offsets, 'header');
+    $max: $min * 2;
+
+    .pm-social-channels {
+      position: absolute;
+      top: get-progressive-calc($min, $max);
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      min-width: map-get($reg-screens, 'min');
+      padding: 0 7.8vw;
+    }
+  }
+
+
+  //--------------------------| Links
+
+  a {
+    border-bottom: 0;
+  }
+
+
+} // .po-header

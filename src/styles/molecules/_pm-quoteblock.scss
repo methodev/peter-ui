@@ -1,0 +1,50 @@
+// =========================| Molecule: Quoteblock |========================= //
+
+
+
+.pm-quoteblock {
+
+  //--------------------------| Variables
+
+  $offset: 1em;
+  $text-size: .8em;
+
+
+  //--------------------------| Base
+
+  @include mq-device-holding-type('outpocket') {
+    display: flex;
+  }
+
+  font-size: $text-size;
+  line-height: map-get($roles-typo-line-heights, 'text');
+
+
+  //--------------------------| Timestamp
+
+  > .pa-meta {
+    @include ellipsis();
+
+    @include mq-device-holding-type('inpocket') {
+      text-align: center;
+    }
+
+    @include mq-device-holding-type('outpocket') {
+      min-width: 3.2em;
+      padding-top: .2em;
+      text-align: right;
+    }
+  }
+
+
+  //--------------------------| Quote
+
+  > .pa-quote {
+    @include mq-device-holding-type('outpocket') {
+      flex: 1;
+      margin-left: $offset;
+    }
+  }
+
+
+} // .pm-quoteblock

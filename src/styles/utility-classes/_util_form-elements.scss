@@ -1,0 +1,16 @@
+// =========================| Utility classes: Form elements |========================= //
+
+
+
+//--------------------------| Checkbox toggle
+
+.checkbox-toggle {
+  @include opacity(0);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}

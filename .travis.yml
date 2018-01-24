@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+- 7.8
+script:
+- npm install grunt-cli -g
+- npm install
+- grunt build --target='prod'
+- printf '.gitignore\ndeployed*' > dist/.gitignore
+- printf 'peterui.martinmetodiev.com' > dist/CNAME
+- cp 'README.md' dist
+branches:
+  only:
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+deploy:
+- provider: releases
+  api_key:
+    secure: sWmLJF6qQQKpXdkRantIexUpgE+uKwG51vVp7ti3Br/GonbHLWPUB3vzYLp6xp/8/tkIFZN4n2957WS9K1c3CHtHO4HSZb9ZedESSuo+VCXCkdiVbeTTnT97jCjhwJDNc7WrhrCYlxLn4yrYuhR6FMaTVJBOxlD+mGHzlDcJufizwJzkp6WKONKIK0TK9xPDlcCHa6H03D8rDa5rOvTYkKyYnTxb4Ssl07BRFeNlCZ1ucX/SSmYf6mQiNEPA7cetJh6XG3O5ES6u/Sy+6vc33OxCvIwuXIwEhTIb/laD1pv6YkuQ4gO9p6TdQFSi/57TPFfwubGKwOU2/NxV6Xg4wNC8p26TOXxOwXApcH2jFTuuojQeaGZH8K5KkwMLdE1TRA74T49v4zhLj8o4NcYEVNMvGlAM+mws4MYZE7Tk/8M5tqiD9qq7RJlFqIzbGe9kozvpZUaqbVmVcCsHo3wk/hhlSS3isBtfrDhruOsIMxIC3w6MgVkJeMRYj6+bw1yqn9ulQkvt82qYv0Qcxfs+aeNow4kYIqOP9c5l7735ZRa5FDUqjYcd3yaFoAtHADGL6ubk9VpjhgYrzQ+2v66v1tA27J1GX0Cl4/ecTbwHFrdzN/MNyuQn9et3N/Pjoj5lrTfOLc4sXQhTXGF526eYZnU20gI2/UeurgrmiCvc3b4=
+  skip_cleanup: true
+  on:
+    tags: true
+- provider: pages
+  skip_cleanup: true
+  local_dir: dist
+  github_token:
+    secure: sWmLJF6qQQKpXdkRantIexUpgE+uKwG51vVp7ti3Br/GonbHLWPUB3vzYLp6xp/8/tkIFZN4n2957WS9K1c3CHtHO4HSZb9ZedESSuo+VCXCkdiVbeTTnT97jCjhwJDNc7WrhrCYlxLn4yrYuhR6FMaTVJBOxlD+mGHzlDcJufizwJzkp6WKONKIK0TK9xPDlcCHa6H03D8rDa5rOvTYkKyYnTxb4Ssl07BRFeNlCZ1ucX/SSmYf6mQiNEPA7cetJh6XG3O5ES6u/Sy+6vc33OxCvIwuXIwEhTIb/laD1pv6YkuQ4gO9p6TdQFSi/57TPFfwubGKwOU2/NxV6Xg4wNC8p26TOXxOwXApcH2jFTuuojQeaGZH8K5KkwMLdE1TRA74T49v4zhLj8o4NcYEVNMvGlAM+mws4MYZE7Tk/8M5tqiD9qq7RJlFqIzbGe9kozvpZUaqbVmVcCsHo3wk/hhlSS3isBtfrDhruOsIMxIC3w6MgVkJeMRYj6+bw1yqn9ulQkvt82qYv0Qcxfs+aeNow4kYIqOP9c5l7735ZRa5FDUqjYcd3yaFoAtHADGL6ubk9VpjhgYrzQ+2v66v1tA27J1GX0Cl4/ecTbwHFrdzN/MNyuQn9et3N/Pjoj5lrTfOLc4sXQhTXGF526eYZnU20gI2/UeurgrmiCvc3b4=
+  on:
+    tags: true
