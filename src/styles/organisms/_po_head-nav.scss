@@ -1,0 +1,445 @@
+// =========================| Organism: Head navigation |========================= //
+
+
+
+.po-head-nav {
+
+  //--------------------------| Data
+
+  $nav-color: map-get($roles-col-backgrounds, 'headline');
+
+
+  //--------------------------| Variables
+
+  $content-color: map-get($roles-col-texts, 'negative');
+  $bgr-color: $nav-color;
+  $bgr-color-active: light($bgr-color, 20%);
+  $link-color: map-get($roles-col-texts, 'negative');
+  $link-color-hover: light(map-get($reg-colors, 'la-rioja'), 20%);
+  $link-color-active: light($link-color-hover, 40%);
+  $mobile-toggle-color: map-get($roles-col-texts, 'primary');
+  $mobile-toggle-color-hover: map-get($reg-colors, 'la-rioja');
+  $mobile-toggle-color-active: light($mobile-toggle-color-hover, 20%);
+  $nav-vertical-offset: .8vw;
+  $space-between-items: #{get-page-offset()}vw;
+  $mobile-stage-bgr-color: dark($nav-color, 30%);
+  $mobile-toggle-min-size: $roles-size-header-icons;
+  $mobile-toggle-max-size: $mobile-toggle-min-size * 2;
+  $mobile-toggle-size: get-progressive-calc($mobile-toggle-min-size, $mobile-toggle-max-size);
+  $mobile-toggle-offset-min: $roles-size-topline + map-get($roles-offsets, 'header');
+  $mobile-toggle-offset-max: $mobile-toggle-offset-min * 2;
+  $mobile-toggle-offset: get-progressive-calc($mobile-toggle-offset-min, $mobile-toggle-offset-max);
+
+
+  //--------------------------| Base
+
+  @include mq-device-holding-type('inpocket') {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-width: map-get($reg-screens, 'min');
+  }
+
+  @include mq-device-holding-type('outpocket') {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: $nav-vertical-offset 0 $nav-vertical-offset calc(#{$space-between-items} / 2);
+    overflow: hidden;
+    background-color: $bgr-color;
+  }
+
+  color: $content-color;
+
+
+  //--------------------------| Mobile toggle
+
+  .mobile-toggle {
+    margin-bottom: 0;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .stage > {
+    .mobile-toggle {
+      display: block;
+      width: $mobile-toggle-size;
+      height: $mobile-toggle-size;
+      text-align: center;
+
+      &::after {
+        display: block;
+        font-weight: bold;
+        line-height: $mobile-toggle-size;
+        color: map-get($roles-col-texts, 'negative'); // TODO: Add :hover & :active states
+        content: '✕';
+      }
+    }
+  }
+
+  @include mq-device-holding-type('inpocket') {
+    .mobile-toggle {
+      width: $mobile-toggle-size;
+      height: $mobile-toggle-size;
+      min-width: $mobile-toggle-min-size;
+      min-height: $mobile-toggle-min-size;
+    }
+
+    .stage {
+      background-color: $mobile-stage-bgr-color;
+
+      > .mobile-toggle {
+        @include translateX(-50%);
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: $mobile-toggle-offset auto;
+
+        &::after {
+          font-size: get-progressive-calc($mobile-toggle-min-size, $mobile-toggle-max-size);
+        }
+
+        &:hover {
+          &::after {
+            color: $link-color-hover;
+          }
+        }
+
+        &:active {
+          &::after {
+            color: $link-color-active;
+          }
+        }
+      }
+    }
+
+    .main-menu,
+    .search-bar {
+      > .mobile-toggle {
+        position: absolute;
+        display: block;
+        margin: $mobile-toggle-offset auto 0;
+
+        > svg {
+          fill: $mobile-toggle-color;
+        }
+
+        &:hover {
+          > svg {
+            fill: $mobile-toggle-color-hover;
+          }
+        }
+
+        &:active {
+          > svg {
+            fill: $mobile-toggle-color-active;
+          }
+        }
+      }
+    }
+  }
+
+
+  //--------------------------| Stage
+
+  .stage {
+    display: flex;
+  }
+
+  @include mq-device-holding-type('inpocket') {
+    .stage {
+      $width: 96vw;
+      $min-width: strip-unit($width) * map-get($reg-screens, 'min') / 100;
+
+      @include transition(all map-get($roles-transitions, 'slide') ease-in-out);
+      @include box-shadow(rgba(map-get($reg-colors, 'mine-shaft'), .3) 3px 3px 0);
+
+      position: fixed;
+      top: 0;
+      left: 2vw;
+      z-index: 1;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: $width;
+      min-width: $min-width;
+      min-height: 50vw;
+      padding: 16vw #{get-page-offset() * 2}vw #{get-page-offset()}vw;
+      overflow: hidden;
+    }
+
+    .checkbox-toggle:not(:checked) ~ .stage {
+      @include translate(0, -120%);
+    }
+
+    .checkbox-toggle:checked ~ .stage {
+      @include translate(0, -5px);
+    }
+  }
+
+
+  //--------------------------| Main menu
+
+  .main-menu {
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul {
+      display: flex;
+    }
+  }
+
+  .menu-item {
+    display: inline-block;
+
+    &.current-menu-item {
+      background-color: $bgr-color-active;
+
+      > a {
+        color: $link-color;
+        pointer-events: none;
+      }
+    }
+
+    &.current_page_item { // sass-lint:disable-line class-name-format
+      background-color: $bgr-color-active;
+    }
+
+    > a {
+      display: block;
+      padding: 0 calc(#{$space-between-items} / 2);
+      color: $link-color;
+
+      &:hover {
+        color: $link-color-hover;
+      }
+
+      &:active {
+        color: $link-color-active;
+      }
+    }
+  }
+
+  @include mq-device-holding-type('inpocket') {
+    .main-menu {
+      > .mobile-toggle {
+        left: #{get-page-offset()}vw;
+      }
+
+      ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .menu-item {
+        font-size: get-progressive-calc(20px, 40px);
+        text-align: center;
+
+        > a {
+          padding: 3vw 0;
+        }
+      }
+    }
+  }
+
+  @include mq-device-holding-type('outpocket') {
+    .main-menu {
+      > .mobile-toggle {
+        display: none;
+      }
+
+      > .stage > .mobile-toggle {
+        display: none;
+      }
+    }
+
+    .menu-item {
+      $menu-item-size-min: $roles-size-menu-item;
+      $menu-item-size-max: $menu-item-size-min * 2;
+
+      font-size: get-progressive-calc($menu-item-size-min, $menu-item-size-max);
+    }
+  }
+
+
+  //--------------------------| Search bar
+
+  .search-bar {
+    display: flex;
+
+    form {
+      width: 100%;
+    }
+
+    > .stage {
+      @include transition(all map-get($roles-transitions, 'slide') ease-in-out);
+    }
+
+    input[type='search'] {
+      $offset-left-min: $roles-size-menu-item * 3;
+      $offset-left-max: $offset-left-min * 2;
+      $offset-left: get-progressive-calc($offset-left-min, $offset-left-max);
+      $offset-right-min: $mobile-toggle-min-size / 2;
+      $offset-right-max: $mobile-toggle-min-size;
+      $offset-right: get-progressive-calc($offset-right-min, $offset-right-max);
+
+      @include appearance(none);
+      @include border-radius(0);
+      @include input-placeholder {
+        font-style: italic;
+      }
+
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-right: $offset-right;
+      padding-left: $offset-left;
+      border: 0;
+    }
+
+    input[type='submit'] {
+      display: none;
+    }
+  }
+
+  @include mq-device-holding-type('inpocket') {
+    .search-bar {
+      > .mobile-toggle {
+        right: #{get-page-offset()}vw;
+      }
+
+      input[type='search'] {
+        $offset: get-progressive-calc(10px, 20px);
+        $text-col: map-get($roles-col-texts, 'primary');
+        $bgr-col: map-get($reg-backgrounds, 'white');
+
+        @include input-placeholder {
+          color: rgba($text-col, .5);
+        }
+
+        padding: $offset 0;
+        color: $text-col;
+        text-indent: $offset;
+        background-color: $bgr-col;
+
+        &,
+        &:focus {
+          @include box-shadow(1px 1px 2px 1px dark($bgr-col, 20%) inset);
+        }
+      }
+    }
+  }
+
+  @include mq-device-holding-type('outpocket') {
+    .search-bar {
+      $font-size: get-progressive-calc($roles-size-menu-item, $roles-size-menu-item * 2);
+
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-left: $space-between-items;
+
+      > .stage {
+        background-color: $bgr-color;
+      }
+
+      input[type='search'] {
+        @include input-placeholder {
+          color: rgba($content-color, .5);
+        }
+
+        color: $content-color;
+        background-color: dark($nav-color, 20%);
+      }
+
+      > .mobile-toggle {
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 #{get-page-offset()}vw;
+
+        > svg {
+          $size: $font-size;
+
+          width: $size;
+          height: $size;
+
+          fill: $content-color;
+        }
+
+        &:hover svg {
+          fill: $link-color-hover;
+        }
+
+        &:active svg {
+          fill: $link-color-active;
+        }
+
+        body.search & {
+          background-color: $bgr-color-active;
+        }
+      }
+
+      > .stage {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+
+        .mobile-toggle {
+          $size: get-progressive-calc($roles-size-menu-item * 3, $roles-size-menu-item * 6, map-get($reg-screens, 'min'), map-get($reg-screens, 'max'));
+
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: $size;
+          height: 100%;
+
+          &::after {
+            font-size: $font-size;
+            line-height: .8;
+          }
+
+          &:hover::after {
+            color: $link-color-hover;
+          }
+
+          &:active::after {
+            color: $link-color-active;
+          }
+        }
+      }
+
+      .checkbox-toggle:not(:checked) ~ .stage {
+        @include translate(100%, 0);
+
+        > .mobile-toggle {
+          display: none;
+        }
+      }
+
+      .checkbox-toggle:checked ~ .stage {
+        @include translate(0, 0);
+      }
+
+      form {
+        flex: 1;
+        height: 100%;
+      }
+    }
+  }
+
+
+} // .po-head-nav

@@ -1,0 +1,67 @@
+// =========================| Roles: Typography |========================= //
+
+
+
+//--------------------------| Base font size
+
+$roles-base-font-size: 18px;
+
+
+//--------------------------| Font families
+
+$roles-typo-font-families: (
+  'title': unquote(map-get($reg-font-families, 'pp–serif')),
+  'text': unquote(map-get($reg-font-families, 'pp–sans')),
+  'system': unquote(map-get($reg-font-families, 'pp–sans')),
+  'credit': unquote(map-get($reg-font-families, 'pp–serif')),
+  'input': unquote(map-get($reg-font-families, 'pp–serif')),
+  'glyph': unquote(map-get($reg-font-families, 'pp–serif')),
+  'error': unquote(map-get($reg-font-families, 'pp–mono'))
+);
+
+
+//--------------------------| Font sizes range
+
+$roles-typo-font-sizes-base: (
+  'min': $roles-base-font-size,
+  'max': 22px
+);
+
+
+//--------------------------| Font sizes hierarchy
+
+$roles-typo-font-sizes: (
+  'site-title':      font-size(38),
+  'primary-title':   font-size(24),
+  'secondary-title': font-size(20),
+  'error-title':     font-size(48),
+  'primary-text':    font-size(strip-unit($roles-base-font-size), rem),
+  'secondary-text':  font-size(16),
+  'system':          font-size(14),
+  'meta':            font-size(13),
+  'credit':          font-size(12)
+);
+
+
+//--------------------------| Line-heights
+
+$roles-typo-line-heights: (
+  'title': map-get($reg-line-heights, '120%'),
+  'text': map-get($reg-line-heights, '130%'),
+  'system': map-get($reg-line-heights, '140%') // for separators, system labels and meta data
+);
+
+
+//--------------------------| Font weights
+
+$roles-typo-font-weights: (
+
+);
+
+
+//--------------------------| Content
+
+$roles-typo-contents: (
+  'separator': '❖',
+  'required': '\2737'
+);

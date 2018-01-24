@@ -1,0 +1,9 @@
+// =========================| Roles: Offsets |========================= //
+
+
+
+$roles-offsets: (
+  'page': map-get($reg-offsets, '10'),
+  'header': map-get($reg-offsets, '10'),
+  'footer': map-get($reg-offsets, '10')
+);

@@ -1,0 +1,23 @@
+// =========================| Molecule: Social channels |========================= //
+
+
+
+.pm-social-channels {
+
+  //--------------------------| Variables
+
+  $min-width: map-get($reg-screens, 'min');
+  $offset: #{get-page-offset()}vw;
+
+
+  //--------------------------| Base
+
+  @include mq-device-holding-type('outpocket') {
+    .pa-social-icon {
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+
+
+} // .pm-social-channels

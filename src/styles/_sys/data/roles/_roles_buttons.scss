@@ -1,0 +1,16 @@
+// =========================| Roles: Buttons |========================= //
+
+
+
+//--------------------------| Types
+
+$roles-button-types: (
+  'default': (
+    'txt-color': map-get($reg-colors, 'white'),
+    'bgr-color': map-get($reg-backgrounds, 'bossanova')
+  ),
+  'primary': (
+    'txt-color': map-get($reg-colors, 'white'),
+    'bgr-color': map-get($reg-backgrounds, 'la-rioja')
+  )
+);

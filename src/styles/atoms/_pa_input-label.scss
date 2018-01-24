@@ -1,0 +1,40 @@
+// =========================| Atom: Input label |========================= //
+
+
+
+.pa-input-label {
+
+  //--------------------------| Variables
+
+  $font-size: map-get($roles-typo-font-sizes, 'system');
+  $text-color: map-get($roles-col-texts, 'system');
+
+
+  //--------------------------| Base
+
+  width: 100%;
+  font-size: $font-size;
+  color: $text-color;
+
+
+  //--------------------------| Required input
+
+  &.required {
+    position: relative;
+    padding-right: 2em;
+
+    &::before {
+      @include translateX(-100%);
+
+      position: absolute;
+      top: .1em;
+      right: 0;
+      width: .5em;
+      font-weight: map-get($reg-font-weights, 'bold');
+      color: map-get($roles-col-states, 'alert');
+      content: map-get($roles-typo-contents, 'required');
+    }
+  }
+
+
+} // .pa-input-label

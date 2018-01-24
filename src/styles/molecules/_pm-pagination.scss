@@ -1,0 +1,65 @@
+// =========================| Molecule: Pagination |========================= //
+
+
+
+.pm-pagination {
+
+  //--------------------------| Variables
+
+  $offset: .5em;
+  $font-face: unquote(map-get($reg-font-families, 'pp–serif'));
+  $font-size: map-get($roles-typo-font-sizes, 'system');
+  $current-bgr-color: map-get($roles-col-states, 'focused');
+  $current-txt-color: map-get($roles-col-texts, 'negative');
+
+
+  //--------------------------| Base
+
+  padding: 1.5em 0;
+  overflow: auto;
+  font: normal $font-size $font-face;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+
+
+  //--------------------------| Screen reader text
+
+  .screen-reader-text {
+    display: none;
+  }
+
+
+  //--------------------------| Items
+
+  .nav-links > * {
+    //@include border-radius(2em);
+
+    display: inline-block;
+    padding: .2em 1em;
+    margin: 0 $offset;
+  }
+
+
+  //--------------------------| States
+
+  .prev,
+  .next {
+    border-bottom-color: transparent;
+  }
+
+  // Current
+  .current {
+    color: $current-txt-color;
+    pointer-events: none;
+    background-color: $current-bgr-color;
+  }
+
+  // Previous
+  //.previouspostslink {}
+
+  // Next
+  //.nextpostslink {}
+
+
+} // .pm-pagination

@@ -1,0 +1,24 @@
+// =========================| Atom: Error title |========================= //
+
+
+
+.pa-title-error {
+
+  //--------------------------| Variables
+
+  $font-face: map-get($roles-typo-font-families, 'error');
+  $text-color: map-get($roles-col-states, 'alert');
+
+
+  //--------------------------| Base
+
+  @include typo-titles-base('error-title');
+
+  width: 100%;
+  font-family: $font-face;
+  font-weight: map-get($reg-font-weights, 'bold');
+  color: $text-color;
+  text-align: center;
+
+
+} // .pa-title-error

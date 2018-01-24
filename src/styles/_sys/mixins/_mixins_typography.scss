@@ -1,0 +1,84 @@
+// =========================| Mixins: Typography |========================= //
+
+
+
+//--------------------------| Font smoothing
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+
+//--------------------------| Text uppercase
+
+@mixin text-uppercase() {
+  text-transform: uppercase;
+  -moz-font-feature-settings: 'case';
+  -webkit-font-feature-settings: 'case';
+  font-feature-settings: 'case' on;
+}
+
+
+//--------------------------| Fluid size
+
+@mixin typo-fluid-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: get-progressive-calc($min-font-size, $max-font-size, $min-vw, $max-vw);
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+
+//--------------------------| Titles base
+
+@mixin typo-titles-base($type, $color: map-get($roles-col-texts, 'primary')) {
+  @extend %ph-typo-titles;
+
+  @include text-shadow(1px 1px 1px rgba($color, .2));
+
+  font-size: map-get($roles-typo-font-sizes, $type);
+}
+
+
+//--------------------------| Line heights
+
+@mixin typo-line-heights($type, $val) {
+  @include mq-device-holding-type('inpocket') {
+    $min-obj-size: $val * 100%;
+    $max-obj-size: ceil($val * 1.1538461538) * 100%;
+    $min-vw: map-get($reg-screens, 'min');
+    $max-vw: map-get($reg-breakpoints, 'xs') - 1;
+    $random-divider: 19.3;
+    $value: $val;
+
+    @if $type == 'text' {
+      $value: calc(#{$val}rem + #{strip-unit(($max-obj-size - $min-obj-size) / $random-divider)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    }
+
+    line-height: $value;
+  }
+
+  @include mq-device-holding-type('outpocket') {
+    line-height: $val * 1.15;
+  }
+}

@@ -1,0 +1,50 @@
+// =========================| Atom: Cover image |========================= //
+
+
+
+.pa-cover-image {
+
+  //--------------------------| Variables
+
+  $image-ratio: .5; // 2:1 (example: 2000 x 1000 px)
+  $bgr-color: map-get($roles-col-backgrounds, 'image-bgr');
+
+
+  //--------------------------| Base
+
+  @include border-v(1px solid map-get($reg-colors, 'dusty-gray'));
+
+  display: block;
+  width: 100%;
+
+
+  //--------------------------| Viewport
+
+  .cover-viewport {
+    @include border-v(1px solid map-get($reg-colors, 'white'));
+
+    position: relative;
+    display: block;
+    padding-top: 100% * $image-ratio;
+    overflow: hidden;
+    background-color: $bgr-color;
+  }
+
+
+  //--------------------------| Image
+
+  img {
+    @include translate(-50%, -50%);
+    @include box-sizing(content-box);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid map-get($reg-colors, 'white'); // fix 1px glitch in Chrome that reveals a thin line from the background
+  }
+
+
+} // .pa-cover-image

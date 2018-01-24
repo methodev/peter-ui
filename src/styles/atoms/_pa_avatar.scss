@@ -1,0 +1,38 @@
+// =========================| Atom: Avatar |========================= //
+
+
+
+.pa-avatar {
+
+  //--------------------------| Variables
+
+  $avatar-size: $roles-size-avatar;
+
+
+  //--------------------------| Base
+
+  @include border-radius(50%);
+
+  display: inline-block;
+  width: $avatar-size;
+  height: $avatar-size;
+  overflow: hidden;
+  background: url(data-uri('#{$core-path}/src/data-uri/no-avatar.svg')) no-repeat center;
+  background-size: 100% auto;
+
+
+  //--------------------------| Image
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  img:not([src]),
+  img[src=''] {
+    display: none;
+  }
+
+
+} // .pa-avatar

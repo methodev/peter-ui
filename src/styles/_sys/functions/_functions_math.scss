@@ -1,0 +1,13 @@
+// =========================| Functions: Math |========================= //
+
+
+
+//--------------------------| Progressive calc
+
+@function get-progressive-calc($min-obj-size, $max-obj-size, $min-vw: map-get($reg-screens, 'min'), $max-vw: map-get($reg-screens, 'max')) {
+  @return calc(#{$min-obj-size} + #{strip-unit($max-obj-size - $min-obj-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+}
+
+@function get-page-offset() {
+  @return map-get($roles-offsets, 'page') * 100 / map-get($reg-screens, 'min');
+}

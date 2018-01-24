@@ -1,0 +1,8 @@
+<h1 class="pa-title-error">
+  {{# title_error.hyperlink }}
+    <a href="{{ href }}">{{ title_error.text }}</a>
+  {{/ title_error.hyperlink }}
+  {{^ title_error.hyperlink }}
+    {{ title_error.text }}
+  {{/ title_error.hyperlink }}
+</h1>

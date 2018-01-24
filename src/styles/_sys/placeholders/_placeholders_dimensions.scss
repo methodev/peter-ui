@@ -1,0 +1,10 @@
+// =========================| Placeholders: Dimensions |========================= //
+
+
+
+//--------------------------| Text
+
+%ph-dimensions-document {
+  min-width: map-get($reg-screens, 'min');
+  min-height: 100vh;
+}

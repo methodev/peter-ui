@@ -1,0 +1,8 @@
+<h2 class="pa-title-secondary">
+  {{# title_secondary.hyperlink }}
+    <a href="{{ href }}">{{ title_secondary.text }}</a>
+  {{/ title_secondary.hyperlink }}
+  {{^ title_secondary.hyperlink }}
+    {{ title_secondary.text }}
+  {{/ title_secondary.hyperlink }}
+</h2>

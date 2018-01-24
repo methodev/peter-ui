@@ -1,0 +1,80 @@
+// =========================| Utility classes: Typography |========================= //
+
+
+
+//--------------------------| Faces
+
+
+
+
+//--------------------------| Sizes
+
+
+
+
+//--------------------------| Line heights
+
+
+
+
+//--------------------------| Weights
+
+
+
+
+//--------------------------| Styles
+
+.ut-typo-capitalize {
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+
+//--------------------------| Alignments
+
+.ut-typo-tac {
+  text-align: center;
+}
+
+.ut-typo-tar {
+  text-align: right;
+}
+
+.ut-typo-tal {
+  text-align: left;
+}
+
+.ut-typo-tac-mobile {
+  @include mq-device-holding-type('inpocket') {
+    text-align: center;
+  }
+}
+
+
+//--------------------------| Wrap
+
+.ut-typo-nowrap {
+  white-space: nowrap;
+}
+
+
+//--------------------------| Pseudo content
+
+.ut-typo-read-more {
+  &::before {
+    content: 'Прочети още';
+  }
+}
+
+.ut-typo-arrow-l {
+  &::before {
+    content: '← ';
+  }
+}
+
+.ut-typo-arrow-r {
+  &::after {
+    content: ' →';
+  }
+}

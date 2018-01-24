@@ -1,0 +1,149 @@
+// =========================| Organism: Foot navigation |========================= //
+
+
+
+.po-foot-nav {
+
+  //--------------------------| Data
+
+  $links-categories: (
+    'most-read': map-get($reg-colors, 'bittersweet'),
+    'tags': map-get($reg-colors, 'golden-tainoi'),
+    'headings': light(map-get($reg-colors, 'la-rioja'), 20%)
+  );
+
+
+  //--------------------------| Variables
+
+  $bgr-color: map-get($reg-backgrounds, 'mine-shaft');
+  $text-color: map-get($roles-col-texts, 'negative');
+  $link-color: $text-color;
+  $offset: #{get-page-offset()}vw;
+
+
+  //--------------------------| Base
+
+  @include mq-screen-size-type('desktop') {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  padding: $offset;
+  color: $text-color;
+  background-color: $bgr-color;
+
+
+  //--------------------------| Common
+
+  a {
+    color: $link-color;
+    border-bottom-color: rgba($link-color, .3);
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+
+  //--------------------------| Links
+
+  > .links {
+    //@include mq-screen-size-type('desktop') {
+    //  margin: 0 auto;
+    //}
+
+    @include mq-device-holding-type('inpocket') {
+      flex-direction: column-reverse;
+      text-align: center;
+
+      .category {
+        width: 100%;
+
+        & + .category {
+          margin: 0 auto calc(#{$offset} * 2);
+        }
+      }
+
+      .pm-links-list {
+        max-width: map-get($reg-screens, 'min');
+        margin: 0 auto;
+      }
+
+      .pa-title-system {
+        display: block;
+        padding: calc(#{$offset} / 2) 0;
+      }
+    }
+
+    @include mq-device-holding-type('outpocket') {
+      .category {
+        & + .category {
+          padding-left: $offset;
+          margin-left: $offset;
+          border-left: 1px solid rgba(map-get($reg-colors, 'white'), .1);
+        }
+      }
+    }
+
+    display: flex;
+    line-height: map-get($reg-line-heights, '110%');
+
+    @for $cat from 1 through length($links-categories) {
+      $name: nth(nth($links-categories, $cat), 1);
+      $value: map-get($links-categories, $name);
+
+      .category[data-type='#{$name}'] {
+        @include mq-device-holding-type('inpocket') {
+          .pa-title-system {
+            @include text-shadow(none);
+
+            color: map-get($roles-col-texts, 'primary');
+            background-color: $value;
+          }
+        }
+
+        @include mq-device-holding-type('outpocket') {
+          .pa-title-system {
+            color: $value;
+          }
+        }
+      }
+    }
+
+    .pa-title-system {
+      margin-bottom: .5em;
+      white-space: nowrap;
+
+      &::after {
+        content: ':';
+      }
+    }
+
+    a {
+      font-size: map-get($roles-typo-font-sizes, 'system');
+    }
+
+    //@include mq-tablet-breakpoint('above') {}
+  }
+
+
+  //--------------------------| Signature
+
+  //> .signature {
+  //  @include mq-screen-size-type('mobile') {
+  //    margin-top: calc(#{$offset} * 4);
+  //    text-align: center;
+  //  }
+  //
+  //  @include mq-screen-size-type('desktop') {
+  //    align-self: flex-end;
+  //    width: $signature-width;
+  //    margin-right: calc(#{$offset / 2.4} * -1);
+  //    margin-bottom: calc(#{$offset / 1.2} * -1);
+  //  }
+  //
+  //  text-align: right;
+  //}
+
+
+} // .po-foot-nav

@@ -1,0 +1,8 @@
+<div class="timestamp pa-meta">
+    {{# meta.hyperlink }}
+        <a href="{{ href }}">{{ meta.text }}</a>
+    {{/ meta.hyperlink }}
+    {{^ meta.hyperlink }}
+        {{ meta.text }}
+    {{/ meta.hyperlink }}
+</div>

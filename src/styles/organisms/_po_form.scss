@@ -1,0 +1,50 @@
+// =========================| Organism: Form |========================= //
+
+
+
+.po-form {
+
+  //--------------------------| Variables
+
+  $offset: 1em;
+
+
+  //--------------------------| Base
+
+  display: block;
+
+
+  //--------------------------| Children
+
+  > *:not(:first-child) {
+    margin-top: $offset;
+  }
+
+
+  //--------------------------| Input scope
+
+  //.pm-input-scope {
+  //  & + .pm-input-scope {
+  //    margin-top: $offset;
+  //  }
+  //}
+
+
+  //--------------------------| Submit area
+
+  @include mq-device-holding-type('inpocket') {
+    .submit-area {
+      display: flex;
+
+      > *:not(:first-child) {
+        margin-left: $offset;
+      }
+    }
+
+    [type='submit'] {
+      flex: 1;
+    }
+  }
+
+
+} // .po-form

@@ -1,0 +1,106 @@
+// =========================| Mixins: Media Queries |========================= //
+
+
+
+//--------------------------| Variables
+
+$bp-xxxl: map-get($reg-breakpoints, 'xxxl');
+$bp-xxl:  map-get($reg-breakpoints,  'xxl');
+$bp-xl:   map-get($reg-breakpoints,   'xl');
+$bp-l:    map-get($reg-breakpoints,    'l');
+$bp-m:    map-get($reg-breakpoints,    'm');
+$bp-s:    map-get($reg-breakpoints,    's');
+$bp-xs:   map-get($reg-breakpoints,   'xs');
+
+
+//--------------------------| Pocket device or not    ( 320px <-> 575px   /   576px <-> 1920px )
+
+@mixin mq-device-holding-type($type) {
+  @if $type == 'inpocket' {
+    @media (max-width: $bp-xs - 1) {
+      @content;
+    }
+  }
+  @else if $type == 'outpocket' {
+    @media (min-width: $bp-xs) {
+      @content;
+    }
+  }
+}
+
+
+//--------------------------| Mobile screen or not    ( 320px <-> 991px   /   992px <-> 1920px )
+
+@mixin mq-screen-size-type($type) {
+  @if $type == 'mobile' {
+    @media (max-width: $bp-m - 1) {
+      @content;
+    }
+  }
+  @else if $type == 'desktop' {
+    @media (min-width: $bp-m) {
+      @content;
+    }
+  }
+}
+
+
+//--------------------------| Above tablet or not    ( 320px <-> 767px   /   768px <-> 1920px )
+
+@mixin mq-tablet-breakpoint($type) {
+  @if $type == 'below' {
+    @media (max-width: $bp-s - 1) {
+      @content;
+    }
+  }
+  @else if $type == 'above' {
+    @media (min-width: $bp-s) {
+      @content;
+    }
+  }
+}
+
+
+//--------------------------| L
+
+@mixin mq-m() {
+  @media (min-width: $bp-m) {
+    @content;
+  }
+}
+
+
+//--------------------------| L
+
+@mixin mq-l() {
+  @media (min-width: $bp-l) {
+    @content;
+  }
+}
+
+
+//--------------------------| XL
+
+@mixin mq-xl() {
+  @media (min-width: $bp-xl) {
+    @content;
+  }
+}
+
+
+//--------------------------| XXL
+
+@mixin mq-xxl() {
+  @media (min-width: $bp-xxl) {
+    @content;
+  }
+}
+
+
+//--------------------------| XXXL
+
+@mixin mq-xxxl() {
+  @media (min-width: $bp-xxxl) {
+    @content;
+  }
+}

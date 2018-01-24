@@ -1,0 +1,40 @@
+// =========================| Registries: Colors |========================= //
+
+
+
+$reg-colors: (
+
+  //--------------------------| Black & White
+
+  'black':         #000,
+  'white':         #fff,
+
+
+  //--------------------------| Gray
+
+  'mine-shaft':    #333,
+  'dove-gray':     #666,
+  'dusty-gray':    #999,
+  'silver':        #ccc,
+
+
+  //--------------------------| Social
+
+  'facebook':      #395185,
+  'twitter':       #55acee,
+
+
+  //--------------------------| Thematic
+
+  'navy-blue':     #009,
+  'governor-bay':  #33c,    // hover link
+  'bossanova':     #5b2869, // visited link
+  'red-berry':     #900,    // active link
+  'bittersweet':   #f66,
+  'golden-tainoi': #fc6,
+  'la-rioja':      #a0c518, // logo
+  'black-squeeze': #e7f0f7,
+  'alabaster':     #f1f1f1, // background color
+  'note':          #fffffa  // comments list
+
+);

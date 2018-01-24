@@ -1,0 +1,30 @@
+// =========================| Molecule: Input scope |========================= //
+
+
+
+.pm-input-scope {
+
+  //--------------------------| Variables
+
+
+
+
+  //--------------------------| Base
+
+  display: flex;
+  flex-wrap: wrap;
+
+
+  //--------------------------| Input label
+
+  //> .pa-input-label {}
+
+
+  //--------------------------| Input area
+
+  > .input-area {
+    width: 100%;
+  }
+
+
+} // .pm-input-scope

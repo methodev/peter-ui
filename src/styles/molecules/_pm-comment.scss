@@ -1,0 +1,60 @@
+// =========================| Molecule: Comment |========================= //
+
+
+
+.pm-comment {
+
+  //--------------------------| Variables
+
+  $offset: .5em;
+  $comment-text-color: map-get($roles-col-texts, 'secondary');
+
+
+  //--------------------------| Base
+
+  font-size: .9rem;
+
+
+  //--------------------------| User head
+
+  .pm-user-head {
+    > .data {
+      margin-bottom: $offset;
+      border-bottom: 1px dotted map-get($reg-colors, 'silver');
+    }
+  }
+
+
+  //--------------------------| Moderation
+
+
+  .comment-awaiting-moderation {
+    $col-warning: map-get($roles-col-states, 'warning');
+
+    @include border-h(3px double $col-warning);
+
+    padding: 0 $offset;
+    margin: $offset 0 $offset $roles-size-avatar + $offset;
+    font-style: italic;
+    background-color: light($col-warning, 75%);
+
+    span {
+      font-size: .8em;
+    }
+  }
+
+
+  //--------------------------| Content
+
+  .content {
+    @include mq-device-holding-type('inpocket') {
+      line-height: map-get($roles-typo-line-heights, 'text');
+    }
+
+    padding-left: $roles-size-avatar + $offset;
+    font-style: italic;
+    color: $comment-text-color;
+  }
+
+
+} // .pm-comment

@@ -1,0 +1,62 @@
+{
+  "paths": {
+    "source": {
+      "root": "./src/patternlab/",
+      "patterns": "./src/patternlab/patterns/",
+      "data": "./src/patternlab/data/",
+      "meta": "./src/patternlab/meta/",
+      "annotations": "./src/patternlab/annotations/",
+      "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
+      "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/"
+    },
+    "public": {
+      "root": "./dist/",
+      "patterns": "./dist/patterns/",
+      "data": "./dist/styleguide/data/",
+      "annotations": "./dist/annotations/",
+      "styleguide": "./dist/styleguide/",
+      "css": "./dist/css/",
+      "fonts": "./dist/fonts/"
+    }
+  },
+  "styleGuideExcludes": [
+    "templates",
+    "pages"
+  ],
+  "defaultPattern": "all",
+  "cleanPublic": true,
+  "patternExtension": "mustache",
+  "ignored-extensions": ["scss", "DS_Store", "less"],
+  "ignored-directories": ["scss"],
+  "debug": false,
+  "ishControlsHide": {
+    "s": true,
+    "m": true,
+    "l": true,
+    "full": false,
+    "random": false,
+    "disco": true,
+    "hay": true,
+    "mqs": false,
+    "find": false,
+    "views-all": false,
+    "views-annotations": false,
+    "views-code": false,
+    "views-new": true,
+    "tools-all": false,
+    "tools-docs": true
+  },
+  "ishMinimum": "320",
+  "ishMaximum": "1920",
+  "patternStateCascade": ["inprogress", "inreview", "complete"],
+  "patternExportPatternPartials": [],
+  "patternExportDirectory": "./pattern_exports/",
+  "baseurl": "",
+  "cacheBust": true,
+  "starterkitSubDir": "dist",
+  "outputFileSuffixes": {
+    "rendered": "",
+    "rawTemplate": "",
+    "markupOnly": ".markup-only"
+  }
+}

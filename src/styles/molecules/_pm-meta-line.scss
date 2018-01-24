@@ -1,0 +1,45 @@
+// =========================| Molecule: Meta line |========================= //
+
+
+
+.pm-meta-line {
+
+  //--------------------------| Variables
+
+  $offset-inner: 1em;
+
+
+  //--------------------------| Base
+
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+
+
+  //--------------------------| Children
+
+  //> * {
+  //  @include ellipsis();
+  //}
+
+  > *:not(:first-child):not(:only-child) {
+    margin-left: $offset-inner;
+  }
+
+  > *:only-child {
+    flex: 1;
+    text-align: right;
+  }
+
+  [data-role='more'] a {
+    &::before {
+      content: 'Още от рубриката „';
+    }
+
+    &::after {
+      content: '“';
+    }
+  }
+
+
+} // .pm-meta-line

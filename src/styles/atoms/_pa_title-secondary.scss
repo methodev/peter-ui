@@ -1,0 +1,19 @@
+// =========================| Atom: Secondary title |========================= //
+
+
+
+.pa-title-secondary {
+
+  //--------------------------| Variables
+
+  $secondary-title-color: map-get($roles-col-texts, 'secondary');
+
+
+  //--------------------------| Base
+
+  @include typo-titles-base('secondary-title', $secondary-title-color);
+
+  color: $secondary-title-color;
+
+
+} // .pa-title-secondary

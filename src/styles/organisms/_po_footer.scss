@@ -1,0 +1,31 @@
+// =========================| Organism: Footer |========================= //
+
+
+
+.po-footer {
+
+  //--------------------------| Variables
+
+  $min-offset: map-get($roles-offsets, 'footer');
+  $max-offset: $min-offset * 2;
+  $offset: get-progressive-calc($min-offset, $max-offset);
+
+
+  //--------------------------| Base
+
+  @include user-select(none);
+
+  margin-bottom: $offset;
+  cursor: default;
+
+
+  //--------------------------| Children
+
+  > .wrp-page > * {
+    &:not(:first-child) {
+      margin-top: #{get-page-offset()}vw;
+    }
+  }
+
+
+} // .po-footer
