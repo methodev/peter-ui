@@ -51,6 +51,8 @@ $roles-col-backgrounds: (
 //--------------------------| Borders
 
 $roles-col-borders: (
-  'separator': map-get($reg-colors, 'silver'),
-  'input': map-get($reg-colors, 'silver')
+  'foot-line': map-get($reg-colors, 'la-rioja'),
+  'input':     map-get($reg-colors, 'silver'),
+  'quote':     map-get($reg-colors, 'la-rioja'),
+  'separator': map-get($reg-colors, 'silver')
 );

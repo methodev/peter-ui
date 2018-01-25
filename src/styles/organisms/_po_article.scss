@@ -52,7 +52,7 @@
 
   .foot {
     padding-top: $offset-inner;
-    border-top: 1px solid map-get($reg-colors, 'la-rioja');
+    border-top: 1px solid map-get($roles-col-borders, 'foot-line');
   }
 
 
