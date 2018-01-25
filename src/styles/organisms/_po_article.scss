@@ -39,6 +39,14 @@
     margin: $secondary-title-offset;
   }
 
+  blockquote {
+    padding-left: $offset-inner;
+    font-size: .9em;
+    font-style: italic;
+    color: map-get($roles-col-texts, 'secondary');
+    border-left: 1px solid map-get($roles-col-borders, 'quote');
+  }
+
 
   //--------------------------| Foot
 
