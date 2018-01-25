@@ -98,3 +98,20 @@ input[type='submit'],
 button {
   cursor: pointer;
 }
+
+
+//--------------------------| Print
+
+@media print {
+  * {
+    @include text-shadow(none !important);
+  }
+
+  body {
+    background: map-get($roles-col-backgrounds, 'paper');
+  }
+
+  #layout-stage {
+    display: block;
+  }
+}

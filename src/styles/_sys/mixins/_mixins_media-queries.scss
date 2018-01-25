@@ -104,3 +104,12 @@ $bp-xs:   map-get($reg-breakpoints,   'xs');
     @content;
   }
 }
+
+
+//--------------------------| Print
+
+@mixin mq-print() {
+  @media print {
+    @content;
+  }
+}

@@ -14,4 +14,13 @@
   @include typo-titles-base('system-title');
 
 
+  //--------------------------| Print
+
+  & {
+    @include mq-print() {
+      display: none;
+    }
+  }
+
+
 } // .pa-title-system

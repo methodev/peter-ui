@@ -48,4 +48,16 @@
   }
 
 
+  //--------------------------| Print
+
+  & {
+    @include mq-print() {
+      .sharedaddy,
+      #respond {
+        display: none;
+      }
+    }
+  }
+
+
 } // .po-article
