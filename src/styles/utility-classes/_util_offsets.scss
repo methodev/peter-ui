@@ -16,6 +16,9 @@
   @include padding-h(#{get-page-offset()}vw)
 }
 
+
+//--------------------------| List items
+
 .ut-ofs-list-items {
   padding: .5em 0;
 }
