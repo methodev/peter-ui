@@ -1,3 +1,18 @@
+<a name="1.2.0"></a>
+# 1.2.0 (2018-01-26)
+
+
+### Bug Fixes
+
+* **Layout:** Improved layout offsets ([d1a66ae](https://github.com/martinmethod/peter-ui/commit/d1a66ae))
+
+
+### Features
+
+* **Resumes list:** New look ([52cfd36](https://github.com/martinmethod/peter-ui/commit/52cfd36))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2018-01-26)
 
