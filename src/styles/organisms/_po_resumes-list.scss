@@ -33,7 +33,7 @@
         @include translate(-50%, 50%);
 
         position: absolute;
-        bottom: -#{$offset / 2};
+        bottom: calc(-#{($offset / 2)} - 3px);
         left: 50%;
         padding: 0;
       }
