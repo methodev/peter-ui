@@ -73,6 +73,25 @@
     background-color: map-get($reg-colors, 'black-squeeze');
   }
 
+  .sharedaddy {
+    margin-top: 2em;
+    text-align: center;
+
+    .sd-title {
+      font-weight: normal;
+    }
+
+    .sd-content {
+      li[class*='share-'] {
+        margin: 0 $offset-inner;
+      }
+
+      .share-end {
+        display: none;
+      }
+    }
+  }
+
 
   //--------------------------| Foot
 
