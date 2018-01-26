@@ -23,7 +23,8 @@
   }
 
   > *:last-child:not(:only-child),
-  > *:only-child[data-role='more'] {
+  > *:only-child[data-role='more'],
+  > *:only-child[data-role='author']{
     flex: 1;
     text-align: right;
   }

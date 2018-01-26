@@ -4,6 +4,7 @@
 
 $reg-shadows: (
 
-  'light-dim': 1px 1px 2px map-get($reg-colors, 'silver')
+  'light-sharp': 3px 3px 0 -1px rgba(map-get($reg-colors, 'black'), .05),
+  'dark-sharp':  3px 3px 0 rgba(map-get($reg-colors, 'mine-shaft'), .3)
 
 );
