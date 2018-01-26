@@ -31,8 +31,8 @@ $roles-col-texts: (
 $roles-col-links: (
   'link':      map-get($reg-colors, 'navy-blue'),
   'hover':     map-get($reg-colors, 'governor-bay'),
-  'active':    map-get($reg-colors, 'red-berry'),
-  'visited':   map-get($reg-colors, 'bossanova')
+  'active':    map-get($reg-colors, 'red-berry')
+  //'visited':   map-get($reg-colors, 'bossanova')
 );
 
 

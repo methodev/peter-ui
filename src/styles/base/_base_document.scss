@@ -244,24 +244,30 @@ sup { top: -.5em; }
 //
 
 a {
+  $col: map-get($roles-col-links, 'link');
+
   @include transition(all map-get($roles-transitions, 'rainbow') ease-in-out);
+
+  color: $col;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+  border-bottom-color: rgba($col, .3);
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
   @for $c from 1 through length($roles-col-links) {
     $name: nth(nth($roles-col-links, $c), 1);
     $val: map-get($roles-col-links, $name);
 
-    &:#{$name} {
-      color: $val;
-      border-bottom-color: rgba($val, .3);
+    @if $name != 'link' {
+      &:#{$name} {
+        color: $val;
+        border-bottom-color: rgba($val, .3);
+      }
     }
   }
-
-  text-decoration: none;
-  cursor: pointer;
-  background-color: transparent; // Remove the gray background on active links in IE 10.
-  border-bottom-style: dashed;
-  border-bottom-width: 1px;
-  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
   &:hover {
     border-bottom-color: transparent;
