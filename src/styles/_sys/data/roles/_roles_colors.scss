@@ -40,6 +40,7 @@ $roles-col-links: (
 
 $roles-col-backgrounds: (
   'paper':     map-get($reg-backgrounds, 'white'),
+  'old-paper': map-get($reg-backgrounds, 'dirtywhite'),
   'box':       dark(map-get($reg-backgrounds, 'alabaster'), 10%),
   'code':       map-get($reg-backgrounds, 'alabaster'),
   'headline':  map-get($reg-backgrounds, 'mine-shaft'),
