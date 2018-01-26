@@ -442,4 +442,13 @@
   }
 
 
+  //--------------------------| Print
+
+  & {
+    @include mq-print() {
+      display: none;
+    }
+  }
+
+
 } // .po-head-nav

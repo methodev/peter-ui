@@ -18,27 +18,18 @@
 
   //--------------------------| Children
 
-  //> * {
-  //  @include ellipsis();
-  //}
-
   > *:not(:first-child):not(:only-child) {
     margin-left: $offset-inner;
   }
 
-  > *:only-child {
+  > *:last-child:not(:only-child),
+  > *:only-child[data-role='more'] {
     flex: 1;
     text-align: right;
   }
 
-  [data-role='more'] a {
-    &::before {
-      content: 'Още от рубриката „';
-    }
-
-    &::after {
-      content: '“';
-    }
+  [data-role='comments'] a {
+    @include ellipsis();
   }
 
 

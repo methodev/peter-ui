@@ -61,7 +61,16 @@ $bp-xs:   map-get($reg-breakpoints,   'xs');
 }
 
 
-//--------------------------| L
+//--------------------------| S
+
+@mixin mq-s() {
+  @media (min-width: $bp-s) {
+    @content;
+  }
+}
+
+
+//--------------------------| M
 
 @mixin mq-m() {
   @media (min-width: $bp-m) {
@@ -101,6 +110,15 @@ $bp-xs:   map-get($reg-breakpoints,   'xs');
 
 @mixin mq-xxxl() {
   @media (min-width: $bp-xxxl) {
+    @content;
+  }
+}
+
+
+//--------------------------| Print
+
+@mixin mq-print() {
+  @media print {
     @content;
   }
 }

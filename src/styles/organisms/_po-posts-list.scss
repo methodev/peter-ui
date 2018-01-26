@@ -43,5 +43,14 @@
   flex-wrap: wrap;
 
 
+  //--------------------------| Print
+
+  & {
+    @include mq-print() {
+      display: block;
+    }
+  }
+
+
 
 } // .po-posts-list

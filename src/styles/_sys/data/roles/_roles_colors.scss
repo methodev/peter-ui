@@ -21,7 +21,8 @@ $roles-col-texts: (
   'system':    map-get($reg-colors, 'dove-gray'),
   'meta':      map-get($reg-colors, 'dove-gray'),
   'credit':    map-get($reg-colors, 'dusty-gray'),
-  'negative':  map-get($reg-colors, 'white')
+  'negative':  map-get($reg-colors, 'white'),
+  'code':      map-get($reg-colors, 'facebook')
 );
 
 
@@ -40,6 +41,7 @@ $roles-col-links: (
 $roles-col-backgrounds: (
   'paper':     map-get($reg-backgrounds, 'white'),
   'box':       dark(map-get($reg-backgrounds, 'alabaster'), 10%),
+  'code':       map-get($reg-backgrounds, 'alabaster'),
   'headline':  map-get($reg-backgrounds, 'mine-shaft'),
   'theme':     map-get($reg-backgrounds, 'la-rioja'),
   'page':      map-get($reg-backgrounds, 'alabaster'),
@@ -51,6 +53,8 @@ $roles-col-backgrounds: (
 //--------------------------| Borders
 
 $roles-col-borders: (
-  'separator': map-get($reg-colors, 'silver'),
-  'input': map-get($reg-colors, 'silver')
+  'foot-line': map-get($reg-colors, 'la-rioja'),
+  'input':     map-get($reg-colors, 'silver'),
+  'quote':     map-get($reg-colors, 'la-rioja'),
+  'separator': map-get($reg-colors, 'silver')
 );

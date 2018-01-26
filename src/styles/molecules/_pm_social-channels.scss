@@ -20,4 +20,11 @@
   }
 
 
+  //--------------------------| Print
+
+  @include mq-print() {
+    display: none;
+  }
+
+
 } // .pm-social-channels
