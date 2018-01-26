@@ -9,9 +9,9 @@ $util-panels: (
     'background': map-get($roles-col-backgrounds, 'paper'),
     'shadow': map-get($roles-shadows, 'panel')
   ),
-  'board': (
-    'background': map-get($roles-col-backgrounds, 'box'),
-    'shadow': none
+  'airbox': (
+    'background': map-get($roles-col-backgrounds, 'old-paper'),
+    'shadow': 0 0 2em -1em
   )
 );
 
