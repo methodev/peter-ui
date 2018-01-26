@@ -98,4 +98,20 @@
   }
 
 
+  //--------------------------| Print
+
+  & {
+    @include mq-print() {
+      .headline {
+        display: block;
+        text-align: center;
+      }
+
+      .pa-title-site {
+        display: block !important;
+      }
+    }
+  }
+
+
 } // .po-header

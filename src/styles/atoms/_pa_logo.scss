@@ -33,4 +33,13 @@
   }
 
 
+  //--------------------------| Print
+
+  & {
+    @include mq-print() {
+      display: none;
+    }
+  }
+
+
 } // .pa-logo

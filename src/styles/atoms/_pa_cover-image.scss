@@ -47,4 +47,20 @@
   }
 
 
+  //--------------------------| Print
+
+  @media print {
+    page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-inside: avoid; /* or 'auto' */
+
+    img {
+      display: inline-block;
+      page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+      page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+      page-break-inside: avoid; /* or 'auto' */
+    }
+  }
+
+
 } // .pa-cover-image

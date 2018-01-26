@@ -78,4 +78,13 @@
   //a {}
 
 
+  //--------------------------| Print
+
+  & {
+    @include mq-print() {
+      display: none;
+    }
+  }
+
+
 } // .pm-links-list

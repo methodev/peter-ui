@@ -20,4 +20,13 @@
   background-color: $topline-bgr-color;
 
 
+  //--------------------------| Print
+
+  & {
+    @include mq-print() {
+      display: none;
+    }
+  }
+
+
 } // .pa-topline

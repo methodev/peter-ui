@@ -54,7 +54,7 @@
 @mixin typo-titles-base($type, $color: map-get($roles-col-texts, 'primary')) {
   @extend %ph-typo-titles;
 
-  @include text-shadow(1px 1px 1px rgba($color, .2));
+  //@include text-shadow(1px 1px 0 light($color, 85%));
 
   font-size: map-get($roles-typo-font-sizes, $type);
 }
