@@ -22,7 +22,7 @@
 
   //--------------------------| Head
 
-
+  //> .head {}
 
 
   //--------------------------| Body
@@ -63,7 +63,7 @@
 
   //--------------------------| Foot
 
-  .foot {
+  > .foot {
     padding-top: $offset-inner;
     border-top: 1px solid map-get($roles-col-borders, 'foot-line');
   }
