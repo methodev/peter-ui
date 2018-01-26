@@ -6,7 +6,7 @@
 
   //--------------------------| Variables
 
-  $secondary-title-offset: 1.5em 0 .6em;
+  $title-offset: 1.5em 0 .6em;
   $offset: #{get-page-offset()}vw;
   $offset-inner: .5em;
 
@@ -33,10 +33,23 @@
         margin-bottom: 0;
       }
     }
-  }
 
-  .pa-title-secondary {
-    margin: $secondary-title-offset;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: $title-offset;
+    }
+
+    $headings: 6;
+
+    @for $h from 1 through $headings {
+      h#{$h} {
+        font-size: #{(($headings + 1) - ($h * ($headings * .1))) * .2}em;
+      }
+    }
   }
 
   blockquote {
