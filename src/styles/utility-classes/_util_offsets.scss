@@ -8,6 +8,17 @@
   padding: 1em #{get-page-offset()}vw;
 }
 
+.ut-ofs-section-top {
+  padding-top: 1em;
+}
+
+.ut-ofs-section-h {
+  @include padding-h(#{get-page-offset()}vw)
+}
+
+
+//--------------------------| List items
+
 .ut-ofs-list-items {
   padding: .5em 0;
 }

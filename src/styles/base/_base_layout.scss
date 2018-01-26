@@ -6,7 +6,8 @@
 
 $layout-bgr-color: map-get($roles-col-backgrounds, 'page');
 $layout-bgr-image: map-get($reg-gradients, 'linear-white-to-gray');
-$offset: #{get-page-offset()}vw;
+$offset-vw: #{get-page-offset()}vw;
+$offset-rem: 2.726rem;
 
 
 //--------------------------| Body
@@ -35,25 +36,23 @@ body {
 
 #layout-main {
   flex: 1;
-  margin: #{get-page-offset()}vw 0;
+  margin: $offset-vw 0 $offset-rem;
 }
 
 
 //--------------------------| Grid
 
 @at-root {
-  $offset: #{get-page-offset()}vw;
-
   .container {
     max-width: none;
-    padding: 0 calc((#{$offset} / 2) * -1);
+    padding: 0 calc((#{$offset-vw} / 2) * -1);
   }
 
   .row:not(.no-gutters) {
-    @include margin-h(calc((#{$offset} / 2) * -1));
+    @include margin-h(calc((#{$offset-vw} / 2) * -1));
 
     [class*='col'] {
-      @include padding-h(calc(#{$offset} / 2));
+      @include padding-h(calc(#{$offset-vw} / 2));
     }
   }
 }
@@ -63,7 +62,7 @@ body {
 
 .tmpl-section {
   & + .tmpl-section {
-    margin-top: $offset;
+    margin-top: 2.726em;
   }
 }
 
