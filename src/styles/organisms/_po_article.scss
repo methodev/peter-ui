@@ -47,6 +47,19 @@
     border-left: 1px solid map-get($roles-col-borders, 'quote');
   }
 
+  pre {
+    $col-pre: map-get($roles-col-texts, 'code');
+
+    @include border-h(3px double $col-pre);
+
+    padding: $offset-inner;
+    font-size: .8em;
+    line-height: normal;
+    color: $col-pre;
+    white-space: pre-wrap;
+    background-color: map-get($reg-colors, 'black-squeeze');
+  }
+
 
   //--------------------------| Foot
 
