@@ -6,7 +6,7 @@
 
   //--------------------------| Variables
 
-
+  $offset: 3rem;
 
 
   //--------------------------| Base
@@ -14,10 +14,30 @@
 
 
 
+  //--------------------------| Resume
+
+  //.po-resume {}
+
+
   //--------------------------| Seaparator
 
   > * {
     @include separator();
+
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: $offset;
+
+      &::after {
+        @include translate(-50%, 50%);
+
+        position: absolute;
+        bottom: -#{$offset / 2};
+        left: 50%;
+        padding: 0;
+      }
+    }
   }
 
 
