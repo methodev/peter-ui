@@ -1,3 +1,18 @@
+<a name="1.3.0"></a>
+# 1.3.0 (2018-01-26)
+
+
+### Bug Fixes
+
+* **Panels:** Improved shadow of Airbox panel ([eccff5a](https://github.com/martinmethod/peter-ui/commit/eccff5a))
+
+
+### Features
+
+* **Layout:** Smoother gradient ([7e71241](https://github.com/martinmethod/peter-ui/commit/7e71241))
+
+
+
 <a name="1.2.0"></a>
 # 1.2.0 (2018-01-26)
 
