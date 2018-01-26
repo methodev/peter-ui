@@ -154,7 +154,7 @@
       $min-width: strip-unit($width) * map-get($reg-screens, 'min') / 100;
 
       @include transition(all map-get($roles-transitions, 'slide') ease-in-out);
-      @include box-shadow(rgba(map-get($reg-colors, 'mine-shaft'), .3) 3px 3px 0);
+      @include box-shadow(map-get($roles-shadows, 'mobile-panel'));
 
       position: fixed;
       top: 0;

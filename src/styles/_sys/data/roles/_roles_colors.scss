@@ -31,8 +31,8 @@ $roles-col-texts: (
 $roles-col-links: (
   'link':      map-get($reg-colors, 'navy-blue'),
   'hover':     map-get($reg-colors, 'governor-bay'),
-  'active':    map-get($reg-colors, 'red-berry'),
-  'visited':   map-get($reg-colors, 'bossanova')
+  'active':    map-get($reg-colors, 'red-berry')
+  //'visited':   map-get($reg-colors, 'bossanova')
 );
 
 
@@ -40,9 +40,9 @@ $roles-col-links: (
 
 $roles-col-backgrounds: (
   'paper':     map-get($reg-backgrounds, 'white'),
-  'old-paper': map-get($reg-backgrounds, 'dirtywhite'),
+  'note':      map-get($reg-backgrounds, 'note'),
   'box':       dark(map-get($reg-backgrounds, 'alabaster'), 10%),
-  'code':       map-get($reg-backgrounds, 'alabaster'),
+  'code':      map-get($reg-backgrounds, 'alabaster'),
   'headline':  map-get($reg-backgrounds, 'mine-shaft'),
   'theme':     map-get($reg-backgrounds, 'la-rioja'),
   'page':      map-get($reg-backgrounds, 'alabaster'),

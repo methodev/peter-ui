@@ -5,5 +5,6 @@
 //--------------------------| States
 
 $roles-shadows: (
-  'panel': map-get($reg-shadows, 'light-dim')
+  'panel': map-get($reg-shadows, 'light-sharp'),
+  'mobile-panel': map-get($reg-shadows, 'dark-sharp')
 );
