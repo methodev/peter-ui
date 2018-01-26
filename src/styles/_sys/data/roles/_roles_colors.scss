@@ -41,6 +41,7 @@ $roles-col-links: (
 $roles-col-backgrounds: (
   'paper':     map-get($reg-backgrounds, 'white'),
   'box':       dark(map-get($reg-backgrounds, 'alabaster'), 10%),
+  'code':       map-get($reg-backgrounds, 'alabaster'),
   'headline':  map-get($reg-backgrounds, 'mine-shaft'),
   'theme':     map-get($reg-backgrounds, 'la-rioja'),
   'page':      map-get($reg-backgrounds, 'alabaster'),
