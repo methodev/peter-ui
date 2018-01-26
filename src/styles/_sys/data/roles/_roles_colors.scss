@@ -21,7 +21,8 @@ $roles-col-texts: (
   'system':    map-get($reg-colors, 'dove-gray'),
   'meta':      map-get($reg-colors, 'dove-gray'),
   'credit':    map-get($reg-colors, 'dusty-gray'),
-  'negative':  map-get($reg-colors, 'white')
+  'negative':  map-get($reg-colors, 'white'),
+  'code':      map-get($reg-colors, 'facebook')
 );
 
 
