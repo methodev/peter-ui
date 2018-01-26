@@ -11,7 +11,7 @@ $util-panels: (
   ),
   'airbox': (
     'background': map-get($roles-col-backgrounds, 'old-paper'),
-    'shadow': 0 0 2em -1em
+    'shadow': 0 0 2em -.6em map-get($reg-colors, 'silver')
   )
 );
 
