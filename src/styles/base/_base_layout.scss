@@ -19,14 +19,6 @@ body {
   background-color: $layout-bgr-color;
   background-repeat: no-repeat;
   background-size: 100% 50vh;
-
-  @media (orientation: landscape) {
-    background-size: 100% 50vh;
-  }
-
-  @media (orientation: portrait) {
-    background-size: 100% 50vw;
-  }
 }
 
 
