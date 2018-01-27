@@ -1,3 +1,22 @@
+<a name="1.5.0"></a>
+# 1.5.0 (2018-01-27)
+
+
+### Bug Fixes
+
+* **Layout:** Improved background gradient ([c4d311c](https://github.com/martinmethod/peter-ui/commit/c4d311c))
+* **Links list:** Set proper vertical em-padding ([09dd68c](https://github.com/martinmethod/peter-ui/commit/09dd68c))
+* **Resumes list:** Fixed separator position after removed shadow ([c06660d](https://github.com/martinmethod/peter-ui/commit/c06660d))
+
+
+### Features
+
+* **Panels:** Redesigned paper panel ([02cb1ab](https://github.com/martinmethod/peter-ui/commit/02cb1ab))
+* **Panels:** Replaced Note panel with new one: Glass ([28e90e4](https://github.com/martinmethod/peter-ui/commit/28e90e4))
+* **Resume:** Smaller resume text on small screens ([cfdbc1f](https://github.com/martinmethod/peter-ui/commit/cfdbc1f))
+
+
+
 <a name="1.4.0"></a>
 # 1.4.0 (2018-01-26)
 
