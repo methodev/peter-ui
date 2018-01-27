@@ -17,6 +17,10 @@
     font-size: .8rem;
   }
 
+  @include mq-tablet-breakpoint('below') {
+    font-size: .9rem;
+  }
+
   & {
     @extend %ph-post-flow;
 
