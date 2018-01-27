@@ -10,10 +10,9 @@ $util-panels: (
     //'shadow': map-get($roles-shadows, 'panel'),
     //'border': 1px solid rgba(map-get($reg-colors, 'black'), .1)
   ),
-  'note': (
-    'background': map-get($roles-col-backgrounds, 'note'),
-    'shadow': map-get($roles-shadows, 'panel'),
-    'border': 1px solid rgba(map-get($reg-colors, 'black'), .1)
+  'glass': (
+    'background': rgba(map-get($roles-col-backgrounds, 'paper'), .6),
+    'border': 1px solid map-get($reg-colors, 'white')
   )
 );
 
