@@ -6,9 +6,9 @@
 
 $util-panels: (
   'paper': (
-    'background': map-get($roles-col-backgrounds, 'paper'),
-    'shadow': map-get($roles-shadows, 'panel'),
-    'border': 1px solid rgba(map-get($reg-colors, 'black'), .1)
+    'background': map-get($roles-col-backgrounds, 'paper')
+    //'shadow': map-get($roles-shadows, 'panel'),
+    //'border': 1px solid rgba(map-get($reg-colors, 'black'), .1)
   ),
   'note': (
     'background': map-get($roles-col-backgrounds, 'note'),
