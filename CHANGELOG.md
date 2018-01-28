@@ -1,3 +1,22 @@
+<a name="1.6.0"></a>
+# 1.6.0 (2018-01-28)
+
+
+### Bug Fixes
+
+* **Text color:** Set the primary body color ([1509fdb](https://github.com/martinmethod/peter-ui/commit/1509fdb))
+
+
+### Features
+
+* **Background color:** Changed "alabaster" color ([22dfaed](https://github.com/martinmethod/peter-ui/commit/22dfaed))
+* **Credits line:** Darken color ([#666](https://github.com/martinmethod/peter-ui/issues/666)) ([28825fc](https://github.com/martinmethod/peter-ui/commit/28825fc))
+* **Fonts:** New Sans-serif font ([4bad681](https://github.com/martinmethod/peter-ui/commit/4bad681))
+* **Mobile background:** Fixed background box ([6599d9e](https://github.com/martinmethod/peter-ui/commit/6599d9e))
+* **Resume text:** Darken color ([#333](https://github.com/martinmethod/peter-ui/issues/333)) ([58d1f8d](https://github.com/martinmethod/peter-ui/commit/58d1f8d))
+
+
+
 <a name="1.5.0"></a>
 # 1.5.0 (2018-01-27)
 
