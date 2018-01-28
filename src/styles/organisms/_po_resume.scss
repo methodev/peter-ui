@@ -8,7 +8,7 @@
 
   $offset: #{get-page-offset()}vw;
   $offset-inner: .5em;
-  $text-color: map-get($roles-col-texts, 'secondary');
+  $text-color: map-get($roles-col-texts, 'primary');
 
 
   //--------------------------| Base
