@@ -12,6 +12,7 @@
   $signature-sign-min-height: 52px;
   $signature-sign-max-height: 66px;
   $signature-label-offset: 1.3;
+  $signature-position: 'right';
 
 
   //--------------------------| Base
@@ -83,7 +84,7 @@
   }
 
   .copyright {
-    padding-right: get-progressive-calc($signature-sign-min-width * $signature-label-offset, $signature-sign-max-width * $signature-label-offset);
+    @include scaler(padding-#{$signature-position}, ($signature-sign-min-width * $signature-label-offset), ($signature-sign-max-width * $signature-label-offset));
   }
 
 
