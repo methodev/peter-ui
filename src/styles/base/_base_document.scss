@@ -81,6 +81,7 @@ body {
   margin: 0; // 1
   overflow-x: hidden;
   font-family: map-get($roles-typo-font-families, 'text');
+  color: map-get($roles-col-texts, 'primary');
   text-align: left; // 3
   //background-color: map-get($roles-col-backgrounds, 'page'); // 2
 }
