@@ -21,7 +21,7 @@ $font-faces: (
       'r': map-get($reg-font-weights, 'regular'),
       'b': map-get($reg-font-weights, 'bold')
     ),
-    'italic': true
+    'italic': false
   )
 );
 
@@ -29,11 +29,11 @@ $font-faces: (
 //--------------------------| Mixins
 
 @mixin font-face($font-name, $style-name, $weight, $style: 'normal') {
+  $style-name: if($style == 'italic', '#{$style-name}i', '#{$style-name}');
   $path: '#{$fonts-sysdir}/#{$fonts-prefix}–#{$font-name}/#{$style-name}';
-  $name: if($style == 'italic', '#{$font-name}i', '#{$font-name}');
 
   @font-face {
-    font-family: '#{$fonts-prefix}–#{$name}';
+    font-family: '#{$fonts-prefix}–#{$font-name}';
     font-style: unquote($style);
     font-weight: $weight;
     src: url('#{$path}.woff2') format('woff2'),
