@@ -21,7 +21,7 @@ $font-faces: (
       'r': map-get($reg-font-weights, 'regular'),
       'b': map-get($reg-font-weights, 'bold')
     ),
-    'italic': true
+    'italic': false
   )
 );
 
