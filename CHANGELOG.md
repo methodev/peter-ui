@@ -1,3 +1,13 @@
+<a name="1.6.2"></a>
+## 1.6.2 (2018-01-28)
+
+
+### Bug Fixes
+
+* **Scalability:** Improved sizes for huge screens ([e3c9aa3](https://github.com/martinmethod/peter-ui/commit/e3c9aa3))
+
+
+
 <a name="1.6.1"></a>
 ## 1.6.1 (2018-01-28)
 
