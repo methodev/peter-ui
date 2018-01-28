@@ -16,6 +16,7 @@
   & {
     @extend %ph-post-flow;
 
+    max-width: $roles-size-post;
     margin: 0 auto;
   }
 
@@ -107,6 +108,15 @@
 
       .share-end {
         display: none;
+      }
+    }
+
+    .sd-button {
+      padding: .4em !important;
+      font-size: inherit !important;
+
+      &::before {
+        font-size: 1.2em;
       }
     }
   }

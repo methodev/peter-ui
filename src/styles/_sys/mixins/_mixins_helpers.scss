@@ -39,3 +39,27 @@
   border-right: $value;
   border-left: $value;
 }
+
+
+//--------------------------| Scaler
+
+@mixin scaler($property, $min-size, $max-size, $min-vw: map-get($reg-screens, 'min'), $max-vw: map-get($reg-screens, 'max')) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-size);
+  $u4: unit($max-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      #{$property}: $min-size;
+
+      @media screen and (min-width: $min-vw) {
+        #{$property}: get-progressive-calc($min-size, $max-size, $min-vw, $max-vw);
+      }
+
+      @media screen and (min-width: $max-vw) {
+        #{$property}: #{($max-size * 100) / $max-vw}vw;
+      }
+    }
+  }
+}

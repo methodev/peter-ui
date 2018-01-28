@@ -26,29 +26,6 @@
 }
 
 
-//--------------------------| Fluid size
-
-@mixin typo-fluid-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: get-progressive-calc($min-font-size, $max-font-size, $min-vw, $max-vw);
-      }
-
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
-}
-
-
 //--------------------------| Titles base
 
 @mixin typo-titles-base($type, $color: map-get($roles-col-texts, 'primary')) {

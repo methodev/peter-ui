@@ -28,12 +28,10 @@ html {
   @extend %ph-dimensions-document;
 
   $col: map-get($reg-colors, 'black');
-  $min-vw: map-get($reg-screens, 'min');
-  $max-vw: map-get($reg-screens, 'max');
   $min-font-size: map-get($roles-typo-font-sizes-base, 'min');
   $max-font-size: map-get($roles-typo-font-sizes-base, 'max');
 
-  @include typo-fluid-size($min-vw, $max-vw, $min-font-size, $max-font-size);
+  @include scaler(font-size, $min-font-size, $max-font-size);
 
   font-family: sans-serif; // 2
   line-height: 1.15; // 3
