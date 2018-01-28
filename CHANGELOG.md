@@ -1,3 +1,14 @@
+<a name="1.6.1"></a>
+## 1.6.1 (2018-01-28)
+
+
+### Bug Fixes
+
+* **Fonts:** Corrected broken includes ([2264ba9](https://github.com/martinmethod/peter-ui/commit/2264ba9))
+* **Fonts:** Improved sans serif font ([b88a8c4](https://github.com/martinmethod/peter-ui/commit/b88a8c4))
+
+
+
 <a name="1.6.0"></a>
 # 1.6.0 (2018-01-28)
 
