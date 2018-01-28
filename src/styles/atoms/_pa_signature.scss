@@ -26,16 +26,17 @@
   //--------------------------| Label
 
   > label {
-    padding-#{$position}: get-progressive-calc($sign-min-width * $label-offset, $sign-max-width * $label-offset);
+    @include scaler(padding-#{$position}, ($sign-min-width * $label-offset), ($sign-max-width * $label-offset));
   }
 
 
   //--------------------------| Logo
 
   > .logo {
+    @include scaler(width, $sign-min-width, $sign-max-width);
+    @include scaler(height, $sign-min-height, $sign-max-height);
+
     display: block;
-    width: get-progressive-calc($sign-min-width, $sign-max-width);
-    height: get-progressive-calc($sign-min-height, $sign-max-height);
     background: url(data-uri('#{$core-path}/src/data-uri/signature.svg')) no-repeat #{$position} center;
     background-size: auto 100%;
   }
