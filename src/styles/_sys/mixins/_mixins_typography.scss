@@ -40,12 +40,14 @@
 //--------------------------| Line heights
 
 @mixin typo-line-heights($type, $val) {
+  $ratio: map-get($reg-line-heights, '160%') / $val;
+
   @include mq-device-holding-type('inpocket') {
-    $min-obj-size: $val * 100%;
-    $max-obj-size: ceil($val * 1.1538461538) * 100%;
+    $min-obj-size: $val * 100;
+    $max-obj-size: ($val * $ratio) * 100;
     $min-vw: map-get($reg-screens, 'min');
     $max-vw: map-get($reg-breakpoints, 'xs') - 1;
-    $random-divider: 19.3;
+    $random-divider: 5.37;
     $value: $val;
 
     @if $type == 'text' {
@@ -56,6 +58,6 @@
   }
 
   @include mq-device-holding-type('outpocket') {
-    line-height: $val * 1.15;
+    line-height: $val * $ratio; // 1.6
   }
 }

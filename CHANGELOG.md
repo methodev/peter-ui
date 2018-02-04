@@ -1,3 +1,13 @@
+<a name="1.7.0"></a>
+# 1.7.0 (2018-02-04)
+
+
+### Features
+
+* **Typography:** Improved readability ([9610cba](https://github.com/martinmethod/peter-ui/commit/9610cba))
+
+
+
 <a name="1.6.2"></a>
 ## 1.6.2 (2018-01-28)
 

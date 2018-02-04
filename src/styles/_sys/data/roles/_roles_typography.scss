@@ -10,13 +10,13 @@ $roles-base-font-size: 18px;
 //--------------------------| Font families
 
 $roles-typo-font-families: (
-  'title': unquote(map-get($reg-font-families, 'pp–serif')),
-  'text': unquote(map-get($reg-font-families, 'pp–sans')),
+  'title':  unquote(map-get($reg-font-families, 'pp–slab')),
+  'text':   unquote(map-get($reg-font-families, 'pp–serif')),
   'system': unquote(map-get($reg-font-families, 'pp–sans')),
-  'credit': unquote(map-get($reg-font-families, 'pp–serif')),
-  'input': unquote(map-get($reg-font-families, 'pp–serif')),
-  'glyph': unquote(map-get($reg-font-families, 'pp–serif')),
-  'error': unquote(map-get($reg-font-families, 'pp–mono'))
+  'credit': unquote(map-get($reg-font-families, 'pp–slab')),
+  'input':  unquote(map-get($reg-font-families, 'pp–serif')),
+  'glyph':  unquote(map-get($reg-font-families, 'pp–serif')),
+  'error':  unquote(map-get($reg-font-families, 'pp–mono'))
 );
 
 
@@ -46,8 +46,8 @@ $roles-typo-font-sizes: (
 //--------------------------| Line-heights
 
 $roles-typo-line-heights: (
-  'title': map-get($reg-line-heights, '120%'),
-  'text': map-get($reg-line-heights, '130%'),
+  'title':  map-get($reg-line-heights, '120%'),
+  'text':   map-get($reg-line-heights, '130%'),
   'system': map-get($reg-line-heights, '140%') // for separators, system labels and meta data
 );
 
@@ -55,7 +55,9 @@ $roles-typo-line-heights: (
 //--------------------------| Font weights
 
 $roles-typo-font-weights: (
-
+  'title':  map-get($reg-font-weights, 'regular'),
+  'button': map-get($reg-font-weights, 'regular'),
+  'credit': map-get($reg-font-weights, 'regular')
 );
 
 

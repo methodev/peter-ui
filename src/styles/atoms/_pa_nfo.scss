@@ -22,6 +22,7 @@
 
   &::before {
     @include border-radius(50%);
+    @include font-smoothing();
 
     position: absolute;
     top: .2em;
