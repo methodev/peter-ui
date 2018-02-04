@@ -6,6 +6,7 @@
 
   //--------------------------| Variables
 
+  $font-face: map-get($roles-typo-font-families, 'system');
   $font-size: map-get($roles-typo-font-sizes, 'system');
   $text-color: map-get($roles-col-texts, 'system');
 
@@ -13,7 +14,7 @@
   //--------------------------| Base
 
   width: 100%;
-  font-size: $font-size;
+  font: normal $font-size $font-face;
   color: $text-color;
 
 

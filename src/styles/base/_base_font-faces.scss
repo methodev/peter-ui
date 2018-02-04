@@ -16,6 +16,13 @@ $font-faces: (
     ),
     'italic': true
   ),
+  'slab': (
+    'family': (
+      'r': map-get($reg-font-weights, 'regular'),
+      'b': map-get($reg-font-weights, 'bold')
+    ),
+    'italic': true
+  ),
   'sans': (
     'family': (
       'r': map-get($reg-font-weights, 'regular'),

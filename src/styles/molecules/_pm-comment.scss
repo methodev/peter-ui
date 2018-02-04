@@ -7,7 +7,7 @@
   //--------------------------| Variables
 
   $offset: .5em;
-  $comment-text-color: map-get($roles-col-texts, 'secondary');
+  $comment-text-color: map-get($roles-col-texts, 'primary');
 
 
   //--------------------------| Base
@@ -47,12 +47,10 @@
   //--------------------------| Content
 
   .content {
-    @include mq-device-holding-type('inpocket') {
-      line-height: map-get($roles-typo-line-heights, 'text');
-    }
+    @include font-smoothing();
+    @include typo-line-heights('text', map-get($roles-typo-line-heights, 'text'));
 
     padding-left: $roles-size-avatar + $offset;
-    font-style: italic;
     color: $comment-text-color;
   }
 

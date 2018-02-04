@@ -10,12 +10,17 @@
 
   //--------------------------| Variables
 
-
+  $font-face: map-get($roles-typo-font-families, 'system');
+  $font-weight: map-get($roles-typo-font-weights, 'button');
 
 
   //--------------------------| Base
 
   @include button-base();
+  @include font-smoothing();
+
+  font-family: $font-face;
+  font-weight: $font-weight;
 
   @at-root {
     button,
@@ -66,7 +71,9 @@
 
   //--------------------------| States
 
-  @include button-states();
+  & {
+    @include button-states();
+  }
 
 
 } // .pa-button
