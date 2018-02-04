@@ -8,12 +8,13 @@
 
   $font-face: map-get($roles-typo-font-families, 'credit');
   $font-size: map-get($roles-typo-font-sizes, 'credit');
+  $font-weight: map-get($roles-typo-font-weights, 'credit');
   $text-col: map-get($roles-col-texts, 'credit');
 
 
   //--------------------------| Base
 
-  font: normal $font-size $font-face;
+  font: $font-weight $font-size $font-face;
   color: $text-col;
 
 

@@ -8,7 +8,7 @@
   &::#{$position} {
     display: block;
     padding: 1rem 0;
-    font-family: unquote(map-get($reg-font-families, 'pp–serif'));
+    font-family: unquote(map-get($reg-font-families, 'pp–slab'));
     color: map-get($reg-colors, 'dusty-gray');
     text-align: center;
     content: $symbol;

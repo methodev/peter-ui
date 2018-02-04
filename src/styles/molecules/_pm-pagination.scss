@@ -7,7 +7,7 @@
   //--------------------------| Variables
 
   $offset: .5em;
-  $font-face: unquote(map-get($reg-font-families, 'pp–serif'));
+  $font-face: unquote(map-get($reg-font-families, 'pp–slab'));
   $font-size: map-get($roles-typo-font-sizes, 'system');
   $current-bgr-color: map-get($roles-col-states, 'focused');
   $current-txt-color: map-get($roles-col-texts, 'negative');

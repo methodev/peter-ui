@@ -5,7 +5,6 @@
 //--------------------------| Text
 
 %ph-typo-texts {
-  @include font-smoothing();
   @include typo-line-heights('text', map-get($roles-typo-line-heights, 'text'));
 
   font-size: map-get($roles-typo-font-sizes, 'primary-text');
@@ -18,7 +17,7 @@
   @include typo-line-heights('title', map-get($roles-typo-line-heights, 'title'));
 
   font-family: map-get($roles-typo-font-families, 'title');
-  font-weight: normal;
+  font-weight: map-get($roles-typo-font-weights, 'title');
 
   &:last-child {
     margin: 0;
