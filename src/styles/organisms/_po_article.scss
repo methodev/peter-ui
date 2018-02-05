@@ -16,6 +16,8 @@
   & {
     @extend %ph-post-flow;
 
+    @include typo-line-heights('text', map-get($roles-typo-line-heights, 'text'));
+
     max-width: $roles-size-post;
     margin: 0 auto;
   }
@@ -57,7 +59,7 @@
     .wp-caption-text {
       margin-top: $offset-inner;
       font-size: .6em;
-      line-height: normal;
+      line-height: map-get($reg-line-heights, 'normal');
       color: map-get($roles-col-texts, 'secondary');
       text-align: center;
     }
@@ -87,7 +89,7 @@
 
     padding: $offset-inner;
     font-size: .8em;
-    line-height: normal;
+    line-height: map-get($reg-line-heights, 'normal');
     color: $col-pre;
     white-space: pre-wrap;
     background-color: map-get($reg-colors, 'black-squeeze');

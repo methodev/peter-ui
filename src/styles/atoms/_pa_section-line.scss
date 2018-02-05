@@ -64,6 +64,8 @@
 
     &::before,
     &::after {
+      @include rotate(45deg);
+
       position: absolute;
       top: 0;
       bottom: 0;

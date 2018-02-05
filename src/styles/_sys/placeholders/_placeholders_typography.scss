@@ -5,8 +5,6 @@
 //--------------------------| Text
 
 %ph-typo-texts {
-  @include typo-line-heights('text', map-get($roles-typo-line-heights, 'text'));
-
   font-size: map-get($roles-typo-font-sizes, 'primary-text');
 }
 

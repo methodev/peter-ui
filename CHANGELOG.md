@@ -1,3 +1,18 @@
+<a name="1.7.1"></a>
+## 1.7.1 (2018-02-05)
+
+
+### Bug Fixes
+
+* **Typography:** Improved line-height logic ([657fda2](https://github.com/martinmethod/peter-ui/commit/657fda2))
+
+
+### Features
+
+* **Section line:** New look (tilted lines) ([ff34792](https://github.com/martinmethod/peter-ui/commit/ff34792))
+
+
+
 <a name="1.7.0"></a>
 # 1.7.0 (2018-02-04)
 
