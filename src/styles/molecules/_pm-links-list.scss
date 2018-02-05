@@ -30,7 +30,10 @@
     $label-size-min: $roles-size-menu-item;
     $label-size-max: $label-size-min * 2;
 
+    @include font-smoothing();
+
     display: block;
+    font-family: map-get($roles-typo-font-families, 'system');
     text-align: center;
     background-color: map-get($roles-col-backgrounds, 'headline');
 

@@ -18,7 +18,7 @@
   padding: 1.5em 0;
   overflow: auto;
   font: normal $font-size $font-face;
-  line-height: normal;
+  line-height: map-get($reg-line-heights, 'normal');
   text-align: center;
   white-space: nowrap;
 

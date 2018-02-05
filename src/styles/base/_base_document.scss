@@ -74,11 +74,13 @@ section {
 
 body {
   @extend %ph-dimensions-document;
-  @extend %ph-typo-texts;
+
+  //@include typo-line-heights('text', map-get($roles-typo-line-heights, 'text'));
 
   margin: 0; // 1
   overflow-x: hidden;
   font-family: map-get($roles-typo-font-families, 'text');
+  line-height: map-get($roles-typo-line-heights, 'system');
   color: map-get($roles-col-texts, 'primary');
   text-align: left; // 3
   //background-color: map-get($roles-col-backgrounds, 'page'); // 2
