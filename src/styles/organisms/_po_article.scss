@@ -132,6 +132,18 @@
   }
 
 
+  //--------------------------| Types
+
+  &[data-type='poetry'] {
+    text-align: center;
+
+    > .body {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+
   //--------------------------| Print
 
   & {
