@@ -175,7 +175,7 @@
     }
 
     .checkbox-toggle:not(:checked) ~ .stage {
-      @include translate(0, -120%);
+      @include translate(0, -300%);
     }
 
     .checkbox-toggle:checked ~ .stage {
