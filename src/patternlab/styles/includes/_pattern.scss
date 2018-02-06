@@ -51,7 +51,7 @@
 //--------------------------| Extra toggle
 
 .sg-pattern-extra-toggle {
-  border-bottom-color: light(map-get($reg-colors, 'black'), 86.5%) !important;
+  border-color: map-get($reg-colors, 'silver') !important;
 
   //span {
   //
@@ -69,6 +69,7 @@
 
 .sg-pattern-extra {
   text-align: left;
+  border-color: map-get($reg-colors, 'silver') !important;
 }
 
 //.sg-modal-content-inner {}
