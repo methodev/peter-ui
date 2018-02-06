@@ -135,11 +135,10 @@
   //--------------------------| Types
 
   &[data-type='poetry'] {
-    text-align: center;
-
-    > .body {
-      display: inline-block;
-      text-align: left;
+    .body {
+      @include mq-device-holding-type('inpocket') {
+        font-size: .8em;
+      }
     }
   }
 

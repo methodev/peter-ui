@@ -41,4 +41,18 @@
       text-align: center;
     }
   }
+
+  // Types
+  &[data-type='poetry'] {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      align-self: center;
+    }
+
+    .head {
+      text-align: left;
+    }
+  }
 }
