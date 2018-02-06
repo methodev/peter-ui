@@ -10,11 +10,12 @@
   $offset: 1em;
   $offset-inner: .5em;
 
-  > *:not(:first-child) {
+  > *:not(:first-child),
+  .item > *:not(:first-child) {
     margin-top: $offset;
   }
 
-  > .head {
+  .head {
     > *:not(:first-child) {
       margin-top: $offset-inner;
     }
