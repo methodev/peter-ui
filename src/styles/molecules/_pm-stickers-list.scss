@@ -1,0 +1,55 @@
+// =========================| Molecule: Stickers list |========================= //
+
+
+
+.pm-stickers-list {
+
+  //--------------------------| Variables
+
+  $offset: 1em;
+
+
+  //--------------------------| Base
+
+
+
+
+  //--------------------------| Items
+
+  > * {
+    @include mq-device-holding-type('inpocket') {
+      @include separator();
+    }
+
+    @media (min-width: map-get($reg-breakpoints,   'xs')) and (max-width: map-get($reg-breakpoints,    'l') - 1) {
+      &:not(:nth-last-child(1)):not(:nth-last-child(2)) {
+        @include separator-content();
+      }
+    }
+
+    @include mq-l() {
+      &:not(:nth-last-child(1)):not(:nth-last-child(2)):not(:nth-last-child(3)):not(:nth-last-child(4)) {
+        @include separator-content();
+      }
+    }
+  }
+
+
+  //--------------------------| Features
+
+  &.tilted {
+    > * {
+      @include mq-l() {
+        &:nth-child(2n+1) {
+          @include rotate(-1deg);
+        }
+
+        &:nth-child(2n+2) {
+          @include rotate(1deg);
+        }
+      }
+    }
+  }
+
+
+} // .pm-stickers-list

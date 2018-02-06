@@ -121,7 +121,7 @@
     margin: 0 auto;
     text-align: initial;
 
-    &:not(.pa-textfield):not(.pa-section-line):not(.pm-meta-line):not(.pm-user-head):not(.pm-quoteblock):not(.pm-credits-line):not([class*='po-']) {
+    &:not(.pa-textfield):not(.pa-section-line):not(.pm-meta-line):not(.pm-user-head):not(.pm-quoteblock):not(.pm-credits-line):not([class*='po-']):not(.pm-stickers-list) {
       display: inline-block;
     }
   }
