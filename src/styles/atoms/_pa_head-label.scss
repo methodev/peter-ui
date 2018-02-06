@@ -1,0 +1,60 @@
+// =========================| Atom: Head label |========================= //
+
+
+
+.pa-head-label {
+
+  //--------------------------| Variables
+
+  $offset: #{get-page-offset()}vw;
+  $label-size-min: $roles-size-menu-item;
+  $label-size-max: $label-size-min * 2;
+  $text-color: map-get($roles-col-texts, 'negative');
+  $font-face: map-get($roles-typo-font-families, 'system');
+  $font-size: get-progressive-calc($label-size-min, $label-size-max);
+  $link-color-hover: light(map-get($reg-colors, 'la-rioja'), 20%);
+  $link-color-active: light($link-color-hover, 40%);
+
+
+  //--------------------------| Base
+
+  @include font-smoothing();
+
+  display: block;
+  background-color: map-get($roles-col-backgrounds, 'headline');
+
+
+  //--------------------------| Text
+
+  > .text {
+    display: block;
+    padding: .45em $offset;
+    font-family: $font-face;
+    font-size: $font-size;
+    color: $text-color;
+    text-align: center;
+  }
+
+  //--------------------------| Link
+
+  a {
+    border-bottom: 0;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+
+    &:active {
+      color: $link-color-active;
+    }
+  }
+
+
+  //--------------------------| Integration
+
+  .ut-ofs-section > & {
+    margin: -1em -#{$offset} 1em;
+  }
+
+
+} // .pa-head-label
