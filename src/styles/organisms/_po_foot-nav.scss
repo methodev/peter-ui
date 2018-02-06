@@ -88,7 +88,7 @@
     }
 
     display: flex;
-    line-height: map-get($reg-line-heights, '110%');
+    line-height: map-get($reg-line-heights, '120%');
 
     @for $cat from 1 through length($links-categories) {
       $name: nth(nth($links-categories, $cat), 1);
