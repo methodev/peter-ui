@@ -1,3 +1,27 @@
+<a name="1.8.0"></a>
+# 1.8.0 (2018-02-06)
+
+
+### Bug Fixes
+
+* **Foot nav:** Increased line-height of links ([5f849bf](https://github.com/martinmethod/peter-ui/commit/5f849bf))
+* **Head nav:** Mobile stage pulled up a lot more ([48c1f99](https://github.com/martinmethod/peter-ui/commit/48c1f99))
+* **Post:** Improved selectors ([6b73878](https://github.com/martinmethod/peter-ui/commit/6b73878))
+* **Post:** Set body styles to both article & resume ([5ff151e](https://github.com/martinmethod/peter-ui/commit/5ff151e))
+
+
+### Features
+
+* **Article:** Poetry type ([b9a7306](https://github.com/martinmethod/peter-ui/commit/b9a7306))
+* **Article:** Support for poetry post type ([0d49a33](https://github.com/martinmethod/peter-ui/commit/0d49a33))
+* **New atom:** Head label ([b393799](https://github.com/martinmethod/peter-ui/commit/b393799))
+* **New atom:** Sticker ([0ff9198](https://github.com/martinmethod/peter-ui/commit/0ff9198))
+* **New molecule:** Stickers list ([ac7e63a](https://github.com/martinmethod/peter-ui/commit/ac7e63a))
+* **New organism:** Category panel ([5242670](https://github.com/martinmethod/peter-ui/commit/5242670))
+* **Typography utility classes:** New: lowercase ([8b3cf91](https://github.com/martinmethod/peter-ui/commit/8b3cf91))
+
+
+
 <a name="1.7.1"></a>
 ## 1.7.1 (2018-02-05)
 

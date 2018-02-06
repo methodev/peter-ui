@@ -1,0 +1,46 @@
+// =========================| Atom: Sticker |========================= //
+
+
+
+.pa-sticker {
+
+  //--------------------------| Variables
+
+  $offset: 1em;
+  $text-size: .8em;
+  $text-color: map-get($roles-col-texts, 'secondary');
+
+
+
+  //--------------------------| Base
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $offset;
+  font-size: $text-size;
+  line-height: map-get($roles-typo-line-heights, 'text');
+  color: $text-color;
+  background-color: map-get($reg-colors, 'black-squeeze');
+  break-inside: avoid;
+
+
+  //--------------------------| Content
+
+  .content {
+    font-style: italic;
+  }
+
+
+  //--------------------------| Types
+
+  &[data-type='poetry'] {
+    justify-content: center;
+
+    .content {
+      text-align: center;
+    }
+  }
+
+
+} // .pa-sticker

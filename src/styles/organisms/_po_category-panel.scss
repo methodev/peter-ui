@@ -1,0 +1,37 @@
+// =========================| Organism: Category panel |========================= //
+
+
+
+.po-category-panel {
+
+  //--------------------------| Variables
+
+  $offset: 2em;
+
+
+  //--------------------------| Base
+
+  display: flex;
+  flex-direction: column;
+
+
+  //--------------------------| Head label
+
+  //.pa-head-label {}
+
+
+  //--------------------------| Links list
+
+  .pm-links-list {
+    flex: 1;
+  }
+
+
+  //--------------------------| Meta line
+
+  .pm-meta-line {
+    margin-top: $offset;
+  }
+
+
+} // .po-category-panel

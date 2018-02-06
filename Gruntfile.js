@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   grunt.project = {
     pkg: pkg,
     env: env,
-    port: 8008,
+    port: 6001,
     dist: 'dist',
     banner: banner
   };

@@ -9,18 +9,113 @@
 
   $offset: 1em;
   $offset-inner: .5em;
+  $title-offset: 1.5em 0 .6em;
 
-  > *:not(:first-child) {
+  > *:not(:first-child),
+  .item > *:not(:first-child) {
     margin-top: $offset;
   }
 
-  > .head {
+  .head {
     > *:not(:first-child) {
       margin-top: $offset-inner;
     }
 
     > [class*='pa-title'] {
       margin-bottom: 0;
+    }
+  }
+
+  .body {
+    > * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: $title-offset;
+    }
+
+    $headings: 6;
+
+    @for $h from 1 through $headings {
+      h#{$h} {
+        font-size: #{(($headings + 1) - ($h * ($headings * .1))) * .2}em;
+      }
+    }
+  }
+
+  .wp-caption {
+    .wp-caption-text {
+      margin-top: $offset-inner;
+      font-size: .6em;
+      line-height: map-get($reg-line-heights, 'normal');
+      color: map-get($roles-col-texts, 'secondary');
+      text-align: center;
+    }
+  }
+
+  [class*='wp-image'] {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 20em;
+    margin: 0 auto;
+  }
+
+  blockquote {
+    padding-left: $offset-inner;
+    font-size: .9em;
+    font-style: italic;
+    color: map-get($roles-col-texts, 'secondary');
+    border-left: 1px solid map-get($roles-col-borders, 'quote');
+  }
+
+  pre {
+    $col-pre: map-get($roles-col-texts, 'code');
+
+    @include border-h(3px double $col-pre);
+
+    padding: $offset-inner;
+    font-size: .8em;
+    line-height: map-get($reg-line-heights, 'normal');
+    color: $col-pre;
+    white-space: pre-wrap;
+    background-color: map-get($reg-colors, 'black-squeeze');
+  }
+
+  .sharedaddy {
+    margin-top: 2em;
+    text-align: center;
+
+    .sd-title {
+      font-weight: normal;
+    }
+
+    .sd-content {
+      li[class*='share-'] {
+        margin: 0 $offset-inner;
+      }
+
+      .share-end {
+        display: none;
+      }
+    }
+
+    .sd-button {
+      padding: .4em !important;
+      font-size: inherit !important;
+
+      &::before {
+        font-size: 1.2em;
+      }
     }
   }
 
@@ -39,6 +134,20 @@
   @include mq-device-holding-type('inpocket') {
     .timestamp {
       text-align: center;
+    }
+  }
+
+  // Types
+  &[data-type='poetry'] {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      align-self: center;
+    }
+
+    .head {
+      text-align: left;
     }
   }
 }
