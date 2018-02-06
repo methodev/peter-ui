@@ -1,3 +1,13 @@
+<a name="1.8.1"></a>
+## 1.8.1 (2018-02-06)
+
+
+### Bug Fixes
+
+* **Post:** Fix body font-size to both article & resume ([e34e033](https://github.com/martinmethod/peter-ui/commit/e34e033))
+
+
+
 <a name="1.8.0"></a>
 # 1.8.0 (2018-02-06)
 
