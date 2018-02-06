@@ -40,17 +40,6 @@
   }
 
 
-  //--------------------------| Types
-
-  &[data-type='poetry'] {
-    .body {
-      @include mq-device-holding-type('inpocket') {
-        font-size: .8em;
-      }
-    }
-  }
-
-
   //--------------------------| Print
 
   & {
