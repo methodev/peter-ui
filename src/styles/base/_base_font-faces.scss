@@ -9,13 +9,22 @@ $fonts-sysdir: '#{$fonts-dir}';
 $fonts-prefix: 'pp';
 
 $font-faces: (
+  // Vollkorn
+  // http://vollkorn-typeface.com/
+  // Design: Friedrich Althausen
   'serif': (
     'family': (
       'r': map-get($reg-font-weights, 'regular'),
       'b': map-get($reg-font-weights, 'bold')
+      //'sb': map-get($reg-font-weights, 'semibold'),
+      //'bl': map-get($reg-font-weights, 'black')
     ),
     'italic': true
   ),
+
+  // Sybilla
+  // http://www.myfonts.com/fonts/karandash/sybilla/
+  // Design: Vassil Kateliev (Karandash)
   'slab': (
     'family': (
       'r': map-get($reg-font-weights, 'regular'),
@@ -23,6 +32,10 @@ $font-faces: (
     ),
     'italic': true
   ),
+
+  // HS Grotesk
+  // https://localfonts.eu/product/hk-grotesk-free/
+  // Cyrillic design: Stefan Peev
   'sans': (
     'family': (
       'r': map-get($reg-font-weights, 'regular'),
