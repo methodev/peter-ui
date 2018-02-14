@@ -64,6 +64,10 @@
     }
 
     @include mq-screen-size-type('desktop') {
+      &:first-child:not(:only-child) {
+        flex: 1;
+      }
+
       & + .pa-credit {
         margin-left: $offset;
       }
