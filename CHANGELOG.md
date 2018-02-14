@@ -1,3 +1,14 @@
+<a name="1.8.2"></a>
+## 1.8.2 (2018-02-14)
+
+
+### Bug Fixes
+
+* **Buttons:** Added forgotten styles to pure elements ([7814b98](https://github.com/martinmethod/peter-ui/commit/7814b98))
+* **Credits line:** Fixed broken line in Safari ([ef7ad8d](https://github.com/martinmethod/peter-ui/commit/ef7ad8d))
+
+
+
 <a name="1.8.1"></a>
 ## 1.8.1 (2018-02-06)
 
