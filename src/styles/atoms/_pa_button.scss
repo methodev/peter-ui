@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 .pa-button {
 
   //--------------------------| Variables
@@ -17,6 +13,7 @@
   //--------------------------| Base
 
   @include button-base();
+  @include button-states();
   @include font-smoothing();
 
   font-family: $font-face;
@@ -30,6 +27,10 @@
       &:not(.pa-button) {
         @include button-base();
         @include button-states();
+        @include font-smoothing();
+
+        font-family: $font-face;
+        font-weight: $font-weight;
       }
     }
 
@@ -66,13 +67,6 @@
     &[data-type='#{$name}'] {
       @include button-type-generator($bgr-color, $txt-color);
     }
-  }
-
-
-  //--------------------------| States
-
-  & {
-    @include button-states();
   }
 
 
