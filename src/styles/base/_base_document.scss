@@ -84,6 +84,8 @@ body {
   color: map-get($roles-col-texts, 'primary');
   text-align: left; // 3
   //background-color: map-get($roles-col-backgrounds, 'page'); // 2
+
+  font-feature-settings: 'ss04' 1; // Required in order to use the bulgarian cyrillic in Safari
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.

@@ -1,3 +1,13 @@
+<a name="1.9.0"></a>
+# 1.9.0 (2018-02-14)
+
+
+### Features
+
+* **Fonts:** New serif font: Vollkorn ([d8255b1](https://github.com/martinmethod/peter-ui/commit/d8255b1))
+
+
+
 <a name="1.8.2"></a>
 ## 1.8.2 (2018-02-14)
 
