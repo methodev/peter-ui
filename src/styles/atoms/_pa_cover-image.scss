@@ -48,8 +48,11 @@
   //--------------------------| Link
 
   > a {
+    $transition: all map-get($roles-transitions, 'cover-hover') ease-in-out;
     $outstep: .5em;
     $offset: 5px;
+
+    @include transition($transition);
 
     display: block;
     border-bottom: 0;
@@ -57,7 +60,7 @@
     &::before,
     &::after {
       @include opacity(0);
-      @include transition(all map-get($roles-transitions, 'cover-hover') ease-in-out);
+      @include transition($transition);
 
       position: absolute;
       background-color: map-get($roles-col-links, 'link');
