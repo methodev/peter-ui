@@ -12,8 +12,7 @@
 
   //--------------------------| Base
 
-  @include border-v(1px solid map-get($reg-colors, 'dusty-gray'));
-
+  position: relative;
   display: block;
   width: 100%;
 
@@ -21,13 +20,12 @@
   //--------------------------| Viewport
 
   .cover-viewport {
-    @include border-v(1px solid map-get($reg-colors, 'white'));
-
     position: relative;
     display: block;
     padding-top: 100% * $image-ratio;
     overflow: hidden;
     background-color: $bgr-color;
+    border: 1px solid map-get($reg-colors, 'white');
   }
 
 
@@ -44,6 +42,71 @@
     width: 100%;
     height: auto;
     border: 1px solid map-get($reg-colors, 'white'); // fix 1px glitch in Chrome that reveals a thin line from the background
+  }
+
+
+  //--------------------------| Link
+
+  > a {
+    $outstep: .5em;
+    $offset: 5px;
+
+    display: block;
+    border-bottom: 0;
+
+    &::before,
+    &::after {
+      @include opacity(0);
+      @include transition(all map-get($roles-transitions, 'cover-hover') ease-in-out);
+
+      position: absolute;
+      background-color: map-get($roles-col-links, 'link');
+      content: '';
+    }
+
+    &::before {
+      top: -#{$offset + 1};
+      right: $offset;
+      left: -#{$outstep * 3};
+      height: 1px;
+    }
+
+    &::after {
+      top: -#{$outstep * 2};
+      bottom: $offset;
+      left: -#{$offset + 1};
+      width: 1px;
+    }
+
+    &:hover {
+      @include opacity(.8);
+
+      &::before,
+      &::after {
+        @include opacity(1);
+
+        background-color: map-get($roles-col-links, 'hover');
+      }
+
+      &::before {
+        top: -1px;
+        right: 1px;
+        left: -#{$outstep};
+      }
+
+      &::after {
+        top: -#{$outstep};
+        bottom: 1px;
+        left: -1px;
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: map-get($roles-col-links, 'active');
+      }
+    }
   }
 
 
