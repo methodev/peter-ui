@@ -1,3 +1,19 @@
+<a name="1.9.1"></a>
+## 1.9.1 (2018-02-15)
+
+
+### Bug Fixes
+
+* **Cover images:** Fixed transition ([d31b8fb](https://github.com/martinmethod/peter-ui/commit/d31b8fb))
+* **Serif typefaces:** Reduced size of source files ([d895abd](https://github.com/martinmethod/peter-ui/commit/d895abd))
+
+
+### Features
+
+* **Cover images:** New hover effect with borders ([3e8588e](https://github.com/martinmethod/peter-ui/commit/3e8588e))
+
+
+
 <a name="1.9.0"></a>
 # 1.9.0 (2018-02-14)
 
