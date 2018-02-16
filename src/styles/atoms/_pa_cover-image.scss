@@ -8,6 +8,49 @@
 
   $image-ratio: .5; // 2:1 (example: 2000 x 1000 px)
   $bgr-color: map-get($roles-col-backgrounds, 'image-bgr');
+  $transition: all map-get($roles-transitions, 'cover-hover') ease-in-out;
+  $outstep: .5em;
+  $offset: 5px;
+  $scale: unquote('translate(-50%, -50%) scale(1.05)');
+  $col-link: map-get($roles-col-links, 'link');
+  $col-link-hover: map-get($roles-col-links, 'hover');
+  $col-link-active: map-get($roles-col-links, 'active');
+
+
+  //--------------------------| Mixins
+
+  @mixin cover-image-box-shadow($col) {
+    @include box-shadow(3px 3px 20px -8px $col);
+  }
+
+  @mixin cover-image-gradient($pos, $col) {
+    @include background-image(linear-gradient($pos, rgba($col, 1) 0%, rgba($col, 0) 100%));
+  }
+
+  @mixin cover-image-slices() {
+    &::before,
+    &::after {
+      @include opacity(1);
+    }
+
+    &::before {
+      left: -#{$outstep * 2};
+    }
+
+    &::after {
+      top: -#{$outstep};
+    }
+  }
+
+  @mixin cover-image-slices-color($col) {
+    &::before {
+      @include cover-image-gradient(left, $col);
+    }
+
+    &::after {
+      @include cover-image-gradient(top, $col);
+    }
+  }
 
 
   //--------------------------| Base
@@ -48,14 +91,16 @@
   //--------------------------| Link
 
   > a {
-    $transition: all map-get($roles-transitions, 'cover-hover') ease-in-out;
-    $outstep: .5em;
-    $offset: 5px;
-
     @include transition($transition);
+    @include translateZ(0); // fix visual glitch in Chrome
+    @include opacity(1);
 
     display: block;
     border-bottom: 0;
+
+    img {
+      @include transition($transition);
+    }
 
     &::before,
     &::after {
@@ -63,51 +108,55 @@
       @include transition($transition);
 
       position: absolute;
-      background-color: map-get($roles-col-links, 'link');
       content: '';
     }
 
     &::before {
-      top: -#{$offset + 1};
-      right: $offset;
-      left: -#{$outstep * 3};
+      top: -1px;
+      left: $outstep * 2;
+      width: calc(100% + #{$outstep * 2});
       height: 1px;
     }
 
     &::after {
-      top: -#{$outstep * 2};
-      bottom: $offset;
-      left: -#{$offset + 1};
+      top: $outstep;
+      left: -1px;
       width: 1px;
+      height: calc(100% + #{$outstep});
     }
 
-    &:hover {
-      @include opacity(.8);
+    html:not(.mobile) & {
+      @include cover-image-slices-color($col-link);
 
-      &::before,
-      &::after {
-        @include opacity(1);
+      &:hover {
+        @include opacity(.9);
+        @include cover-image-box-shadow($col-link-hover);
+        @include cover-image-slices();
 
-        background-color: map-get($roles-col-links, 'hover');
+        img {
+          @include transform($scale);
+        }
       }
 
-      &::before {
-        top: -1px;
-        right: 1px;
-        left: -#{$outstep};
+      &:active {
+        @include cover-image-slices-color($col-link-active);
       }
+    }
 
-      &::after {
-        top: -#{$outstep};
-        bottom: 1px;
-        left: -1px;
+    html.mobile & {
+      @include cover-image-slices-color($col-link-active);
+
+      &:active {
+        @include cover-image-slices();
       }
     }
 
     &:active {
-      &::before,
-      &::after {
-        background-color: map-get($roles-col-links, 'active');
+      @include opacity(.9);
+      @include cover-image-box-shadow($col-link-active !important);
+
+      img {
+        @include transform($scale);
       }
     }
   }
