@@ -1,3 +1,13 @@
+<a name="1.9.5"></a>
+## 1.9.5 (2018-02-16)
+
+
+### Bug Fixes
+
+* **Article:** Typography improvements ([0944284](https://github.com/martinmethod/peter-ui/commit/0944284))
+
+
+
 <a name="1.9.4"></a>
 ## 1.9.4 (2018-02-16)
 
