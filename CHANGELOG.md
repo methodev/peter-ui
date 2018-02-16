@@ -1,3 +1,13 @@
+<a name="1.9.2"></a>
+## 1.9.2 (2018-02-16)
+
+
+### Bug Fixes
+
+* **Cover image link interactions:** Improvements ([ea7c33d](https://github.com/martinmethod/peter-ui/commit/ea7c33d))
+
+
+
 <a name="1.9.1"></a>
 ## 1.9.1 (2018-02-15)
 
