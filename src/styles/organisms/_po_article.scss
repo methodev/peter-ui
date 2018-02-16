@@ -31,6 +31,23 @@
 
   //.body {}
 
+  .pa-cover-image {
+    &.full {
+      .cover-viewport {
+        padding: 0;
+        background: none;
+        border: 0;
+      }
+
+      img {
+        @include translate(0, 0);
+
+        position: static;
+        border: 0;
+      }
+    }
+  }
+
 
   //--------------------------| Foot
 
