@@ -1,3 +1,13 @@
+<a name="1.9.4"></a>
+## 1.9.4 (2018-02-16)
+
+
+### Bug Fixes
+
+* **Cover image slides:** Horizontal scroll on mobile ([6960f88](https://github.com/martinmethod/peter-ui/commit/6960f88))
+
+
+
 <a name="1.9.3"></a>
 ## 1.9.3 (2018-02-16)
 
