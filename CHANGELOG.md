@@ -1,3 +1,13 @@
+<a name="1.9.3"></a>
+## 1.9.3 (2018-02-16)
+
+
+### Bug Fixes
+
+* **Cover image:** Revealed full image for articles ([354729b](https://github.com/martinmethod/peter-ui/commit/354729b))
+
+
+
 <a name="1.9.2"></a>
 ## 1.9.2 (2018-02-16)
 
