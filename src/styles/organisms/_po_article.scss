@@ -24,12 +24,25 @@
 
   //--------------------------| Head
 
-  //.head {}
+  .head {
+    text-align: center;
+  }
 
 
   //--------------------------| Body
 
-  //.body {}
+  .body {
+    $col-selection: map-get($roles-col-backgrounds, 'selection');
+
+    .char1 {
+      font-size: 2em;
+      line-height: 1;
+    }
+
+    p {
+      text-indent: 2em;
+    }
+  }
 
   .pa-cover-image {
     &.full {
