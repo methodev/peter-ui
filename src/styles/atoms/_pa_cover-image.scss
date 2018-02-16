@@ -34,7 +34,7 @@
     }
 
     &::before {
-      left: -#{$outstep * 2};
+      left: -#{$outstep};
     }
 
     &::after {
@@ -113,13 +113,13 @@
 
     &::before {
       top: -1px;
-      left: $outstep * 2;
-      width: calc(100% + #{$outstep * 2});
+      left: 0;
+      width: calc(100% + #{$outstep});
       height: 1px;
     }
 
     &::after {
-      top: $outstep;
+      top: 0;
       left: -1px;
       width: 1px;
       height: calc(100% + #{$outstep});
