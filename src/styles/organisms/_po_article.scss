@@ -31,18 +31,7 @@
 
   //--------------------------| Body
 
-  .body {
-    $col-selection: map-get($roles-col-backgrounds, 'selection');
-
-    .char1 {
-      font-size: 2em;
-      line-height: 1;
-    }
-
-    p {
-      text-indent: 2em;
-    }
-  }
+  //.body {}
 
   .pa-cover-image {
     &.full {
@@ -67,6 +56,24 @@
   .foot {
     padding-top: $offset-inner;
     border-top: 1px solid map-get($roles-col-borders, 'foot-line');
+  }
+
+
+  //--------------------------| Types
+
+  &:not([data-type='poetry']) {
+    .body {
+      @include mq-tablet-breakpoint('above') {
+        .char1 {
+          font-size: 2em;
+          line-height: 1;
+        }
+
+        > p {
+          text-indent: 2em;
+        }
+      }
+    }
   }
 
 
