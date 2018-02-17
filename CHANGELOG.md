@@ -1,3 +1,13 @@
+<a name="1.9.6"></a>
+## 1.9.6 (2018-02-17)
+
+
+### Bug Fixes
+
+* **Article:** Improved identation & first-letter size ([4df8f2b](https://github.com/martinmethod/peter-ui/commit/4df8f2b))
+
+
+
 <a name="1.9.5"></a>
 ## 1.9.5 (2018-02-16)
 
