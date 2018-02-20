@@ -1,3 +1,13 @@
+<a name="1.9.7"></a>
+## 1.9.7 (2018-02-20)
+
+
+### Bug Fixes
+
+* **Time alignment:** Centered post head everywhere ([940f165](https://github.com/martinmethod/peter-ui/commit/940f165))
+
+
+
 <a name="1.9.6"></a>
 ## 1.9.6 (2018-02-17)
 

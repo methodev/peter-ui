@@ -17,6 +17,8 @@
   }
 
   .head {
+    text-align: center;
+
     > *:not(:first-child) {
       margin-top: $offset-inner;
     }
@@ -128,12 +130,6 @@
       display: block;
       width: 100%;
       height: auto;
-    }
-  }
-
-  @include mq-device-holding-type('inpocket') {
-    .timestamp {
-      text-align: center;
     }
   }
 
