@@ -1,3 +1,13 @@
+<a name="1.10.0"></a>
+# 1.10.0 (2018-02-22)
+
+
+### Features
+
+* **Fonts:** New family: Poetry ([fdcf52b](https://github.com/martinmethod/peter-ui/commit/fdcf52b))
+
+
+
 <a name="1.9.7"></a>
 ## 1.9.7 (2018-02-20)
 
