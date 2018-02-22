@@ -12,6 +12,7 @@ $roles-base-font-size: 18px;
 $roles-typo-font-families: (
   'title':  unquote(map-get($reg-font-families, 'pp–slab')),
   'text':   unquote(map-get($reg-font-families, 'pp–serif')),
+  'poetry': unquote(map-get($reg-font-families, 'pp–poetry')),
   'system': unquote(map-get($reg-font-families, 'pp–sans')),
   'credit': unquote(map-get($reg-font-families, 'pp–slab')),
   'input':  unquote(map-get($reg-font-families, 'pp–serif')),

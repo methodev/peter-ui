@@ -42,6 +42,20 @@ $font-faces: (
       'b': map-get($reg-font-weights, 'bold')
     ),
     'italic': false
+  ),
+
+  // Family: Cormorant
+  // Source: https://fontlibrary.org/fr/font/cormorant
+  // Design: Christian Thalmann (Catharsis Fonts)
+  'poetry': (
+    'family': (
+      //'l': map-get($reg-font-weights, 'light'),
+      'r': map-get($reg-font-weights, 'regular'),
+      //'m': map-get($reg-font-weights, 'medium'),
+      //'sb': map-get($reg-font-weights, 'semibold'),
+      'b': map-get($reg-font-weights, 'bold')
+    ),
+    'italic': true
   )
 );
 
