@@ -137,6 +137,8 @@
   &[data-type='poetry'] {
     display: flex;
     flex-direction: column;
+    font-family: map-get($roles-typo-font-families, 'poetry');
+    font-feature-settings: 'ss10' 1; // Required in order to use the bulgarian cyrillic in Safari
 
     .item {
       align-self: center;
@@ -149,6 +151,7 @@
     .body {
       @include mq-device-holding-type('inpocket') {
         font-size: .8em;
+        line-height: map-get($roles-typo-line-heights, 'text');
       }
     }
   }
