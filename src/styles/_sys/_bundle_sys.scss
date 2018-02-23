@@ -4,8 +4,8 @@
 
 //--------------------------| Registries
 
-@import 'data/registries/core/*.*';
-@import 'data/registries/items/*.*';
+@import 'data/registries/core/**/*.*';
+@import 'data/registries/items/**/*.*';
 
 
 //--------------------------| Functions
