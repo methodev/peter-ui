@@ -57,24 +57,6 @@
   }
 
 
-  //--------------------------| Types
-
-  &:not([data-type='poetry']) {
-    .body {
-      @include mq-tablet-breakpoint('above') {
-        .char1 {
-          font-size: 2em;
-          line-height: 1;
-        }
-
-        > p {
-          text-indent: 2em;
-        }
-      }
-    }
-  }
-
-
   //--------------------------| Print
 
   & {
