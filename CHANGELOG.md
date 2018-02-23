@@ -1,3 +1,13 @@
+<a name="1.11.0"></a>
+# 1.11.0 (2018-02-23)
+
+
+### Features
+
+* **Improvements:** Removed poetry logic ([123096a](https://github.com/martinmethod/peter-ui/commit/123096a))
+
+
+
 <a name="1.10.0"></a>
 # 1.10.0 (2018-02-22)
 
