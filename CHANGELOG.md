@@ -1,3 +1,16 @@
+<a name="1.12.0"></a>
+# 1.12.0 (2018-03-02)
+
+
+### Features
+
+* **Cover image:** Removed box shadow ([62ae40d](https://github.com/martinmethod/peter-ui/commit/62ae40d))
+* **Layout & Panels:** Improved look ([bd7cc1f](https://github.com/martinmethod/peter-ui/commit/bd7cc1f))
+* **Page background:** New pattern ([fea22b8](https://github.com/martinmethod/peter-ui/commit/fea22b8))
+* **Section line:** Thinner height ([77c1750](https://github.com/martinmethod/peter-ui/commit/77c1750))
+
+
+
 <a name="1.11.0"></a>
 # 1.11.0 (2018-02-23)
 

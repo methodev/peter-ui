@@ -19,6 +19,7 @@
   $label-font-size: map-get($roles-typo-font-sizes, 'system');
   $label-line-height: map-get($roles-typo-line-heights, 'system');
   $offset: 1em;
+  $thickness: 1px;
 
 
   //--------------------------| Base
@@ -94,7 +95,7 @@
   > hr {
     display: block;
     flex: 1;
-    height: 2px;
+    height: $thickness;
     min-width: 20%;
     border: 0;
   }
