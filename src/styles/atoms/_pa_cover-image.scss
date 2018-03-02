@@ -19,10 +19,6 @@
 
   //--------------------------| Mixins
 
-  @mixin cover-image-box-shadow($col) {
-    @include box-shadow(3px 3px 20px -8px $col);
-  }
-
   @mixin cover-image-gradient($pos, $col) {
     @include background-image(linear-gradient($pos, rgba($col, 1) 0%, rgba($col, 0) 100%));
   }
@@ -130,7 +126,6 @@
 
       &:hover {
         @include opacity(.9);
-        @include cover-image-box-shadow($col-link-hover);
         @include cover-image-slices();
 
         img {
@@ -153,7 +148,6 @@
 
     &:active {
       @include opacity(.9);
-      @include cover-image-box-shadow($col-link-active !important);
 
       img {
         @include transform($scale);
