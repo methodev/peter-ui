@@ -25,7 +25,7 @@ body {
 //--------------------------| Layout
 
 #layout {
-  $bgr: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAOklEQVQoU2NkIAIwElLz////M3gVgRUwMpoQNAlkE1ZFMBNgTsFQhK4Ap0nonoGbhM0EFOvwKQApBAB8YxfTDrIj0wAAAABJRU5ErkJggg==') repeat fixed;
+  $bgr: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIAIkJSVJMRJSB1I0b968Z3gVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCzyiVLN+PF6gAAAABJRU5ErkJggg==') repeat fixed;
 
   html:not(.mobile) & {
     background: $bgr;
