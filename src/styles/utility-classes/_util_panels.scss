@@ -6,12 +6,11 @@
 
 $util-panels: (
   'paper': (
-    'background': map-get($roles-col-backgrounds, 'paper')
-    //'shadow': map-get($roles-shadows, 'panel'),
-    //'border': 1px solid rgba(map-get($reg-colors, 'black'), .1)
+    'background': map-get($roles-col-backgrounds, 'paper'),
+    'shadow': map-get($roles-shadows, 'panel')
   ),
   'glass': (
-    'background': rgba(map-get($roles-col-backgrounds, 'paper'), .6),
+    'shadow': map-get($roles-shadows, 'panel'),
     'border': 1px solid map-get($reg-colors, 'white')
   )
 );
@@ -36,6 +35,12 @@ $util-panels: (
       border: $border;
     }
 
-    background-color: $bgr;
+    background: $bgr;
   }
+}
+
+.ut-panel-glass {
+  @include background-image(map-get($reg-gradients, 'blur'));
+
+  background-attachment: fixed;
 }

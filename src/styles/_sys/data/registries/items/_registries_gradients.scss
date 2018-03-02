@@ -3,5 +3,6 @@
 
 
 $reg-gradients: (
-  'linear-white-to-gray': linear-gradient(top, map-get($reg-colors, 'white') 0%, map-get($reg-colors, 'white') 33%, map-get($reg-colors, 'alabaster') 100%)
+  'linear-white-to-gray': linear-gradient(top, map-get($reg-colors, 'white') 0%, map-get($reg-colors, 'white') 33%, map-get($reg-colors, 'alabaster') 100%),
+  'blur': radial-gradient(center, rgba(map-get($reg-colors, 'white'), .85) 50%, rgba(250, 250, 250, .2) 100%)
 );
