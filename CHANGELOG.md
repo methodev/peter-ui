@@ -1,3 +1,13 @@
+<a name="1.12.1"></a>
+## 1.12.1 (2018-03-07)
+
+
+### Bug Fixes
+
+* **Panels:** Static background for glass panel ([83b3349](https://github.com/martinmethod/peter-ui/commit/83b3349))
+
+
+
 <a name="1.12.0"></a>
 # 1.12.0 (2018-03-02)
 
