@@ -41,6 +41,4 @@ $util-panels: (
 
 .ut-panel-glass {
   @include background-image(map-get($reg-gradients, 'blur'));
-
-  background-attachment: fixed;
 }
