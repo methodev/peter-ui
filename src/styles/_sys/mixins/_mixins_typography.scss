@@ -40,25 +40,13 @@
 //--------------------------| Line heights
 
 @mixin typo-line-heights($type, $val) {
-  $ratio: map-get($reg-line-heights, '170%') / $val;
-
   @if $type == 'text' {
+    $ratio: map-get($reg-line-heights, '170%') / $val;
+
     @include mq-device-holding-type('outpocket') {
       line-height: $val * $ratio;
     }
-  }
 
-  @if $type == 'resume' {
-    @include mq-tablet-breakpoint('below') {
-      line-height: $val * $ratio;
-    }
-
-    @include mq-tablet-breakpoint('above') {
-      line-height: $val;
-    }
-  }
-
-  @if $type == 'text' or $type == 'resume' {
     @include mq-device-holding-type('inpocket') {
       $min-obj-size: $val * 100;
       $max-obj-size: ($val * $ratio) * 100;
@@ -67,6 +55,18 @@
       $random-divider: 5.361;
 
       line-height: calc(#{$val}rem + #{strip-unit(($max-obj-size - $min-obj-size) / $random-divider)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    }
+  }
+
+  @if $type == 'resume' {
+    $ratio: map-get($reg-line-heights, '150%') / $val;
+
+    @include mq-device-holding-type('outpocket') {
+      line-height: $val * $ratio;
+    }
+
+    @include mq-device-holding-type('inpocket') {
+      line-height: $val;
     }
   }
 
