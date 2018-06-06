@@ -1,3 +1,13 @@
+<a name="1.13.1"></a>
+## 1.13.1 (2018-06-06)
+
+
+### Bug Fixes
+
+* **Typography:** Line-height improvements ([e59f185](https://github.com/martinmethod/peter-ui/commit/e59f185))
+
+
+
 <a name="1.13.0"></a>
 # 1.13.0 (2018-06-06)
 
