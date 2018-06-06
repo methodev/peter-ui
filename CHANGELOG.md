@@ -1,3 +1,18 @@
+<a name="1.13.0"></a>
+# 1.13.0 (2018-06-06)
+
+
+### Bug Fixes
+
+* **Resume body:** Removed ">" from selector ([72de67c](https://github.com/martinmethod/peter-ui/commit/72de67c))
+
+
+### Features
+
+* **Typography roles:** New excerpt role ([454ba88](https://github.com/martinmethod/peter-ui/commit/454ba88))
+
+
+
 <a name="1.12.1"></a>
 ## 1.12.1 (2018-03-07)
 
