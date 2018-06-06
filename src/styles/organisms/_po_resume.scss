@@ -13,16 +13,13 @@
 
   //--------------------------| Base
 
-  @include mq-tablet-breakpoint('above') {
-    font-size: .8rem;
-  }
-
   & {
     @extend %ph-post-flow;
 
-    @include typo-line-heights('resume', map-get($roles-typo-line-heights, 'text'));
+    @include typo-line-heights('resume', map-get($roles-typo-line-heights, 'excerpt'));
 
     display: block;
+    font-size: .8rem;
   }
 
 
