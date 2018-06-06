@@ -10,13 +10,14 @@ $roles-base-font-size: 18px;
 //--------------------------| Font families
 
 $roles-typo-font-families: (
-  'title':  unquote(map-get($reg-font-families, 'pp–slab')),
-  'text':   unquote(map-get($reg-font-families, 'pp–serif')),
-  'system': unquote(map-get($reg-font-families, 'pp–sans')),
-  'credit': unquote(map-get($reg-font-families, 'pp–slab')),
-  'input':  unquote(map-get($reg-font-families, 'pp–serif')),
-  'glyph':  unquote(map-get($reg-font-families, 'pp–serif')),
-  'error':  unquote(map-get($reg-font-families, 'pp–mono'))
+  'title':   unquote(map-get($reg-font-families, 'pp–slab')),
+  'text':    unquote(map-get($reg-font-families, 'pp–serif')),
+  'excerpt': unquote(map-get($reg-font-families, 'pp–sans')),
+  'system':  unquote(map-get($reg-font-families, 'pp–sans')),
+  'credit':  unquote(map-get($reg-font-families, 'pp–slab')),
+  'input':   unquote(map-get($reg-font-families, 'pp–serif')),
+  'glyph':   unquote(map-get($reg-font-families, 'pp–serif')),
+  'error':   unquote(map-get($reg-font-families, 'pp–mono'))
 );
 
 
