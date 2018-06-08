@@ -25,7 +25,7 @@ body {
 //--------------------------| Layout
 
 #layout {
-  $bgr: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIAIkJSVJMRJSB1I0b968Z3gVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQCzyiVLN+PF6gAAAABJRU5ErkJggg==') repeat fixed;
+  $bgr: url(map-get($roles-patterns, 'layout')) repeat fixed;
 
   html:not(.mobile) & {
     background: $bgr;
