@@ -11,7 +11,7 @@
   $offset-inner: .5em;
   $title-offset: 1.5em 0 .6em;
 
-  > *:not(:first-child),
+  &:not(.item) > *:not(:first-child),
   .item > *:not(:first-child) {
     margin-top: $offset;
   }
