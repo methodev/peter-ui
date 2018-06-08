@@ -40,5 +40,46 @@ $util-panels: (
 }
 
 .ut-panel-glass {
-  @include background-image(map-get($reg-gradients, 'blur'));
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+  }
+
+  html:not(.mobile) & {
+    @include background-image($layout-bgr-image);
+
+    background-attachment: fixed;
+    background-color: $layout-bgr-color;
+    background-repeat: no-repeat;
+    background-size: 100% 50vh;
+
+    &::before {
+      @include filter(blur(.9px));
+
+      z-index: 1;
+      background: url(map-get($roles-patterns, 'layout')) repeat fixed;
+    }
+
+    &::after {
+      @include background-image(map-get($reg-gradients, 'blur'));
+
+      z-index: 2;
+    }
+  }
+
+  html.mobile &::after {
+    @include background-image(map-get($reg-gradients, 'blur-white'));
+  }
+
+  > * {
+    position: relative;
+    z-index: 3;
+  }
 }

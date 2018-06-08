@@ -1,3 +1,13 @@
+<a name="1.14.0"></a>
+# 1.14.0 (2018-06-08)
+
+
+### Features
+
+* **Glass panels:** Blur effect ([0c3c9b5](https://github.com/martinmethod/peter-ui/commit/0c3c9b5))
+
+
+
 <a name="1.13.1"></a>
 ## 1.13.1 (2018-06-06)
 
