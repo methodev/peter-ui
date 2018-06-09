@@ -118,14 +118,8 @@ hr {
 //
 // Set the highlight background color of selected text
 @at-root {
-  $col-selection: map-get($roles-col-backgrounds, 'selection');
-
-  ::-moz-selection {
-    background: rgba($col-selection, .5);
-  }
-
-  ::selection {
-    background: rgba($col-selection, .5);
+  * {
+    @include selection(map-get($roles-col-backgrounds, 'selection'));
   }
 }
 

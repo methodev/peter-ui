@@ -1,3 +1,15 @@
+<a name="1.16.2"></a>
+## 1.16.2 (2018-06-09)
+
+
+### Bug Fixes
+
+* **Blockquotes:** Increased font-size ([953b892](https://github.com/martinmethod/peter-ui/commit/953b892))
+* **Blockquotes:** Reduced padding to 1.6em ([586f646](https://github.com/martinmethod/peter-ui/commit/586f646))
+* **Text selection:** Improvements ([c81a5be](https://github.com/martinmethod/peter-ui/commit/c81a5be))
+
+
+
 <a name="1.16.1"></a>
 ## 1.16.1 (2018-06-09)
 
