@@ -81,6 +81,8 @@
   blockquote {
     $quotes-offset: .05em;
 
+    @include selection(map-get($reg-colors, 'twitter'));
+
     position: relative;
     padding: 2em;
     font-size: .9em;

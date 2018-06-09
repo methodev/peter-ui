@@ -63,3 +63,18 @@
     }
   }
 }
+
+
+//--------------------------| Selection
+
+@mixin selection($col) {
+  $bgr: rgba($col, .5);
+
+  &::-moz-selection {
+    background: $bgr;
+  }
+
+  &::selection {
+    background: $bgr;
+  }
+}
