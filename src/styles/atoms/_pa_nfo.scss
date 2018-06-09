@@ -29,7 +29,7 @@
     left: 0;
     width: $nfo-icon-size;
     height: $nfo-icon-size;
-    font: map-get($reg-font-weights, 'bold') unquote('#{.8em}/#{$nfo-icon-size}') map-get($roles-typo-font-families, 'glyph');
+    font: map-get($reg-font-weights, 'bold') unquote('#{.8em}/#{$nfo-icon-size + .3}') map-get($roles-typo-font-families, 'glyph');
     color: map-get($roles-col-texts, 'negative');
     text-align: center;
     background-color: map-get($roles-col-states, 'alert');
