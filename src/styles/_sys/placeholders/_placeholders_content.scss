@@ -8,7 +8,7 @@
   @extend %ph-typo-texts;
 
   $offset: 1em;
-  $offset-inner: 2em;
+  $offset-inner: .5em;
   $title-offset: 1.5em 0 .6em;
 
   &:not(.item) > *:not(:first-child),
@@ -76,7 +76,7 @@
     $quotes-offset: .05em;
 
     position: relative;
-    padding: $offset-inner;
+    padding: 2em;
     font-size: .9em;
     font-style: italic;
     background-color: map-get($roles-col-backgrounds, 'quote');
