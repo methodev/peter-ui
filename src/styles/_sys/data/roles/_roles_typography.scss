@@ -48,7 +48,7 @@ $roles-typo-font-sizes: (
 
 $roles-typo-line-heights: (
   'title':    map-get($reg-line-heights, '130%'),
-  'excerpt':  map-get($reg-line-heights, '130%'),
+  'excerpt':  map-get($reg-line-heights, '150%'),
   'text':     map-get($reg-line-heights, '140%'),
   'system':   map-get($reg-line-heights, '150%') // for separators, system labels and meta data
 );
