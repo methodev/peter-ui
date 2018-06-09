@@ -1,3 +1,13 @@
+<a name="1.16.1"></a>
+## 1.16.1 (2018-06-09)
+
+
+### Bug Fixes
+
+* **Note:** Improved layout ([0279b08](https://github.com/martinmethod/peter-ui/commit/0279b08))
+
+
+
 <a name="1.16.0"></a>
 # 1.16.0 (2018-06-09)
 
