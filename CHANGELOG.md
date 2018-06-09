@@ -1,3 +1,20 @@
+<a name="1.15.0"></a>
+# 1.15.0 (2018-06-09)
+
+
+### Bug Fixes
+
+* **Blockquotes:** Improved layout ([4682545](https://github.com/martinmethod/peter-ui/commit/4682545))
+* **Excerpts:** Extended line-height to 1.5 ([c0d45b2](https://github.com/martinmethod/peter-ui/commit/c0d45b2))
+* **Panels:** Increased blur effect for glass panels ([d8cde46](https://github.com/martinmethod/peter-ui/commit/d8cde46))
+
+
+### Features
+
+* **Blockquotes:** Blue block layout ([9bc244e](https://github.com/martinmethod/peter-ui/commit/9bc244e))
+
+
+
 <a name="1.14.0"></a>
 # 1.14.0 (2018-06-08)
 

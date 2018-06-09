@@ -46,7 +46,8 @@ $roles-col-backgrounds: (
   'theme':     map-get($reg-backgrounds, 'la-rioja'),
   'page':      map-get($reg-backgrounds, 'alabaster'),
   'selection': map-get($reg-backgrounds, 'la-rioja'),
-  'image-bgr': map-get($reg-backgrounds, 'mine-shaft')
+  'image-bgr': map-get($reg-backgrounds, 'mine-shaft'),
+  'quote':     map-get($reg-backgrounds, 'black-squeeze')
 );
 
 
@@ -55,6 +56,5 @@ $roles-col-backgrounds: (
 $roles-col-borders: (
   'foot-line': map-get($reg-colors, 'la-rioja'),
   'input':     map-get($reg-colors, 'silver'),
-  'quote':     map-get($reg-colors, 'la-rioja'),
   'separator': map-get($reg-colors, 'silver')
 );
