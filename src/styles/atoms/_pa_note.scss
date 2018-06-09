@@ -47,8 +47,12 @@
     content: 'i';
   }
 
-  p:last-child {
-    margin-bottom: 0;
+  p {
+    @include selection(map-get($reg-colors, 'golden-tainoi'));
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
 
