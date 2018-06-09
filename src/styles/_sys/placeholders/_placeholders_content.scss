@@ -87,6 +87,7 @@
     padding: 1.6em;
     font-size: 1.2em;
     font-style: italic;
+    text-align: center;
     background-color: map-get($roles-col-backgrounds, 'quote');
 
     &:not(:last-child) {
