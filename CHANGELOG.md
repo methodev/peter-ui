@@ -1,3 +1,18 @@
+<a name="1.16.0"></a>
+# 1.16.0 (2018-06-09)
+
+
+### Bug Fixes
+
+* **Info text:** Increased symbol line-height ([224b9cb](https://github.com/martinmethod/peter-ui/commit/224b9cb))
+
+
+### Features
+
+* **New atom:** Note ([c14bd34](https://github.com/martinmethod/peter-ui/commit/c14bd34))
+
+
+
 <a name="1.15.1"></a>
 ## 1.15.1 (2018-06-09)
 
