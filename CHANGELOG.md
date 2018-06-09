@@ -1,3 +1,13 @@
+<a name="1.15.1"></a>
+## 1.15.1 (2018-06-09)
+
+
+### Bug Fixes
+
+* **Article:** Restored inner offset to 0.5em ([4d42e8a](https://github.com/martinmethod/peter-ui/commit/4d42e8a))
+
+
+
 <a name="1.15.0"></a>
 # 1.15.0 (2018-06-09)
 
