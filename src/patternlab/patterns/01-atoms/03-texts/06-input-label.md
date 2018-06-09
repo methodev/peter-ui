@@ -1,5 +1,5 @@
 ---
-title: Default
+title: Input label
 ---
 
 Този текст има за цел да бъде използван...
