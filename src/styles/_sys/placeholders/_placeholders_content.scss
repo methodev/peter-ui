@@ -8,7 +8,7 @@
   @extend %ph-typo-texts;
 
   $offset: 1em;
-  $offset-inner: .5em;
+  $offset-inner: 3em;
   $title-offset: 1.5em 0 .6em;
 
   &:not(.item) > *:not(:first-child),
@@ -73,11 +73,35 @@
   }
 
   blockquote {
-    padding-left: $offset-inner;
+    position: relative;
+    padding: ($offset-inner / 2) $offset-inner;
     font-size: .9em;
     font-style: italic;
-    color: map-get($roles-col-texts, 'secondary');
-    border-left: 1px solid map-get($roles-col-borders, 'quote');
+    background-color: map-get($roles-col-backgrounds, 'quote');
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      font-size: 6em;
+      line-height: 1;
+      color: map-get($roles-col-texts, 'negative');
+    }
+
+    &::before {
+      bottom: .05em;
+      left: .1em;
+      content: '„';
+    }
+
+    &::after {
+      top: .1em;
+      right: .1em;
+      content: '“';
+    }
   }
 
   pre {
