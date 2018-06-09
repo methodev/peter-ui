@@ -72,6 +72,12 @@
     margin: 0 auto;
   }
 
+  .pa-note {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+
   blockquote {
     $quotes-offset: .05em;
 

@@ -1,0 +1,38 @@
+// =========================| Atom: Note |========================= //
+
+
+
+.pa-note {
+
+  //--------------------------| Variables
+
+  $offset: .2em;
+
+
+  //--------------------------| Base
+
+  position: relative;
+  padding: 3.6em 2em 1em;
+  font-size: .9em;
+  font-style: italic;
+  background-color: map-get($roles-col-backgrounds, 'note');
+
+  &::before {
+    @include text-shadow(1px 1px 0 rgba(map-get($reg-colors, 'silver'), .8));
+
+    position: absolute;
+    top: $offset;
+    left: .7em;
+    font-size: 3em;
+    font-weight: map-get($roles-typo-font-weights, 'symbol');
+    line-height: 1;
+    color: map-get($roles-col-texts, 'negative');
+    content: 'i';
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+
+} // .pa-note

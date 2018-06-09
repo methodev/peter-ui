@@ -47,7 +47,9 @@ $roles-col-backgrounds: (
   'page':      map-get($reg-backgrounds, 'alabaster'),
   'selection': map-get($reg-backgrounds, 'la-rioja'),
   'image-bgr': map-get($reg-backgrounds, 'mine-shaft'),
-  'quote':     map-get($reg-backgrounds, 'black-squeeze')
+  'quote':     map-get($reg-backgrounds, 'black-squeeze'),
+  'note':      light(map-get($reg-backgrounds, 'golden-tainoi'), 75%),
+  'highlight': light(map-get($reg-backgrounds, 'golden-tainoi'), 50%)
 );
 
 

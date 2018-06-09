@@ -57,9 +57,11 @@ $roles-typo-line-heights: (
 //--------------------------| Font weights
 
 $roles-typo-font-weights: (
-  'title':  map-get($reg-font-weights, 'regular'),
-  'button': map-get($reg-font-weights, 'regular'),
-  'credit': map-get($reg-font-weights, 'regular')
+  'title':     map-get($reg-font-weights, 'regular'),
+  'button':    map-get($reg-font-weights, 'regular'),
+  'credit':    map-get($reg-font-weights, 'regular'),
+  'highlight': map-get($reg-font-weights, 'regular'),
+  'symbol':    map-get($reg-font-weights, 'black')
 );
 
 
