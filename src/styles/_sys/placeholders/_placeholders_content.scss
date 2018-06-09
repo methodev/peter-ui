@@ -81,8 +81,6 @@
   blockquote {
     $quotes-offset: .05em;
 
-    @include selection(map-get($reg-colors, 'twitter'));
-
     position: relative;
     padding: 1.6em;
     font-size: 1.2em;
@@ -114,8 +112,12 @@
       content: '“';
     }
 
-    p:last-child {
-      margin-bottom: 0;
+    p {
+      @include selection(map-get($reg-colors, 'twitter'));
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
