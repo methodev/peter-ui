@@ -1,4 +1,4 @@
-var browser = process.platform === 'win32' ? 'Chrome' : 'Google Chrome';
+var browser = process.platform === 'win32' ? 'Chrome' : '/Applications/Google Chrome.app';
 
 module.exports = {
   dev: {
