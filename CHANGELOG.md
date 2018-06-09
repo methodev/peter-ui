@@ -1,3 +1,14 @@
+<a name="1.16.3"></a>
+## 1.16.3 (2018-06-09)
+
+
+### Bug Fixes
+
+* **Blockquote:** Centered text ([f3c6587](https://github.com/martinmethod/peter-ui/commit/f3c6587))
+* **Blockquote:** Paragraph selection ([6f807a1](https://github.com/martinmethod/peter-ui/commit/6f807a1))
+
+
+
 <a name="1.16.2"></a>
 ## 1.16.2 (2018-06-09)
 
