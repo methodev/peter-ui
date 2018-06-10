@@ -1,3 +1,13 @@
+<a name="1.16.4"></a>
+## 1.16.4 (2018-06-10)
+
+
+### Bug Fixes
+
+* **Mobile header:** Broken z-index ([17ed2ad](https://github.com/martinmethod/peter-ui/commit/17ed2ad))
+
+
+
 <a name="1.16.3"></a>
 ## 1.16.3 (2018-06-09)
 
