@@ -18,6 +18,7 @@
   $bgr-color: map-get($reg-backgrounds, 'mine-shaft');
   $text-color: map-get($roles-col-texts, 'negative');
   $link-color: $text-color;
+  $link-font-face: map-get($roles-typo-font-families, 'system');
   $offset: #{get-page-offset()}vw;
 
 
@@ -38,6 +39,7 @@
   //--------------------------| Common
 
   a {
+    font-family: $link-font-face;
     color: $link-color;
     border-bottom-color: rgba($link-color, .3);
 
