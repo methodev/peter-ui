@@ -41,4 +41,13 @@
   }
 
 
+  //--------------------------| Print
+
+  @media print {
+    & {
+      display: none;
+    }
+  }
+
+
 } // .po-resumes-list

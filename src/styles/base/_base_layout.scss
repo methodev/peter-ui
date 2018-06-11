@@ -131,10 +131,18 @@ button {
 @media print {
   * {
     @include text-shadow(none !important);
+    @include box-shadow(none !important);
+
+    &,
+    &::before,
+    &::after {
+      background: none !important;
+    }
   }
 
-  body {
-    background: map-get($roles-col-backgrounds, 'paper');
+  #related-posts,
+  [data-comments='0'] {
+    display: none;
   }
 
   #layout-stage {
