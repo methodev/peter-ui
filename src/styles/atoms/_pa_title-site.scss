@@ -19,6 +19,7 @@
 
   //--------------------------| Slogan
 
+  &::before,
   &::after {
     display: block;
     font-size: $slogan-font-size;
