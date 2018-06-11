@@ -1,3 +1,13 @@
+<a name="1.16.6"></a>
+## 1.16.6 (2018-06-11)
+
+
+### Bug Fixes
+
+* **Print styles:** Layout improvements ([89b0b13](https://github.com/martinmethod/peter-ui/commit/89b0b13))
+
+
+
 <a name="1.16.5"></a>
 ## 1.16.5 (2018-06-11)
 
