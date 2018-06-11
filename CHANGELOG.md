@@ -1,3 +1,13 @@
+<a name="1.16.7"></a>
+## 1.16.7 (2018-06-11)
+
+
+### Bug Fixes
+
+* **Title-site:** Added support for ::before slogan ([87e4e56](https://github.com/martinmethod/peter-ui/commit/87e4e56))
+
+
+
 <a name="1.16.6"></a>
 ## 1.16.6 (2018-06-11)
 
