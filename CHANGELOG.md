@@ -1,3 +1,13 @@
+<a name="1.16.5"></a>
+## 1.16.5 (2018-06-11)
+
+
+### Bug Fixes
+
+* **Foot nav:** Changed links' font-face to pp-sans ([7821d6f](https://github.com/martinmethod/peter-ui/commit/7821d6f))
+
+
+
 <a name="1.16.4"></a>
 ## 1.16.4 (2018-06-10)
 
