@@ -29,7 +29,9 @@
 
   //--------------------------| Body
 
-  //.body {}
+  .body {
+    @include text-shadow(1px 1px 0 rgba(map-get($reg-colors, 'alabaster'), .5));
+  }
 
   .pa-cover-image {
     &.full {
