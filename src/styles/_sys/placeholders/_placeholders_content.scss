@@ -98,20 +98,21 @@
     &::before,
     &::after {
       position: absolute;
-      font-size: 6em;
-      line-height: 1;
+      font: normal 6em unquote(map-get($reg-font-families, 'pp–slab'));
+      line-height: 0;
       color: map-get($reg-colors, 'twitter');
+      text-shadow: 1px 1px 0 map-get($reg-colors, 'black');
     }
 
     &::before {
-      bottom: -.2em;
-      left: $quotes-offset;
+      bottom: .4em;
+      left: 0;
       content: '„';
     }
 
     &::after {
-      top: -.15em;
-      right: $quotes-offset;
+      top: .25em;
+      right: 0;
       content: '“';
     }
 
