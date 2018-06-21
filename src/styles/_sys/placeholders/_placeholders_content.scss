@@ -10,6 +10,7 @@
   $offset: 1em;
   $offset-inner: .5em;
   $title-offset: 1.5em 0 .6em;
+  $title-color: map-get($roles-col-texts, 'secondary');
 
   &:not(.item) > *:not(:first-child),
   .item > *:not(:first-child) {
@@ -42,6 +43,7 @@
     h5,
     h6 {
       margin: $title-offset;
+      color: $title-color;
       text-shadow: none;
     }
 
