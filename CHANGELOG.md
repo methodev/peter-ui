@@ -1,3 +1,20 @@
+<a name="1.17.0"></a>
+# 1.17.0 (2018-06-21)
+
+
+### Bug Fixes
+
+* **Article body titles:** Changed color to gray ([c22db4c](https://github.com/martinmethod/peter-ui/commit/c22db4c))
+
+
+### Features
+
+* **Article:** Body text with shadow ([87c8413](https://github.com/martinmethod/peter-ui/commit/87c8413))
+* **Fonts:** New serif: Minion 3 ([2eb4a17](https://github.com/martinmethod/peter-ui/commit/2eb4a17))
+* **Links List:** Changed font to sans-serif ([d8b04ea](https://github.com/martinmethod/peter-ui/commit/d8b04ea))
+
+
+
 <a name="1.16.7"></a>
 ## 1.16.7 (2018-06-11)
 
