@@ -8,8 +8,7 @@
 
   $offset: 1em;
   $text-size: .8em;
-  $text-color: map-get($roles-col-texts, 'secondary');
-
+  $text-color: darken(map-get($reg-colors, 'twitter'), 33%);
 
 
   //--------------------------| Base
