@@ -609,3 +609,7 @@ output {
 summary {
   display: list-item; // Add the correct display in all browsers
 }
+
+br {
+  @include selection(transparent);
+}
