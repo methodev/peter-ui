@@ -14,6 +14,8 @@
   & {
     @extend %ph-list-reset;
 
+    @include user-select(none);
+
     font-family: $link-font-face;
   }
 
