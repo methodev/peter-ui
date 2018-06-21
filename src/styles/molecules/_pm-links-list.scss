@@ -6,13 +6,15 @@
 
   //--------------------------| Variables
 
-
+  $link-font-face: map-get($roles-typo-font-families, 'system');
 
 
   //--------------------------| Base
 
   & {
     @extend %ph-list-reset;
+
+    font-family: $link-font-face;
   }
 
   @include mq-device-holding-type('inpocket') {
