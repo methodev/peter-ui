@@ -9,15 +9,15 @@ $fonts-sysdir: '#{$fonts-dir}';
 $fonts-prefix: 'pp';
 
 $font-faces: (
-  // Family: Vollkorn
-  // Source: http://vollkorn-typeface.com/
-  // Design: Friedrich Althausen (http://friedrichalthausen.de)
+  // Family: Minion 3
+  // Source: https://minion.typekit.com/preview
+  // Design: Robert Slimbach (Adobe)
   'serif': (
     'family': (
-      'r': map-get($reg-font-weights, 'regular'),
-      'b': map-get($reg-font-weights, 'bold')
-      //'sb': map-get($reg-font-weights, 'semibold'),
-      //'bl': map-get($reg-font-weights, 'black')
+       'r': map-get($reg-font-weights, 'regular'),
+       'm': map-get($reg-font-weights, 'medium'),
+      'sb': map-get($reg-font-weights, 'semibold'),
+       'b': map-get($reg-font-weights, 'bold')
     ),
     'italic': true
   ),
