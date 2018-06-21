@@ -6,12 +6,12 @@
 
   //--------------------------| Variables
 
-
+  $primary-title-color: map-get($roles-col-texts, 'primary');
 
 
   //--------------------------| Base
 
-  @include typo-titles-base('primary-title');
+  @include typo-titles-base('primary-title', $primary-title-color);
 
 
 } // .pa-title-primary
