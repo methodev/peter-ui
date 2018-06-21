@@ -12,6 +12,7 @@
   //--------------------------| Base
 
   @include typo-titles-base('system-title');
+  @include user-select(none);
 
 
   //--------------------------| Print
