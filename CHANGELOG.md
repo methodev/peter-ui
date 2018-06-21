@@ -1,3 +1,25 @@
+<a name="1.17.1"></a>
+## 1.17.1 (2018-06-21)
+
+
+### Bug Fixes
+
+* **Article:** Improved text shadow ([a5fa8ff](https://github.com/martinmethod/peter-ui/commit/a5fa8ff))
+* **Blockquote:** Refactored quotes ([28b13b2](https://github.com/martinmethod/peter-ui/commit/28b13b2))
+* **Break elements:** Transparent text selection ([28658d9](https://github.com/martinmethod/peter-ui/commit/28658d9))
+* **Foot line:** Silver border color ([ebc7412](https://github.com/martinmethod/peter-ui/commit/ebc7412))
+* **Images:** Disabled pointer events ([52b5c64](https://github.com/martinmethod/peter-ui/commit/52b5c64))
+* **Images:** Disabled user selection ([18a4c29](https://github.com/martinmethod/peter-ui/commit/18a4c29))
+* **Info:** Disabled user selection ([cd4a4c9](https://github.com/martinmethod/peter-ui/commit/cd4a4c9))
+* **Input label:** Disabled user selection ([9c87678](https://github.com/martinmethod/peter-ui/commit/9c87678))
+* **Links List:** Disabled user selection ([98cefb0](https://github.com/martinmethod/peter-ui/commit/98cefb0))
+* **Primary Title:** Added text shadow ([080e314](https://github.com/martinmethod/peter-ui/commit/080e314))
+* **Sticker:** Text color set to dark blue ([797b80f](https://github.com/martinmethod/peter-ui/commit/797b80f))
+* **Sticker:** Text selection color set to blue ([4ec21a8](https://github.com/martinmethod/peter-ui/commit/4ec21a8))
+* **System Title:** Disabled user selection ([304973d](https://github.com/martinmethod/peter-ui/commit/304973d))
+
+
+
 <a name="1.17.0"></a>
 # 1.17.0 (2018-06-21)
 
