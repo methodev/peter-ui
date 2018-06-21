@@ -13,6 +13,8 @@
 
   //--------------------------| Base
 
+  @include user-select(none);
+
   width: 100%;
   font: normal $font-size $font-face;
   color: $text-color;
