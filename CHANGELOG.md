@@ -1,3 +1,13 @@
+<a name="1.18.0"></a>
+# 1.18.0 (2018-06-21)
+
+
+### Features
+
+* **Post:** Refactoring ([6f42703](https://github.com/martinmethod/peter-ui/commit/6f42703))
+
+
+
 <a name="1.17.1"></a>
 ## 1.17.1 (2018-06-21)
 

@@ -65,6 +65,14 @@ $roles-typo-font-weights: (
 );
 
 
+//--------------------------| Utilities
+
+$roles-typo-utilities: (
+  'indent': 2em,
+  'highlight': map-get($roles-col-backgrounds, 'highlight')
+);
+
+
 //--------------------------| Content
 
 $roles-typo-contents: (

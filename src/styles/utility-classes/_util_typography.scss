@@ -63,6 +63,33 @@
 }
 
 
+
+//--------------------------| Indent
+
+.ut-typo-indent {
+  text-indent: map-get($roles-typo-utilities, 'indent');
+}
+
+
+//--------------------------| Highlight
+
+.ut-typo-highlight {
+  @include font-smoothing(none);
+  @include selection(dark(map-get($roles-col-backgrounds, 'highlight'), 25%));
+
+  font-weight: map-get($roles-typo-font-weights, 'highlight');
+  background-color: map-get($roles-typo-utilities, 'highlight');
+}
+
+
+//--------------------------| Signature
+
+.ut-typo-signature {
+  font-style: italic;
+  text-align: right;
+}
+
+
 //--------------------------| Pseudo content
 
 .ut-typo-read-more {
