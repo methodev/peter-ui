@@ -1,8 +1,8 @@
-// =========================| Organism: Article |========================= //
+// =========================| Organism: Post |========================= //
 
 
 
-.po-article {
+.po-post {
 
   //--------------------------| Variables
 
@@ -16,9 +16,6 @@
     @extend %ph-post-flow;
 
     @include typo-line-heights('text', map-get($roles-typo-line-heights, 'text'));
-
-    max-width: $roles-size-post;
-    margin: 0 auto;
   }
 
 
@@ -59,6 +56,22 @@
   }
 
 
+  //--------------------------| Types
+
+  &:not([data-type]) { // default type: article
+    .body {
+      .char1 {
+        font-size: 2em;
+        line-height: 1;
+      }
+
+      > p:first-of-type {
+        text-indent: map-get($roles-typo-utilities, 'indent');
+      }
+    }
+  }
+
+
   //--------------------------| Print
 
   & {
@@ -71,4 +84,4 @@
   }
 
 
-} // .po-article
+} // .po-post
