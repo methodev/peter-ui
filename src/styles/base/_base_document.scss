@@ -350,6 +350,7 @@ img {
   @include user-select(none);
 
   vertical-align: middle;
+  pointer-events: none;
   border-style: none; // Remove the border on images inside links in IE 10-.
 }
 
