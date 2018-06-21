@@ -7,6 +7,7 @@
   //--------------------------| Data
 
   $links-categories: (
+    'pages': map-get($reg-colors, 'alabaster'),
     'most-read': map-get($reg-colors, 'bittersweet'),
     'tags': map-get($reg-colors, 'golden-tainoi'),
     'headings': light(map-get($reg-colors, 'la-rioja'), 20%)
@@ -54,7 +55,7 @@
     //  margin: 0 auto;
     //}
 
-    @include mq-device-holding-type('inpocket') {
+    @include mq-tablet-breakpoint('below') {
       flex-direction: column-reverse;
       text-align: center;
 
@@ -77,7 +78,7 @@
       }
     }
 
-    @include mq-device-holding-type('outpocket') {
+    @include mq-tablet-breakpoint('above') {
       .category {
         & + .category {
           padding-left: $offset;
@@ -95,7 +96,7 @@
       $value: map-get($links-categories, $name);
 
       .category[data-type='#{$name}'] {
-        @include mq-device-holding-type('inpocket') {
+        @include mq-tablet-breakpoint('below') {
           .pa-title-system {
             @include text-shadow(none);
 
@@ -104,7 +105,7 @@
           }
         }
 
-        @include mq-device-holding-type('outpocket') {
+        @include mq-tablet-breakpoint('above') {
           .pa-title-system {
             color: $value;
           }
@@ -124,28 +125,7 @@
     a {
       font-size: map-get($roles-typo-font-sizes, 'system');
     }
-
-    //@include mq-tablet-breakpoint('above') {}
   }
-
-
-  //--------------------------| Signature
-
-  //> .signature {
-  //  @include mq-screen-size-type('mobile') {
-  //    margin-top: calc(#{$offset} * 4);
-  //    text-align: center;
-  //  }
-  //
-  //  @include mq-screen-size-type('desktop') {
-  //    align-self: flex-end;
-  //    width: $signature-width;
-  //    margin-right: calc(#{$offset / 2.4} * -1);
-  //    margin-bottom: calc(#{$offset / 1.2} * -1);
-  //  }
-  //
-  //  text-align: right;
-  //}
 
 
   //--------------------------| Print

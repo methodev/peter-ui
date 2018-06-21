@@ -1,3 +1,13 @@
+<a name="1.19.0"></a>
+# 1.19.0 (2018-06-21)
+
+
+### Features
+
+* **Foot Nav:** Support for new section: Pages ([e0ede80](https://github.com/martinmethod/peter-ui/commit/e0ede80))
+
+
+
 <a name="1.18.0"></a>
 # 1.18.0 (2018-06-21)
 
