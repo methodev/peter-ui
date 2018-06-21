@@ -68,7 +68,7 @@
 //--------------------------| Selection
 
 @mixin selection($col) {
-  $bgr: rgba($col, .5);
+  $bgr: if($col != transparent, rgba($col, .5), rgba(0, 0, 0, 0));
 
   &::-moz-selection {
     background: $bgr;

@@ -30,7 +30,7 @@
   //--------------------------| Body
 
   .body {
-    @include text-shadow(1px 1px 0 rgba(map-get($reg-colors, 'alabaster'), .5));
+    @include text-shadow(1px 1px 0 rgba(light(map-get($roles-col-texts, 'secondary'), 95%), .5));
   }
 
   .pa-cover-image {

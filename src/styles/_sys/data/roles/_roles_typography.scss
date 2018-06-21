@@ -16,7 +16,7 @@ $roles-typo-font-families: (
   'system':  unquote(map-get($reg-font-families, 'pp–sans')),
   'credit':  unquote(map-get($reg-font-families, 'pp–slab')),
   'input':   unquote(map-get($reg-font-families, 'pp–serif')),
-  'glyph':   unquote(map-get($reg-font-families, 'pp–serif')),
+  'glyph':   unquote(map-get($reg-font-families, 'pp–slab')),
   'error':   unquote(map-get($reg-font-families, 'pp–mono'))
 );
 
