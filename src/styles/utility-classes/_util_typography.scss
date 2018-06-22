@@ -98,14 +98,27 @@
   }
 }
 
+[class*='ut-typo-arrow'] {
+  &::before,
+  &::after {
+    @include translateY(.05em);
+    @include font-smoothing();
+
+    display: inline-block;
+    margin: 0 .2em;
+    font-size: 1.5em;
+    color: map-get($roles-col-texts, 'glyphs');
+  }
+}
+
 .ut-typo-arrow-l {
   &::before {
-    content: '← ';
+    content: ' #{map-get($roles-typo-contents, 'arrow-l')}';
   }
 }
 
 .ut-typo-arrow-r {
   &::after {
-    content: ' →';
+    content: ' #{map-get($roles-typo-contents, 'arrow-r')}';
   }
 }
