@@ -241,7 +241,8 @@ sup { top: -.5em; }
 //
 
 a {
-  $col: map-get($roles-col-links, 'link');
+  $col: map-get-deep($roles-col-links, 'light', 'link');
+  $map: map-get($roles-col-links, 'light');
 
   @include transition(all map-get($roles-transitions, 'rainbow') ease-in-out);
 
@@ -254,9 +255,10 @@ a {
   border-bottom-width: 1px;
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
-  @for $c from 1 through length($roles-col-links) {
-    $name: nth(nth($roles-col-links, $c), 1);
-    $val: map-get($roles-col-links, $name);
+
+  @for $c from 1 through length($map) {
+    $name: nth(nth($map, $c), 1);
+    $val: map-get($map, $name);
 
     @if $name != 'link' {
       &:#{$name} {

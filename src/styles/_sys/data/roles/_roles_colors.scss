@@ -6,6 +6,7 @@
 
 $roles-col-states: (
   'disabled':  map-get($reg-colors, 'dusty-gray'),
+  'selected':  map-get($reg-colors, 'red-berry'),
   'focused':   map-get($reg-colors, 'la-rioja'),
   'alert':     map-get($reg-colors, 'red-berry'),
   'warning':   map-get($reg-colors, 'golden-tainoi'),
@@ -30,10 +31,17 @@ $roles-col-texts: (
 //--------------------------| Links
 
 $roles-col-links: (
-  'link':      map-get($reg-colors, 'navy-blue'),
-  'hover':     map-get($reg-colors, 'governor-bay'),
-  'active':    map-get($reg-colors, 'red-berry')
-  //'visited':   map-get($reg-colors, 'bossanova')
+  'light': (
+    'link':      map-get($reg-colors, 'navy-blue'),
+    'hover':     map-get($reg-colors, 'twitter'),
+    'active':    map-get($reg-colors, 'red-berry')
+    //'visited':   map-get($reg-colors, 'bossanova')
+  ),
+  'dark': (
+    'link':      map-get($roles-col-texts, 'negative'),
+    'hover':     light(map-get($reg-colors, 'twitter'), 33%),
+    'active':    light(map-get($reg-colors, 'twitter'), 66%)
+  )
 );
 
 

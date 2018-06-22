@@ -18,7 +18,9 @@
 
   $bgr-color: map-get($reg-backgrounds, 'mine-shaft');
   $text-color: map-get($roles-col-texts, 'negative');
-  $link-color: $text-color;
+  $link-color: map-get-deep($roles-col-links, 'dark', 'link');
+  $link-color-hover: map-get-deep($roles-col-links, 'dark', 'hover');
+  $link-color-active: map-get-deep($roles-col-links, 'dark', 'active');
   $offset: #{get-page-offset()}vw;
 
 
@@ -43,7 +45,12 @@
     border-bottom-color: rgba($link-color, .3);
 
     &:hover {
+      color: $link-color-hover;
       border-bottom-color: transparent;
+    }
+
+    &:active {
+      color: $link-color-active;
     }
   }
 
