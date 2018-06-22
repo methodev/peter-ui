@@ -27,7 +27,7 @@
 
     &::before {
       top: $offset;
-      left: .3em;
+      left: .4em;
     }
   }
 
@@ -40,7 +40,7 @@
     @include text-shadow(1px 1px 0 map-get($reg-colors, 'white'));
 
     position: absolute;
-    font-size: 3em;
+    font-size: 2.6em;
     font-weight: map-get($roles-typo-font-weights, 'symbol');
     line-height: 1;
     color: map-get($reg-colors, 'golden-tainoi');

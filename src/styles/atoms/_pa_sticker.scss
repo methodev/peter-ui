@@ -29,7 +29,7 @@
   .content {
     font-style: italic;
 
-    p {
+    * {
       @include selection(map-get($reg-colors, 'twitter'));
     }
   }

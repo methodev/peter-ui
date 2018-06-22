@@ -16,6 +16,8 @@
     @extend %ph-post-flow;
 
     @include typo-line-heights('text', map-get($roles-typo-line-heights, 'text'));
+
+    max-width: $roles-size-post;
   }
 
 
@@ -27,7 +29,12 @@
   //--------------------------| Body
 
   .body {
-    @include text-shadow(1px 1px 0 rgba(light(map-get($roles-col-texts, 'secondary'), 95%), .5));
+    p,
+    ul,
+    ol,
+    dl {
+      @include text-shadow(1px 1px 0 rgba(light(map-get($roles-col-texts, 'secondary'), 95%), .66));
+    }
   }
 
   .pa-cover-image {
@@ -52,7 +59,7 @@
 
   .foot {
     padding-top: $offset-inner;
-    border-top: 1px solid map-get($roles-col-borders, 'foot-line');
+    border-top: 1px dashed map-get($roles-col-borders, 'foot-line');
   }
 
 

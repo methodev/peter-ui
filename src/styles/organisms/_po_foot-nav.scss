@@ -63,7 +63,11 @@
         width: 100%;
 
         & + .category {
-          margin: 0 auto calc(#{$offset} * 2);
+          margin: 0 auto calc(#{$offset} * 3);
+        }
+
+        .pa-title-system {
+          @include border-v(1px dashed transparent);
         }
       }
 
@@ -74,7 +78,7 @@
 
       .pa-title-system {
         display: block;
-        padding: calc(#{$offset} / 2) 0;
+        padding: calc(#{$offset} / 3) 0;
       }
     }
 
@@ -100,8 +104,9 @@
           .pa-title-system {
             @include text-shadow(none);
 
-            color: map-get($roles-col-texts, 'primary');
-            background-color: $value;
+            //color: map-get($roles-col-texts, 'primary');
+            color: $value;
+            border-color: $value;
           }
         }
 

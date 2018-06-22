@@ -5,7 +5,6 @@
 //--------------------------| Text
 
 %ph-typo-texts {
-  max-width: $roles-size-post;
   margin: 0 auto;
   font-size: map-get($roles-typo-font-sizes, 'primary-text');
 }

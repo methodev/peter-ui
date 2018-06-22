@@ -1,3 +1,27 @@
+<a name="1.20.0"></a>
+# 1.20.0 (2018-06-22)
+
+
+### Bug Fixes
+
+* **Glass Panel:** Increase blur from 1.2px to 1.3px ([6f36212](https://github.com/martinmethod/peter-ui/commit/6f36212))
+* **Note:** Resized & relocated glyph ([89c4de6](https://github.com/martinmethod/peter-ui/commit/89c4de6))
+* **Post:** Text-shadow on content text only ([001e809](https://github.com/martinmethod/peter-ui/commit/001e809))
+* **Resume:** Incorrect max-width ([9618276](https://github.com/martinmethod/peter-ui/commit/9618276))
+* **Sticker:** Text selection support for all content ([aea036e](https://github.com/martinmethod/peter-ui/commit/aea036e))
+
+
+### Features
+
+* **Foot nav:** New mobile look of section titles ([7ee65d6](https://github.com/martinmethod/peter-ui/commit/7ee65d6))
+* **Glyphs:** New arrows ([fa41707](https://github.com/martinmethod/peter-ui/commit/fa41707))
+* **Hyperlinks:** Dotted underline ([7e9da39](https://github.com/martinmethod/peter-ui/commit/7e9da39))
+* **Hyperlinks:** Increased underline transparency ([f71099f](https://github.com/martinmethod/peter-ui/commit/f71099f))
+* **Post:** Dashed foot border ([f9d96ff](https://github.com/martinmethod/peter-ui/commit/f9d96ff))
+* **Section Line:** New look ([dc94349](https://github.com/martinmethod/peter-ui/commit/dc94349))
+
+
+
 <a name="1.19.0"></a>
 # 1.19.0 (2018-06-21)
 
