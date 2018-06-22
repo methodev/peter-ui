@@ -17,7 +17,7 @@
   $label-font-face: map-get($roles-typo-font-families, 'system');
   $label-font-size: map-get($roles-typo-font-sizes, 'system');
   $label-line-height: map-get($roles-typo-line-heights, 'system');
-  $offset: .5em;
+  $offset: 1em;
   $thickness: 1px;
 
 
