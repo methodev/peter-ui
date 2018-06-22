@@ -16,6 +16,8 @@
     @extend %ph-post-flow;
 
     @include typo-line-heights('text', map-get($roles-typo-line-heights, 'text'));
+
+    max-width: $roles-size-post;
   }
 
 

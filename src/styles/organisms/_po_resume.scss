@@ -19,7 +19,11 @@
     @include typo-line-heights('resume', map-get($roles-typo-line-heights, 'excerpt'));
 
     display: block;
-    font-size: .8rem;
+    max-width: $roles-size-post * 1.2;
+
+    .item {
+      font-size: .8em;
+    }
   }
 
 
