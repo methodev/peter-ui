@@ -61,7 +61,7 @@ $util-panels: (
     background-size: 100% 50vh;
 
     &::before {
-      @include filter(blur(1.2px));
+      @include filter(blur(1.3px));
 
       z-index: 1;
       background: url(map-get($roles-patterns, 'layout')) repeat fixed;
