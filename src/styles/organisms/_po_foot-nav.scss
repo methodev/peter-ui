@@ -87,7 +87,7 @@
         & + .category {
           padding-left: $offset;
           margin-left: $offset;
-          border-left: 1px solid rgba(map-get($reg-colors, 'white'), .1);
+          border-left: 1px dashed rgba(map-get($reg-colors, 'white'), .1);
         }
       }
     }
