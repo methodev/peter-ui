@@ -52,7 +52,7 @@
 
   .foot {
     padding-top: $offset-inner;
-    border-top: 1px solid map-get($roles-col-borders, 'foot-line');
+    border-top: 1px dashed map-get($roles-col-borders, 'foot-line');
   }
 
 
