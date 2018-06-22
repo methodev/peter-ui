@@ -15,12 +15,12 @@
   $content-color: map-get($roles-col-texts, 'negative');
   $bgr-color: $nav-color;
   $bgr-color-active: light($bgr-color, 20%);
-  $link-color: map-get($roles-col-texts, 'negative');
-  $link-color-hover: light(map-get($reg-colors, 'la-rioja'), 20%);
-  $link-color-active: light($link-color-hover, 40%);
+  $link-color: map-get-deep($roles-col-links, 'dark', 'link');
+  $link-color-hover: map-get-deep($roles-col-links, 'dark', 'hover');
+  $link-color-active: map-get-deep($roles-col-links, 'dark', 'active');
   $mobile-toggle-color: map-get($roles-col-texts, 'primary');
-  $mobile-toggle-color-hover: map-get($reg-colors, 'la-rioja');
-  $mobile-toggle-color-active: light($mobile-toggle-color-hover, 20%);
+  $mobile-toggle-color-hover: map-get-deep($roles-col-links, 'light', 'hover');
+  $mobile-toggle-color-active: map-get-deep($roles-col-links, 'light', 'active');
   $nav-vertical-offset: .8vw;
   $space-between-items: #{get-page-offset()}vw;
   $mobile-stage-bgr-color: dark($nav-color, 30%);

@@ -8,8 +8,7 @@
 
   $section-line-types: (
     'major': map-get($reg-colors, 'red-berry'),
-    'minor': map-get($reg-colors, 'dove-gray'),
-    'sky':   map-get($reg-colors, 'twitter')
+    'minor': dark(map-get($reg-colors, 'la-rioja'), 20%)
   );
 
 

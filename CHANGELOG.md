@@ -1,3 +1,18 @@
+<a name="1.22.0"></a>
+# 1.22.0 (2018-06-22)
+
+
+### Bug Fixes
+
+* **Posts Lists:** Support for .item wrapper ([b42d727](https://github.com/martinmethod/peter-ui/commit/b42d727))
+
+
+### Features
+
+* **Hyperlinks:** Improved color system ([ce360a8](https://github.com/martinmethod/peter-ui/commit/ce360a8))
+
+
+
 <a name="1.21.0"></a>
 # 1.21.0 (2018-06-22)
 
