@@ -12,8 +12,9 @@
   $text-color: map-get($roles-col-texts, 'negative');
   $font-face: map-get($roles-typo-font-families, 'system');
   $font-size: get-progressive-calc($label-size-min, $label-size-max);
-  $link-color-hover: light(map-get($reg-colors, 'la-rioja'), 20%);
-  $link-color-active: light($link-color-hover, 40%);
+  $link-color: map-get-deep($roles-col-links, 'dark', 'link');
+  $link-color-hover: map-get-deep($roles-col-links, 'dark', 'hover');
+  $link-color-active: map-get-deep($roles-col-links, 'dark', 'active');
 
 
   //--------------------------| Base
@@ -38,6 +39,7 @@
   //--------------------------| Link
 
   a {
+    color: $link-color;
     border-bottom: 0;
 
     &:hover {

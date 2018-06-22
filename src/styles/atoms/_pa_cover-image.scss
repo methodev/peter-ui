@@ -12,9 +12,9 @@
   $outstep: .5em;
   $offset: 5px;
   $scale: unquote('translate(-50%, -50%) scale(1.05)');
-  $col-link: map-get($roles-col-links, 'link');
-  $col-link-hover: map-get($roles-col-links, 'hover');
-  $col-link-active: map-get($roles-col-links, 'active');
+  $col-link: map-get-deep($roles-col-links, 'light', 'link');
+  $col-link-hover: map-get-deep($roles-col-links, 'light', 'hover');
+  $col-link-active: map-get-deep($roles-col-links, 'light', 'active');
 
 
   //--------------------------| Mixins
