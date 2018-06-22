@@ -9,7 +9,7 @@
     display: block;
     padding: 1rem 0;
     font-family: unquote(map-get($reg-font-families, 'pp–slab'));
-    color: map-get($reg-colors, 'dusty-gray');
+    color: map-get($roles-col-texts, 'glyphs');
     text-align: center;
     content: $symbol;
   }
