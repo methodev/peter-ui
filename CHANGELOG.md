@@ -1,3 +1,13 @@
+<a name="1.22.1"></a>
+## 1.22.1 (2018-06-22)
+
+
+### Bug Fixes
+
+* **Section Line:** Extend bottom offset to 1em ([92ed3d4](https://github.com/martinmethod/peter-ui/commit/92ed3d4))
+
+
+
 <a name="1.22.0"></a>
 # 1.22.0 (2018-06-22)
 
