@@ -27,7 +27,12 @@
   //--------------------------| Body
 
   .body {
-    @include text-shadow(1px 1px 0 rgba(light(map-get($roles-col-texts, 'secondary'), 95%), .5));
+    p,
+    ul,
+    ol,
+    dl {
+      @include text-shadow(1px 1px 0 rgba(light(map-get($roles-col-texts, 'secondary'), 95%), .66));
+    }
   }
 
   .pa-cover-image {
