@@ -29,9 +29,13 @@
     }
 
     .po-resume {
-      display: flex;
-      flex-direction: column;
       height: 100%;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
 
       .body {
         flex: 1;
