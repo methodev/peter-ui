@@ -1,3 +1,18 @@
+<a name="1.21.0"></a>
+# 1.21.0 (2018-06-22)
+
+
+### Bug Fixes
+
+* **Credits Line:** Aligned logo ([110d2dd](https://github.com/martinmethod/peter-ui/commit/110d2dd))
+
+
+### Features
+
+* **Foot Nav:** Dotted category separators ([77a02a7](https://github.com/martinmethod/peter-ui/commit/77a02a7))
+
+
+
 <a name="1.20.0"></a>
 # 1.20.0 (2018-06-22)
 
