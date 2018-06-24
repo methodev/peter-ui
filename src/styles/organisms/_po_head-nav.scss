@@ -19,7 +19,7 @@
   $link-color-hover: map-get-deep($roles-col-links, 'dark', 'hover');
   $link-color-active: map-get-deep($roles-col-links, 'dark', 'active');
   $mobile-toggle-color: map-get($roles-col-texts, 'primary');
-  $mobile-toggle-color-hover: map-get-deep($roles-col-links, 'light', 'hover');
+  $mobile-toggle-color-hover: map-get-deep($roles-col-links, 'light', 'active');
   $mobile-toggle-color-active: map-get-deep($roles-col-links, 'light', 'active');
   $nav-vertical-offset: .8vw;
   $space-between-items: #{get-page-offset()}vw;
@@ -76,7 +76,7 @@
         display: block;
         font-weight: bold;
         line-height: $mobile-toggle-size;
-        color: map-get($roles-col-texts, 'negative'); // TODO: Add :hover & :active states
+        color: $link-color;
         content: '✕';
       }
     }
@@ -206,7 +206,7 @@
       background-color: $bgr-color-active;
 
       > a {
-        color: $link-color;
+        color: $content-color;
         pointer-events: none;
       }
     }
@@ -376,7 +376,7 @@
           width: $size;
           height: $size;
 
-          fill: $content-color;
+          fill: $link-color;
         }
 
         &:hover svg {

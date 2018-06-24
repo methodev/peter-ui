@@ -9,7 +9,7 @@
   $offset: #{get-page-offset()}vw;
   $label-size-min: $roles-size-menu-item;
   $label-size-max: $label-size-min * 2;
-  $text-color: map-get($roles-col-texts, 'negative');
+  $text-color: map-get($reg-colors, 'silver');
   $font-face: map-get($roles-typo-font-families, 'system');
   $font-size: get-progressive-calc($label-size-min, $label-size-max);
   $link-color: map-get-deep($roles-col-links, 'dark', 'link');
@@ -22,6 +22,7 @@
   @include font-smoothing();
 
   display: block;
+  color: $text-color;
   background-color: map-get($roles-col-backgrounds, 'headline');
 
 
@@ -32,7 +33,6 @@
     padding: .45em $offset;
     font-family: $font-face;
     font-size: $font-size;
-    color: $text-color;
     text-align: center;
   }
 

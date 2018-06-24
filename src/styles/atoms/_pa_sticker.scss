@@ -8,7 +8,7 @@
 
   $offset: 1em;
   $text-size: .8em;
-  $text-color: darken(map-get($reg-colors, 'twitter'), 33%);
+  $text-color: darken(map-get($reg-colors, 'picton-blue'), 33%);
 
 
   //--------------------------| Base
@@ -30,7 +30,7 @@
     font-style: italic;
 
     * {
-      @include selection(map-get($reg-colors, 'twitter'));
+      @include selection(map-get($reg-colors, 'picton-blue'));
     }
   }
 

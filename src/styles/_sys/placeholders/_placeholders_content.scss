@@ -100,7 +100,7 @@
       position: absolute;
       font: normal 6em unquote(map-get($reg-font-families, 'pp–slab'));
       line-height: 0;
-      color: map-get($reg-colors, 'twitter');
+      color: map-get($reg-colors, 'picton-blue');
       text-shadow: 1px 1px 0 map-get($reg-colors, 'black');
     }
 
@@ -117,7 +117,7 @@
     }
 
     p {
-      @include selection(map-get($reg-colors, 'twitter'));
+      @include selection(map-get($reg-colors, 'picton-blue'));
 
       &:last-child {
         margin-bottom: 0;
