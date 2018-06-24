@@ -260,18 +260,23 @@ a {
     $name: nth(nth($map, $c), 1);
     $val: map-get($map, $name);
 
-    @if $name != 'link' {
+    @if $name == 'hover' {
+      html:not(.mobile) & {
+        &:#{$name} {
+          color: $val;
+        }
+      }
+    }
+
+    @if $name == 'active' {
       &:#{$name} {
-        color: $val;
-        border-bottom-color: rgba($val, .3);
+        color: $val !important;
       }
     }
   }
 
-  html:not(.mobile) & {
-    &:hover {
-      border-bottom-color: transparent;
-    }
+  &:active {
+    border-bottom-color: transparent !important;
   }
 
   &:focus {
