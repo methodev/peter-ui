@@ -29,6 +29,7 @@
   //--------------------------| Text
 
   > .text {
+    @include ellipsis();
     @include user-select(none);
 
     display: block;
