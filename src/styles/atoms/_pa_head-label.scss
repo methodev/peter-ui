@@ -29,6 +29,8 @@
   //--------------------------| Text
 
   > .text {
+    @include user-select(none);
+
     display: block;
     padding: .45em $offset;
     font-family: $font-face;
