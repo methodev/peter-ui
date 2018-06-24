@@ -21,9 +21,15 @@
     color: $text-color;
     border-bottom-color: transparent;
 
-    &:hover,
+
+    html:not(.mobile) & {
+      &:hover {
+        color: $text-color-accent;
+      }
+    }
+
     &:active {
-      color: $text-color-accent;
+      color: $text-color-accent !important;
     }
   }
 

@@ -250,7 +250,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   background-color: transparent; // Remove the gray background on active links in IE 10.
-  border-bottom-color: rgba($col, .2);
+  border-bottom-color: rgba($col, .3);
   border-bottom-style: dotted;
   border-bottom-width: 1px;
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
@@ -260,16 +260,23 @@ a {
     $name: nth(nth($map, $c), 1);
     $val: map-get($map, $name);
 
-    @if $name != 'link' {
+    @if $name == 'hover' {
+      html:not(.mobile) & {
+        &:#{$name} {
+          color: $val;
+        }
+      }
+    }
+
+    @if $name == 'active' {
       &:#{$name} {
-        color: $val;
-        border-bottom-color: rgba($val, .3);
+        color: $val !important;
       }
     }
   }
 
-  &:hover {
-    border-bottom-color: transparent;
+  &:active {
+    border-bottom-color: transparent !important;
   }
 
   &:focus {

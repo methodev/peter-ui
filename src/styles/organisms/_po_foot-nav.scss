@@ -44,13 +44,15 @@
     color: $link-color;
     border-bottom-color: rgba($link-color, .3);
 
-    &:hover {
-      color: $link-color-hover;
-      border-bottom-color: transparent;
+    html:not(.mobile) & {
+      &:hover {
+        color: $link-color-hover;
+        border-bottom-color: transparent;
+      }
     }
 
     &:active {
-      color: $link-color-active;
+      color: $link-color-active !important;
     }
   }
 

@@ -19,7 +19,7 @@
   $link-color-hover: map-get-deep($roles-col-links, 'dark', 'hover');
   $link-color-active: map-get-deep($roles-col-links, 'dark', 'active');
   $mobile-toggle-color: map-get($roles-col-texts, 'primary');
-  $mobile-toggle-color-hover: map-get-deep($roles-col-links, 'light', 'hover');
+  $mobile-toggle-color-hover: map-get-deep($roles-col-links, 'light', 'active');
   $mobile-toggle-color-active: map-get-deep($roles-col-links, 'light', 'active');
   $nav-vertical-offset: .8vw;
   $space-between-items: #{get-page-offset()}vw;
@@ -76,8 +76,22 @@
         display: block;
         font-weight: bold;
         line-height: $mobile-toggle-size;
-        color: map-get($roles-col-texts, 'negative'); // TODO: Add :hover & :active states
+        color: $link-color;
         content: '✕';
+      }
+
+      html:not(.mobile) & {
+        &:hover {
+          &::after {
+            color: $link-color-hover;
+          }
+        }
+      }
+
+      &:active {
+        &::after {
+          color: $link-color-active !important;
+        }
       }
     }
   }
@@ -105,15 +119,17 @@
           font-size: get-progressive-calc($mobile-toggle-min-size, $mobile-toggle-max-size);
         }
 
-        &:hover {
-          &::after {
-            color: $link-color-hover;
+        html:not(.mobile) & {
+          &:hover {
+            &::after {
+              color: $link-color-hover;
+            }
           }
         }
 
         &:active {
           &::after {
-            color: $link-color-active;
+            color: $link-color-active !important;
           }
         }
       }
@@ -130,15 +146,17 @@
           fill: $mobile-toggle-color;
         }
 
-        &:hover {
-          > svg {
-            fill: $mobile-toggle-color-hover;
+        html:not(.mobile) & {
+          &:hover {
+            > svg {
+              fill: $mobile-toggle-color-hover;
+            }
           }
         }
 
         &:active {
           > svg {
-            fill: $mobile-toggle-color-active;
+            fill: $mobile-toggle-color-active !important;
           }
         }
       }
@@ -206,7 +224,7 @@
       background-color: $bgr-color-active;
 
       > a {
-        color: $link-color;
+        color: $content-color;
         pointer-events: none;
       }
     }
@@ -220,12 +238,14 @@
       padding: 0 calc(#{$space-between-items} / 2);
       color: $link-color;
 
-      &:hover {
-        color: $link-color-hover;
+      html:not(.mobile) & {
+        &:hover {
+          color: $link-color-hover;
+        }
       }
 
       &:active {
-        color: $link-color-active;
+        color: $link-color-active !important;
       }
     }
   }
@@ -376,15 +396,17 @@
           width: $size;
           height: $size;
 
-          fill: $content-color;
+          fill: $link-color;
         }
 
-        &:hover svg {
-          fill: $link-color-hover;
+        html:not(.mobile) & {
+          &:hover svg {
+            fill: $link-color-hover;
+          }
         }
 
         &:active svg {
-          fill: $link-color-active;
+          fill: $link-color-active !important;
         }
 
         body.search & {
@@ -416,12 +438,14 @@
             line-height: .8;
           }
 
-          &:hover::after {
-            color: $link-color-hover;
+          html:not(.mobile) & {
+            &:hover::after {
+              color: $link-color-hover;
+            }
           }
 
           &:active::after {
-            color: $link-color-active;
+            color: $link-color-active !important;
           }
         }
       }
