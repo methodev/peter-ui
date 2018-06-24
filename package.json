@@ -10,7 +10,7 @@
     "atomic",
     "design"
   ],
-  "version": "1.22.1",
+  "version": "1.23.0",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-conventional-changelog": "^6.1.0",
     "grunt-open": "^0.2.3",
+    "grunt-prepend": "^0.1.2",
     "grunt-sass": "^2.1.0",
     "grunt-sass-lint": "^0.2.4",
     "grunt-shell": "^2.1.0",

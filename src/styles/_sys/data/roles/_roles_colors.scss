@@ -23,7 +23,7 @@ $roles-col-texts: (
   'meta':      map-get($reg-colors, 'dove-gray'),
   'credit':    map-get($reg-colors, 'mine-shaft'),
   'negative':  map-get($reg-colors, 'white'),
-  'code':      map-get($reg-colors, 'facebook'),
+  'code':      map-get($reg-colors, 'bossanova'),
   'glyphs':    map-get($reg-colors, 'dusty-gray')
 );
 
@@ -32,15 +32,14 @@ $roles-col-texts: (
 
 $roles-col-links: (
   'light': (
-    'link':      map-get($reg-colors, 'navy-blue'),
-    'hover':     map-get($reg-colors, 'twitter'),
-    'active':    map-get($reg-colors, 'red-berry')
-    //'visited':   map-get($reg-colors, 'bossanova')
+    'link':    map-get($reg-colors, 'smalt'),
+    'hover':   map-get($reg-colors, 'mariner'),
+    'active':  map-get($reg-colors, 'red-berry')
   ),
   'dark': (
-    'link':      map-get($roles-col-texts, 'negative'),
-    'hover':     light(map-get($reg-colors, 'twitter'), 33%),
-    'active':    light(map-get($reg-colors, 'twitter'), 66%)
+    'link':    map-get($reg-colors, 'white'),
+    'hover':   map-get($reg-colors, 'perano'),
+    'active':  light(map-get($reg-colors, 'red-berry'), 50%)
   )
 );
 
