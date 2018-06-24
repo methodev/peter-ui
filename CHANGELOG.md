@@ -1,3 +1,25 @@
+<a name="1.23.0"></a>
+# 1.23.0 (2018-06-24)
+
+
+### Bug Fixes
+
+* **Head Label:** Disabled text selection ([44d2415](https://github.com/martinmethod/peter-ui/commit/44d2415))
+* **Head Label:** Prevented text overflow ([de27072](https://github.com/martinmethod/peter-ui/commit/de27072))
+* **Hyperlinks:** Ignored :hover effect on mobile ([0249138](https://github.com/martinmethod/peter-ui/commit/0249138))
+* **Hyperlinks:** Increased underline visibility ([4656f58](https://github.com/martinmethod/peter-ui/commit/4656f58))
+* **Interactions:** Ignored :hover effect on mobile ([0dc8c3e](https://github.com/martinmethod/peter-ui/commit/0dc8c3e))
+* **Serif Typeface:** Extended version with № symbol ([1dfaf77](https://github.com/martinmethod/peter-ui/commit/1dfaf77))
+* **Stylesheet:** Charset UTF-8 ([da76b82](https://github.com/martinmethod/peter-ui/commit/da76b82))
+
+
+### Features
+
+* **Hyperlinks:** Improved color scheme ([f4fd172](https://github.com/martinmethod/peter-ui/commit/f4fd172))
+* **Section Line:** New minor color: Dove Gray ([070accd](https://github.com/martinmethod/peter-ui/commit/070accd))
+
+
+
 <a name="1.22.1"></a>
 ## 1.22.1 (2018-06-22)
 
