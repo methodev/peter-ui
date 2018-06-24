@@ -268,8 +268,10 @@ a {
     }
   }
 
-  &:hover {
-    border-bottom-color: transparent;
+  html:not(.mobile) & {
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
 
   &:focus {

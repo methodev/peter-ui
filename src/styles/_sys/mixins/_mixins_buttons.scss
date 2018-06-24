@@ -22,12 +22,14 @@
   background-color: $bgr-color;
   border-color: $bgr-color;
 
-  &:hover {
-    background-color: light($bgr-color, 15%);
+  html:not(.mobile) & {
+    &:hover {
+      background-color: light($bgr-color, 15%);
+    }
   }
 
   &:active {
-    background-color: light($bgr-color, 30%);
+    background-color: light($bgr-color, 30%) !important;
   }
 }
 
