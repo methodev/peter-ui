@@ -2,7 +2,7 @@ var grunt = require('grunt'),
     prod = grunt.option('target') === 'prod',
 
     styleTasks = prod ?
-      ['stripCssComments', 'sass', 'usebanner:styles'] :
+      ['stripCssComments', 'sass', 'usebanner:styles', 'gruntPrepend'] :
       ['stripCssComments', 'sass'],
 
     scriptTasks = prod ?
