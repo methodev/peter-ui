@@ -4,7 +4,7 @@ module.exports = {
       content: '@charset "UTF-8";'
     },
     files: [{
-      src: 'app/css/*.css'
+      src: 'dist/**/*.css'
     }]
   }
 };
