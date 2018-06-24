@@ -264,6 +264,7 @@ a {
       html:not(.mobile) & {
         &:#{$name} {
           color: $val;
+          border-bottom-color: transparent !important;
         }
       }
     }

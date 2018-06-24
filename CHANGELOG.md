@@ -1,3 +1,13 @@
+<a name="1.23.2"></a>
+## 1.23.2 (2018-06-24)
+
+
+### Bug Fixes
+
+* **Hyperlinks:** No underline on :hover effect ([0104e64](https://github.com/martinmethod/peter-ui/commit/0104e64))
+
+
+
 <a name="1.23.1"></a>
 # 1.23.1 (2018-06-24)
 
