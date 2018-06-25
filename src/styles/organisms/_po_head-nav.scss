@@ -80,7 +80,7 @@
         content: '✕';
       }
 
-      html:not(.mobile) & {
+      @media (hover: hover) {
         &:hover {
           &::after {
             color: $link-color-hover;
@@ -90,7 +90,7 @@
 
       &:active {
         &::after {
-          color: $link-color-active !important;
+          color: $link-color-active;
         }
       }
     }
@@ -119,7 +119,7 @@
           font-size: get-progressive-calc($mobile-toggle-min-size, $mobile-toggle-max-size);
         }
 
-        html:not(.mobile) & {
+        @media (hover: hover) {
           &:hover {
             &::after {
               color: $link-color-hover;
@@ -129,7 +129,7 @@
 
         &:active {
           &::after {
-            color: $link-color-active !important;
+            color: $link-color-active;
           }
         }
       }
@@ -146,7 +146,7 @@
           fill: $mobile-toggle-color;
         }
 
-        html:not(.mobile) & {
+        @media (hover: hover) {
           &:hover {
             > svg {
               fill: $mobile-toggle-color-hover;
@@ -156,7 +156,7 @@
 
         &:active {
           > svg {
-            fill: $mobile-toggle-color-active !important;
+            fill: $mobile-toggle-color-active;
           }
         }
       }
@@ -238,14 +238,14 @@
       padding: 0 calc(#{$space-between-items} / 2);
       color: $link-color;
 
-      html:not(.mobile) & {
+      @media (hover: hover) {
         &:hover {
           color: $link-color-hover;
         }
       }
 
       &:active {
-        color: $link-color-active !important;
+        color: $link-color-active;
       }
     }
   }
@@ -399,14 +399,14 @@
           fill: $link-color;
         }
 
-        html:not(.mobile) & {
+        @media (hover: hover) {
           &:hover svg {
             fill: $link-color-hover;
           }
         }
 
         &:active svg {
-          fill: $link-color-active !important;
+          fill: $link-color-active;
         }
 
         body.search & {
@@ -438,14 +438,14 @@
             line-height: .8;
           }
 
-          html:not(.mobile) & {
+          @media (hover: hover) {
             &:hover::after {
               color: $link-color-hover;
             }
           }
 
           &:active::after {
-            color: $link-color-active !important;
+            color: $link-color-active;
           }
         }
       }

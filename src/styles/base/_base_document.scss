@@ -261,23 +261,23 @@ a {
     $val: map-get($map, $name);
 
     @if $name == 'hover' {
-      html:not(.mobile) & {
+      @media (hover: hover) {
         &:#{$name} {
           color: $val;
-          border-bottom-color: transparent !important;
+          border-bottom-color: transparent;
         }
       }
     }
 
     @if $name == 'active' {
       &:#{$name} {
-        color: $val !important;
+        color: $val;
       }
     }
   }
 
   &:active {
-    border-bottom-color: transparent !important;
+    border-bottom-color: transparent;
   }
 
   &:focus {

@@ -22,14 +22,14 @@
     border-bottom-color: transparent;
 
 
-    html:not(.mobile) & {
+    @media (hover: hover) {
       &:hover {
         color: $text-color-accent;
       }
     }
 
     &:active {
-      color: $text-color-accent !important;
+      color: $text-color-accent;
     }
   }
 
