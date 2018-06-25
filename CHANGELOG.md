@@ -1,3 +1,13 @@
+<a name="1.25.0"></a>
+# 1.25.0 (2018-06-25)
+
+
+### Features
+
+* **Colors Registry:** New colors ([00c4e2a](https://github.com/martinmethod/peter-ui/commit/00c4e2a))
+
+
+
 <a name="1.24.0"></a>
 # 1.24.0 (2018-06-25)
 
