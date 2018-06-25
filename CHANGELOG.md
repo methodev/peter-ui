@@ -1,3 +1,13 @@
+<a name="1.25.1"></a>
+## 1.25.1 (2018-06-25)
+
+
+### Bug Fixes
+
+* **Panels:** White border to paper panel ([ba54c0e](https://github.com/martinmethod/peter-ui/commit/ba54c0e))
+
+
+
 <a name="1.25.0"></a>
 # 1.25.0 (2018-06-25)
 
