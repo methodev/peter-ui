@@ -44,7 +44,7 @@
     color: $link-color;
     border-bottom-color: rgba($link-color, .3);
 
-    html:not(.mobile) & {
+    @media (hover: hover) {
       &:hover {
         color: $link-color-hover;
         border-bottom-color: transparent;
@@ -52,7 +52,7 @@
     }
 
     &:active {
-      color: $link-color-active !important;
+      color: $link-color-active;
     }
   }
 
