@@ -7,7 +7,8 @@
 $util-panels: (
   'paper': (
     'background': map-get($roles-col-backgrounds, 'paper'),
-    'shadow': map-get($roles-shadows, 'panel')
+    'shadow': map-get($roles-shadows, 'panel'),
+    'border': 1px solid map-get($reg-colors, 'white')
   ),
   'glass': (
     'shadow': map-get($roles-shadows, 'panel'),
