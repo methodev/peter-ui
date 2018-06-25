@@ -1,3 +1,18 @@
+<a name="1.24.0"></a>
+# 1.24.0 (2018-06-25)
+
+
+### Bug Fixes
+
+* **Hyperlinks:** Transition support for inner spans ([3a19612](https://github.com/martinmethod/peter-ui/commit/3a19612))
+
+
+### Features
+
+* **Colors Registry:** New colors ([5b4f0bb](https://github.com/martinmethod/peter-ui/commit/5b4f0bb))
+
+
+
 <a name="1.23.2"></a>
 ## 1.23.2 (2018-06-24)
 
