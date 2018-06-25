@@ -121,7 +121,7 @@
       height: calc(100% + #{$outstep});
     }
 
-    html:not(.mobile) & {
+    @media (hover: hover) {
       @include cover-image-slices-color($col-link);
 
       &:hover {
