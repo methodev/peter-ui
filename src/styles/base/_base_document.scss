@@ -244,8 +244,6 @@ a {
   $col: map-get-deep($roles-col-links, 'light', 'link');
   $map: map-get($roles-col-links, 'light');
 
-  @include transition(all map-get($roles-transitions, 'rainbow') ease-in-out);
-
   color: $col;
   text-decoration: none;
   cursor: pointer;
@@ -282,6 +280,11 @@ a {
 
   &:focus {
     outline: none;
+  }
+
+  &,
+  * {
+    @include transition(all map-get($roles-transitions, 'rainbow') ease-in-out);
   }
 }
 
