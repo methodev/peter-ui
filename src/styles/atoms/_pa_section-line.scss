@@ -24,9 +24,9 @@
   //--------------------------| Base
 
   @include user-select(none);
+  @include display-flex();
+  @include align-items(center);
 
-  display: flex;
-  align-items: center;
   margin-bottom: $offset;
   line-height: $label-line-height;
 
@@ -96,8 +96,9 @@
   //--------------------------| Lines
 
   > hr {
+    @include flex(1);
+
     display: block;
-    flex: 1;
     height: 0;
     min-width: 20%;
     border: 0;

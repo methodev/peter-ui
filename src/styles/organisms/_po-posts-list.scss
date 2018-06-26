@@ -11,6 +11,9 @@
 
   //--------------------------| Base
 
+  @include display-flex();
+  @include flex-wrap(wrap);
+
   @include mq-tablet-breakpoint('below') {
     > * {
       @include separator();
@@ -32,19 +35,17 @@
       height: 100%;
 
       .item {
-        display: flex;
-        flex-direction: column;
+        @include display-flex();
+        @include flex-direction(column);
+
         min-height: 100%; // min-height and not height due to a problem with old iPads
       }
 
       .body {
-        flex: 1;
+        @include flex(1);
       }
     }
   }
-
-  display: flex;
-  flex-wrap: wrap;
 
 
   //--------------------------| Print
