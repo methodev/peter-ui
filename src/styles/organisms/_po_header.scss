@@ -21,8 +21,12 @@
   //--------------------------| Headline
 
   .headline {
+    @include display-flex();
+    @include justify-content(space-between);
+    @include align-items(center);
+
     @include mq-device-holding-type('inpocket') {
-      flex-direction: column;
+      @include flex-direction(column);
 
       .pa-logo {
         position: relative;
@@ -30,7 +34,8 @@
       }
 
       .pa-title-site {
-        align-self: normal;
+        @include align-self(normal);
+
         padding: get-progressive-calc($min-offset / 2, $min-offset) 0;
         margin: $offset calc(#{get-page-offset()}vw * -1) 0;
         //background-color: $mobile-site-title-bgr-color;
@@ -51,7 +56,7 @@
       margin: 0 0 $offset;
 
       .pa-logo {
-        align-self: flex-start;
+        @include align-self(flex-start);
       }
 
       .pa-title-site {
@@ -62,10 +67,6 @@
       //  padding-top: $offset;
       //}
     }
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
     .pa-logo {
       margin-top: -2px;
@@ -80,10 +81,11 @@
     $max: $min * 2;
 
     .pm-social-channels {
+      @include display-flex();
+      @include justify-content(space-around);
+
       position: absolute;
       top: get-progressive-calc($min, $max);
-      display: flex;
-      justify-content: space-around;
       width: 100%;
       min-width: map-get($reg-screens, 'min');
       padding: 0 7.8vw;

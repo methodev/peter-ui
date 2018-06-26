@@ -11,6 +11,9 @@
 
   //--------------------------| Base
 
+  @include display-flex();
+  @include flex-wrap(wrap);
+
   @include mq-tablet-breakpoint('below') {
     text-align: center;
 
@@ -30,9 +33,6 @@
       }
     }
   }
-
-  display: flex;
-  flex-wrap: wrap;
 
 
 } // .po-links-lists

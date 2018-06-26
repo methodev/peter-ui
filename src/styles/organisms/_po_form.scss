@@ -34,7 +34,7 @@
 
   @include mq-device-holding-type('inpocket') {
     .submit-area {
-      display: flex;
+      @include display-flex();
 
       > *:not(:first-child) {
         margin-left: $offset;
@@ -42,7 +42,7 @@
     }
 
     [type='submit'] {
-      flex: 1;
+      @include flex(1);
     }
   }
 

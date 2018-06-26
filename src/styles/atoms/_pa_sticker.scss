@@ -13,9 +13,10 @@
 
   //--------------------------| Base
 
+  @include display-flex();
+  @include flex-wrap(wrap);
+
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
   padding: $offset;
   font-size: $text-size;
   line-height: map-get($roles-typo-line-heights, 'text');

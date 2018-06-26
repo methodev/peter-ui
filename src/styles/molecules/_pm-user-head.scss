@@ -11,14 +11,15 @@
 
   //--------------------------| Base
 
-  display: flex;
+  @include display-flex();
 
 
   //--------------------------| Data
 
   > .data {
-    align-self: center;
-    flex: 1;
+    @include flex(1);
+    @include align-self(center);
+
     margin-left: $offset;
   }
 

@@ -43,9 +43,10 @@
   }
 
   @include mq-device-holding-type('outpocket') {
+    @include display-flex();
+    @include justify-content(space-between);
+
     position: relative;
-    display: flex;
-    justify-content: space-between;
     padding: $nav-vertical-offset 0 $nav-vertical-offset calc(#{$space-between-items} / 2);
     overflow: hidden;
     background-color: $bgr-color;
@@ -167,7 +168,7 @@
   //--------------------------| Stage
 
   .stage {
-    display: flex;
+    @include display-flex();
   }
 
   @include mq-device-holding-type('inpocket') {
@@ -177,14 +178,14 @@
 
       @include transition(all map-get($roles-transitions, 'slide') ease-in-out);
       @include box-shadow(map-get($roles-shadows, 'mobile-panel'));
+      @include justify-content(center);
+      @include flex-direction(column);
+      @include align-items(center);
 
       position: fixed;
       top: 0;
       left: 2vw;
       z-index: 10;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
       width: $width;
       min-width: $min-width;
       min-height: 50vw;
@@ -213,7 +214,7 @@
     }
 
     ul {
-      display: flex;
+      @include display-flex();
     }
   }
 
@@ -257,7 +258,8 @@
       }
 
       ul {
-        flex-direction: column;
+        @include flex-direction(column);
+
         width: 100%;
       }
 
@@ -295,7 +297,7 @@
   //--------------------------| Search bar
 
   .search-bar {
-    display: flex;
+    @include display-flex();
 
     form {
       width: 100%;
@@ -364,9 +366,10 @@
     .search-bar {
       $font-size: get-progressive-calc($roles-size-menu-item, $roles-size-menu-item * 2);
 
-      align-items: center;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
+      @include justify-content(flex-end);
+      @include flex-direction(row-reverse);
+      @include align-items(center);
+
       margin-left: $space-between-items;
 
       > .stage {
@@ -383,11 +386,12 @@
       }
 
       > .mobile-toggle {
+        @include display-flex();
+        @include align-items(center);
+
         position: absolute;
         top: 0; // fix for a problem in old iPads where the magnifier is not aligned
         right: 0;
-        display: flex;
-        align-items: center;
         height: 100%;
         padding: 0 #{get-page-offset()}vw;
 
@@ -416,21 +420,23 @@
       }
 
       > .stage {
+        @include display-flex();
+        @include align-items(center);
+
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        display: flex;
-        align-items: center;
 
         .mobile-toggle {
           $size: get-progressive-calc($roles-size-menu-item * 3, $roles-size-menu-item * 6, map-get($reg-screens, 'min'), map-get($reg-screens, 'max'));
 
+          @include display-flex();
+          @include justify-content(center);
+          @include align-items(center);
+
           position: absolute;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           width: $size;
           height: 100%;
 
@@ -464,7 +470,8 @@
       }
 
       form {
-        flex: 1;
+        @include flex(1);
+
         height: 100%;
       }
     }
