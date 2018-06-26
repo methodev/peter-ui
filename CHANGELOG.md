@@ -1,3 +1,15 @@
+<a name="1.25.2"></a>
+## 1.25.2 (2018-06-26)
+
+
+### Bug Fixes
+
+* **Foot Nav:** No underline on :active link ([6b6df91](https://github.com/martinmethod/peter-ui/commit/6b6df91))
+* **Head Nav:** Not aligned search magnifier in old iPads ([6fd0aab](https://github.com/martinmethod/peter-ui/commit/6fd0aab))
+* **Posts List:** Broken layout in old iPads ([f4eca59](https://github.com/martinmethod/peter-ui/commit/f4eca59))
+
+
+
 <a name="1.25.1"></a>
 ## 1.25.1 (2018-06-25)
 
