@@ -384,6 +384,7 @@
 
       > .mobile-toggle {
         position: absolute;
+        top: 0; // fix for a problem in old iPads where the magnifier is not aligned
         right: 0;
         display: flex;
         align-items: center;
