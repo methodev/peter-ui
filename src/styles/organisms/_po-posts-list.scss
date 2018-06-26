@@ -34,7 +34,7 @@
       .item {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        min-height: 100%; // min-height and not height due to a problem with old iPads
       }
 
       .body {
