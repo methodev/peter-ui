@@ -1,0 +1,8 @@
+<h1 class="pa-title-primary">
+  {{# title_primary.hyperlink }}
+    <a href="{{ href }}">{{ title_primary.text }}</a>
+  {{/ title_primary.hyperlink }}
+  {{^ title_primary.hyperlink }}
+    {{ title_primary.text }}
+  {{/ title_primary.hyperlink }}
+</h1>

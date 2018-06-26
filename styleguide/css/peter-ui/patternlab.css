@@ -1,0 +1,35 @@
+.sg-pattern-head {
+  text-align: left; }
+
+.sg-pattern-title a {
+  border-bottom-color: transparent !important; }
+
+.sg-pattern-extra-toggle {
+  border-color: #ccc !important; }
+
+.sg-pattern-extra {
+  text-align: left;
+  border-color: #ccc !important; }
+
+.sg-pattern-example {
+  max-width: 94%;
+  margin: 0 auto;
+  text-align: center; }
+  .sg-pattern-example > * {
+    position: relative !important;
+    margin: 0 auto;
+    text-align: initial; }
+    .sg-pattern-example > *:not(.pa-textfield):not(.pa-section-line):not(.pm-meta-line):not(.pm-user-head):not(.pm-quoteblock):not(.pm-credits-line):not([class*='po-']):not(.pm-stickers-list) {
+      display: inline-block; }
+  .sg-pattern-example .po-head-nav {
+    min-height: 40px; }
+  .sg-pattern-example .po-font-family .pa-typeface-title {
+    white-space: normal; }
+  .sg-pattern-example .pa-cover-image,
+  .sg-pattern-example .po-resumes-list,
+  .sg-pattern-example .po-comments-list {
+    max-width: 34.091em; }
+  .sg-pattern-example .pa-input-label {
+    width: auto; }
+
+/*# sourceMappingURL=patternlab.css.map */

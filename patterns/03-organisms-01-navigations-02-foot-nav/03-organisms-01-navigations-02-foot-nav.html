@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class="">
+    <head>
+        <title></title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Language" content="en"/>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+        <link rel="stylesheet" href="../../styleguide/css/peter-ui/patternlab.css?1530019695808" media="all" />
+        <link rel="stylesheet" href="../../css/peter-ui.css?1530019695808" media="all" />
+
+        <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+        <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1530019695808" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1530019695808" media="all" />
+
+        <!-- End Pattern Lab -->
+    </head>
+
+    <body class="">
+        <div class="wrp-page">
+            <div class="ut-ofs-section">
+<nav class="po-foot-nav">
+    <div class="links">
+        <div class="category" data-type="pages">
+            <label class="pa-title-system">Страници</label>
+            <div class="pm-links-list">
+                <ul>
+                    <li class="item"><a href="index.html">Начало</a></li>
+                    <li class="item"><a href="articles.html">Публикации</a></li>
+                    <li class="item"><a href="thoughts.html">Мисли</a></li>
+                    <li class="item"><a href="author.html">Авторът</a></li>
+                    <li class="item"><a href="contant.html">Контакт</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="category" data-type="headings">
+            <label class="pa-title-system">Рубрики</label>
+            <div class="pm-links-list">
+                <ul>
+                    <li class="item"><a href="heading.html">Политика</a></li>
+                    <li class="item"><a href="heading.html">Общество</a></li>
+                    <li class="item"><a href="heading.html">История</a></li>
+                    <li class="item"><a href="heading.html">Свят</a></li>
+                    <li class="item"><a href="heading.html">Спорт</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="category" data-type="tags">
+            <label class="pa-title-system">Топ етикети</label>
+            <div class="pm-links-list">
+                <ul>
+                    <li class="item"><a href="tag.html">България</a></li>
+                    <li class="item"><a href="tag.html">Европейски съюз</a></li>
+                    <li class="item"><a href="tag.html">ГЕРБ</a></li>
+                    <li class="item"><a href="tag.html">Русия</a></li>
+                    <li class="item"><a href="tag.html">Григор Димитров</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="category" data-type="most-read">
+            <label class="pa-title-system">Най-четени</label>
+            <div class="pm-links-list">
+                <ul>
+                    <li class="item"><a href="article.html">„Да, България!“ като филм на ужасите</a></li>
+                    <li class="item"><a href="article.html">Силата да си свободен</a></li>
+                    <li class="item"><a href="article.html">Открихте ли се на снимката?</a></li>
+                    <li class="item"><a href="article.html">Защо партиите не го могат?</a></li>
+                    <li class="item"><a href="article.html">За Комисията „Хохегер“ и защо не беше преименувана на Комисията „Моника“</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+        </div><!-- .ut-ofs-section -->
+    </div><!-- .wrp-page -->
+
+    <!-- Scripts-->
+    <script data-main="../../js/patternlab" src="../../js/libs.js"></script>
+
+    <!--DO NOT REMOVE-->
+    <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternType":"organisms","patternSubtype":"navigations"},"patternExtension":"mustache","patternName":"Foot navigation","patternPartial":"organisms-foot-nav","patternState":"","patternEngineName":"mustache","extraOutput":{}}
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+  
+  var scriptLoader = {
+    
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+    
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1530019695808">
+  (function() {
+    if (self != top) {
+      var cb = '1530019695808';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1530019695808">
+  (function() {
+    if (self != top) {
+      var cb = '1530019695808';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+  </body>
+</html>

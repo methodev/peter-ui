@@ -1,0 +1,8 @@
+<label class="pa-title-system">
+  {{# title_system.hyperlink }}
+    <a href="{{ href }}">{{ title_system.text }}</a>
+  {{/ title_system.hyperlink }}
+  {{^ title_system.hyperlink }}
+    {{ title_system.text }}
+  {{/ title_system.hyperlink }}
+</label>

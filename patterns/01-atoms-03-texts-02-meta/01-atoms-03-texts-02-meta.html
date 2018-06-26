@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html class="">
+    <head>
+        <title></title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Language" content="en"/>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+        <link rel="stylesheet" href="../../styleguide/css/peter-ui/patternlab.css?1530019695808" media="all" />
+        <link rel="stylesheet" href="../../css/peter-ui.css?1530019695808" media="all" />
+
+        <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+        <!-- never cache patterns -->
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1530019695808" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1530019695808" media="all" />
+
+        <!-- End Pattern Lab -->
+    </head>
+
+    <body class="">
+        <div class="wrp-page">
+            <div class="ut-ofs-section">
+<div class="timestamp pa-meta">
+        15 ноември, 2013 год. | 11:55 ч.
+</div>
+        </div><!-- .ut-ofs-section -->
+    </div><!-- .wrp-page -->
+
+    <!-- Scripts-->
+    <script data-main="../../js/patternlab" src="../../js/libs.js"></script>
+
+    <!--DO NOT REMOVE-->
+    <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"molecules-meta-line","lineagePath":"../../patterns/02-molecules-01-texts-01-meta-line/02-molecules-01-texts-01-meta-line.html"},{"lineagePattern":"molecules-user-head","lineagePath":"../../patterns/02-molecules-04-user-blocks-01-user-head/02-molecules-04-user-blocks-01-user-head.html"},{"lineagePattern":"molecules-quoteblock","lineagePath":"../../patterns/02-molecules-01-texts-03-quoteblock/02-molecules-01-texts-03-quoteblock.html"}],"lineageR":[{"lineagePattern":"molecules-meta-line","lineagePath":"../../patterns/02-molecules-01-texts-01-meta-line/02-molecules-01-texts-01-meta-line.html"},{"lineagePattern":"molecules-user-head","lineagePath":"../../patterns/02-molecules-04-user-blocks-01-user-head/02-molecules-04-user-blocks-01-user-head.html"},{"lineagePattern":"molecules-quoteblock","lineagePath":"../../patterns/02-molecules-01-texts-03-quoteblock/02-molecules-01-texts-03-quoteblock.html"}],"patternLineageEExists":true,"patternDesc":"<p>Този текст има за цел да бъде използван...</p>\n","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"texts"},"patternExtension":"mustache","patternName":"Meta text","patternPartial":"atoms-meta","patternState":"","patternEngineName":"mustache","extraOutput":{}}
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+  
+  var scriptLoader = {
+    
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+    
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1530019695808">
+  (function() {
+    if (self != top) {
+      var cb = '1530019695808';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1530019695808">
+  (function() {
+    if (self != top) {
+      var cb = '1530019695808';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+  </body>
+</html>
