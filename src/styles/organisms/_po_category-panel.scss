@@ -11,8 +11,8 @@
 
   //--------------------------| Base
 
-  display: flex;
-  flex-direction: column;
+  @include display-flex();
+  @include flex-direction(column);
 
 
   //--------------------------| Head label
@@ -23,7 +23,7 @@
   //--------------------------| Links list
 
   .pm-links-list {
-    flex: 1;
+    @include flex(1);
   }
 
 

@@ -13,7 +13,7 @@
   //--------------------------| Base
 
   @include mq-device-holding-type('outpocket') {
-    display: flex;
+    @include display-flex();
   }
 
   font-size: $text-size;
@@ -41,7 +41,8 @@
 
   > .pa-quote {
     @include mq-device-holding-type('outpocket') {
-      flex: 1;
+      @include flex(1);
+
       margin-left: $offset;
     }
   }

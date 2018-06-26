@@ -27,8 +27,8 @@
   //--------------------------| Base
 
   @include mq-screen-size-type('desktop') {
-    display: flex;
-    justify-content: space-between;
+    @include display-flex();
+    @include justify-content(space-between);
   }
 
   @include font-smoothing();
@@ -61,12 +61,15 @@
   //--------------------------| Links
 
   > .links {
+    @include display-flex();
+
     //@include mq-screen-size-type('desktop') {
     //  margin: 0 auto;
     //}
 
     @include mq-tablet-breakpoint('below') {
-      flex-direction: column-reverse;
+      @include flex-direction(column-reverse);
+
       text-align: center;
 
       .category {
@@ -102,7 +105,6 @@
       }
     }
 
-    display: flex;
     line-height: map-get($reg-line-heights, '120%');
 
     @for $cat from 1 through length($links-categories) {

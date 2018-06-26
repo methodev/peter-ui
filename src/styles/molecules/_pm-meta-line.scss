@@ -11,8 +11,9 @@
 
   //--------------------------| Base
 
-  display: flex;
-  justify-content: space-between;
+  @include justify-content(space-between);
+  @include display-flex();
+
   font-style: italic;
 
 
@@ -25,7 +26,8 @@
   > *:last-child:not(:only-child),
   > *:only-child[data-role='more'],
   > *:only-child[data-role='author'] {
-    flex: 1;
+    @include flex(1);
+
     text-align: right;
   }
 

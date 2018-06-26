@@ -1,3 +1,13 @@
+<a name="1.25.3"></a>
+## 1.25.3 (2018-06-26)
+
+
+### Bug Fixes
+
+* **Flexbox:** -webkit prefix for older iOS versions ([c15ee4c](https://github.com/martinmethod/peter-ui/commit/c15ee4c))
+
+
+
 <a name="1.25.2"></a>
 ## 1.25.2 (2018-06-26)
 

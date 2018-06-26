@@ -24,7 +24,7 @@
   }
 
   > .row {
-    align-items: center;
+    @include align-items(center);
   }
 
 
