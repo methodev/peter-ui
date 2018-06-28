@@ -34,7 +34,7 @@
     display: block;
 
     &:not(:last-child) {
-      margin-bottom: map-get($roles-typo-font-sizes, 'system');
+      @include margin-v(calc(#{map-get($roles-typo-font-sizes, 'system')} / 2));
     }
   }
 
